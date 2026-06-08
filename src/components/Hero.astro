@@ -1,0 +1,49 @@
+---
+import config from '../data/config.json';
+import StepsForm from './StepsForm.astro';
+
+interface Props {
+  communeName?: string;
+  categoryName?: string;
+}
+
+const { communeName = config.mainCity, categoryName = "" } = Astro.props;
+---
+
+<section class="hero">
+  <div class="container hero-grid">
+    <!-- Left Column: Localized SEO Hook & Badges -->
+    <div class="hero-content">
+      <h1>
+        Location de Benne {categoryName ? categoryName + " " : ""}à <span>{communeName}</span> et dans tout le <span>{config.department}</span>
+      </h1>
+      <p>
+        Besoin d'évacuer des gravats, des déchets verts, du bois ou du tout-venant ? Réservez votre benne de 8m³ à 30m³ chez <strong>{config.brandName}</strong>. Service rapide, conforme et au meilleur prix local.
+      </p>
+
+      <div class="trust-badges">
+        <div class="badge">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span>Livraison sous 24h</span>
+        </div>
+        <div class="badge">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+          <span>Prix local garanti</span>
+        </div>
+      </div>
+
+      <div style="margin-top: 30px; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md); border: 1px solid var(--border-color);">
+        <img src="/images/hero.png" alt={`Location de benne à ${communeName}`} style="width: 100%; height: auto; display: block;" />
+      </div>
+    </div>
+
+    <!-- Right Column: Interactive Lead capture -->
+    <div>
+      <StepsForm />
+    </div>
+  </div>
+</section>

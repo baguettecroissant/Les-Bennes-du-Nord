@@ -1,0 +1,76 @@
+---
+import Layout from '../layouts/Layout.astro';
+import config from '../data/config.json';
+import communes from '../data/communes.json';
+
+const title = `Villes desservies dans le ${config.department} (${config.departmentCode}) | ${config.brandName}`;
+const description = `Retrouvez toutes les communes du département du ${config.department} où nous proposons nos services de location de bennes de 8m³ à 30m³.`;
+
+// Group communes alphabetically by their first letter
+const groupedCommunes = communes.reduce((acc, commune) => {
+  const firstLetter = commune.nom.normalize('NFD').replace(/[\u0300-\u036f]/g, '')[0].toUpperCase();
+  if (!acc[firstLetter]) {
+    acc[firstLetter] = [];
+  }
+  acc[firstLetter].push(commune);
+  return acc;
+}, {} as Record<string, typeof communes>);
+
+// Sort the letters alphabetically
+const letters = Object.keys(groupedCommunes).sort();
+---
+
+<Layout title={title} description={description}>
+  <section class="features">
+    <div class="container">
+      <div class="section-title">
+        <h1>Annuaire des communes desservies - {config.department}</h1>
+        <p>Nous livrons nos bennes de 8m³ à 30m³ dans l'ensemble des communes ci-dessous</p>
+      </div>
+
+      <!-- Quick Alphabetical Anchor Navigation -->
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 40px; padding: 20px; background: var(--bg-color); border-radius: var(--radius-sm); border: 1px solid var(--border-color);">
+        {letters.map((letter) => (
+          <a href={`#letter-${letter}`} style="padding: 6px 12px; font-weight: 700; background: var(--white); border: 1px solid var(--border-color); border-radius: 4px; color: var(--secondary-color);">
+            {letter}
+          </a>
+        ))}
+      </div>
+
+      <!-- Alphabetical Groups -->
+      <div style="display: flex; flex-direction: column; gap: 40px;">
+        {letters.map((letter) => (
+          <div id={`letter-${letter}`} style="scroll-margin-top: 100px;">
+            <h2 style="font-size: 28px; font-weight: 800; color: var(--accent-color); border-bottom: 2px solid var(--border-color); padding-bottom: 8px; margin-bottom: 20px;">
+              {letter}
+            </h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 15px;">
+              {groupedCommunes[letter].map((commune) => (
+                <a 
+                  href={`/location-benne-${commune.slug}`} 
+                  style="background: var(--white); padding: 12px 16px; border-radius: var(--radius-sm); border: 1px solid var(--border-color); font-size: 14px; font-weight: 600; display: flex; justify-content: space-between; align-items: center; transition: var(--transition);"
+                  class="city-link-card"
+                >
+                  <span style="color: var(--text-dark);">{commune.nom}</span>
+                  <span style="color: var(--text-muted); font-size: 11px; background: var(--bg-color); padding: 2px 6px; border-radius: 4px;">{commune.codePostal}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .city-link-card:hover {
+    border-color: var(--accent-color) !important;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+  }
+  .city-link-card:hover span {
+    color: var(--accent-color) !important;
+  }
+</style>

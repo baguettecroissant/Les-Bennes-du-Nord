@@ -1,0 +1,390 @@
+---
+import Layout from '../layouts/Layout.astro';
+import StepsForm from '../components/StepsForm.astro';
+import config from '../data/config.json';
+
+const title = `Types & Tailles de Bennes | Guide de Volume (8m³ à 30m³) - ${config.brandName}`;
+const description = `Quelle taille de benne choisir pour vos travaux dans le Nord (59) ? Découvrez les dimensions, tonnages et déchets autorisés pour nos bennes de 8m³ à 30m³.`;
+---
+
+<Layout title={title} description={description}>
+  <!-- Hero Section -->
+  <section class="hero" style="padding: 60px 0 80px;">
+    <div class="container" style="text-align: center; max-width: 800px;">
+      <h1 style="font-size: 42px; font-weight: 800; color: var(--secondary-color); margin-bottom: 20px;">
+        Nos <span>Types et Tailles</span> de Bennes à Louer
+      </h1>
+      <p style="font-size: 18px; color: var(--text-muted); line-height: 1.6; margin-bottom: 0;">
+        Du petit caisson à gravats de 8m³ pour le béton lourd au grand conteneur de 30m³ pour le bois ou les volumes industriels légers, trouvez le contenant adapté aux contraintes de votre chantier dans le {config.department}.
+      </p>
+    </div>
+  </section>
+
+  <!-- Interactive Project-to-Size Calculator -->
+  <section class="features" style="background: var(--white); padding: 60px 0;">
+    <div class="container">
+      <div class="section-title">
+        <h2>Aide au Choix : Quel Volume pour votre Projet ?</h2>
+        <p>Sélectionnez votre type de chantier pour identifier instantanément la benne recommandée</p>
+      </div>
+
+      <div class="form-card" style="max-width: 750px; margin: 0 auto; padding: 40px; box-shadow: var(--shadow-lg);">
+        <div style="display: flex; flex-direction: column; gap: 24px;">
+          <!-- Dropdown Selector -->
+          <div class="form-group">
+            <label for="project-select" style="font-size: 16px; font-weight: 700;">🏗️ Quel est votre type de travaux ?</label>
+            <select id="project-select" class="form-control" style="width: 100%; border: 1.5px solid var(--border-color); background: var(--bg-color);">
+              <option value="" disabled selected>-- Choisissez votre type de projet --</option>
+              <option value="dalle_beton">🧱 Démolition d'une dalle béton, terrasse ou toit (Matériaux Lourds)</option>
+              <option value="terrassement">🪨 Excavation de terre, création de piscine, allée (Matériaux Lourds)</option>
+              <option value="renov_cuisine">🍳 Rénovation complète d'une cuisine ou salle de bain (Mélange / DIB)</option>
+              <option value="vide_garage">🚗 Débarras d'un garage, d'une cave ou d'un grenier (Encombrants)</option>
+              <option value="vide_maison">🏠 Débarras intégral d'une maison de plain-pied ou étage (Encombrants)</option>
+              <option value="taille_arbres">🌿 Élagage de grands arbres, abattage ou nettoyage de jardin (Végétaux)</option>
+              <option value="charpente_bois">🪵 Travaux de charpente, planchers ou grand tri de palettes (Bois / DIB)</option>
+            </select>
+          </div>
+
+          <!-- Dynamic Result Display (Hidden by default) -->
+          <div id="calculator-result" style="display: none; background: rgba(30, 41, 59, 0.02); border: 2px solid var(--secondary-color); border-radius: var(--radius-md); padding: 30px; margin-top: 10px;">
+            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+              <span style="font-size: 32px;" id="result-icon">🚚</span>
+              <div>
+                <h3 style="font-size: 18px; font-weight: 800; color: var(--secondary-color); margin: 0;">
+                  Benne recommandée : <span id="result-volume-title" style="color: var(--accent-color);">Benne XX m³</span>
+                </h3>
+                <span id="result-waste-label" style="font-size: 13px; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">
+                  Gravats / Inertes
+                </span>
+              </div>
+            </div>
+            
+            <p style="font-size: 15px; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px;" id="result-explanation">
+              Explications spécifiques sur le choix de cette benne en fonction du poids et du volume des matériaux.
+            </p>
+
+            <div style="background: var(--white); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 15px; margin-bottom: 25px; font-size: 14px;">
+              <ul style="list-style-type: none; display: flex; flex-direction: column; gap: 8px;">
+                <li>📏 <strong>Dimensions approx.</strong> : <span id="result-dims">0 x 0 x 0 m</span></li>
+                <li>⚖️ <strong>Charge utile max.</strong> : <span id="result-weight">0 Tonnes</span></li>
+                <li>🟢 <strong>Principalement admis</strong> : <span id="result-allowed" style="color: #27ae60; font-weight: 600;">...</span></li>
+              </ul>
+            </div>
+
+            <a 
+              href="#devis" 
+              class="btn-primary" 
+              style="width: 100%; text-align: center; justify-content: center; text-decoration: none;"
+              id="calculator-cta-btn"
+            >
+              📋 Demander un devis pour une benne de <span id="cta-btn-vol">XX</span>m³ &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Physical Catalog of Dumpsters -->
+  <section class="features" style="background: var(--bg-color); padding: 80px 0;">
+    <div class="container">
+      <div class="section-title">
+        <h2>Notre Catalogue de Bennes en Détail</h2>
+        <p>Spécifications physiques et techniques de nos différents caissons</p>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 40px;">
+        <!-- Benne 8m3 -->
+        <div class="form-card" style="padding: 40px; display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; align-items: center;" id="benne-8">
+          <div style="text-align: center; background: var(--bg-color); border-radius: var(--radius-md); padding: 30px; border: 1.5px dashed var(--border-color);">
+            <img src="/images/benne-gravats.png" alt="Location Benne 8m3 Gravats" style="width: 100%; max-width: 180px; height: auto; border-radius: var(--radius-sm); margin: 0 auto 15px; display: block; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);" />
+            <h3 style="font-size: 26px; font-weight: 800; color: var(--secondary-color); margin-top: 15px;">Benne 8 m³</h3>
+            <span style="font-size: 14px; font-weight: 700; color: var(--accent-color); text-transform: uppercase; letter-spacing: 0.5px;">Gravats & Inertes</span>
+          </div>
+          <div>
+            <h4 style="font-size: 20px; font-weight: 800; color: var(--secondary-color); margin-bottom: 15px;">Spécifications Techniques</h4>
+            <p style="font-size: 15px; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;">
+              Le caisson de 8m³ est le modèle renforcé standard utilisé pour évacuer les gravats lourds. En raison des contraintes de poids (charge utile) sur la voirie et des limites de levage du bras hydraulique des camions, les bennes à béton/terre ne peuvent pas dépasser ce volume.
+            </p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; font-size: 14px;">
+              <div>
+                <strong>📏 Dimensions approx. :</strong><br />
+                <span style="color: var(--text-muted);">4.0m (L) x 2.0m (l) x 1.0m (H)</span>
+              </div>
+              <div>
+                <strong>⚖️ Charge Utile Max :</strong><br />
+                <span style="color: var(--text-muted);">10 Tonnes (Matériaux denses)</span>
+              </div>
+              <div>
+                <strong>🟢 Déchets Admis :</strong><br />
+                <span style="color: #27ae60; font-weight: 600;">Béton, briques, tuiles, carrelage, terre, cailloux.</span>
+              </div>
+              <div>
+                <strong>🔴 Déchets Interdits :</strong><br />
+                <span style="color: #c0392b; font-weight: 600;">Plâtre, placoplatre, plastiques, bois, amiante.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Benne 10m3 -->
+        <div class="form-card" style="padding: 40px; display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; align-items: center;" id="benne-10">
+          <div style="text-align: center; background: var(--bg-color); border-radius: var(--radius-md); padding: 30px; border: 1.5px dashed var(--border-color);">
+            <img src="/images/benne-encombrants.png" alt="Location Benne 10m3 Encombrants" style="width: 100%; max-width: 180px; height: auto; border-radius: var(--radius-sm); margin: 0 auto 15px; display: block; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);" />
+            <h3 style="font-size: 26px; font-weight: 800; color: var(--secondary-color); margin-top: 15px;">Benne 10 m³</h3>
+            <span style="font-size: 14px; font-weight: 700; color: var(--accent-color); text-transform: uppercase; letter-spacing: 0.5px;">Encombrants & DIB</span>
+          </div>
+          <div>
+            <h4 style="font-size: 20px; font-weight: 800; color: var(--secondary-color); margin-bottom: 15px;">Spécifications Techniques</h4>
+            <p style="font-size: 15px; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;">
+              Idéale pour les petits chantiers de rénovation de maison ou de commerce. Sa taille compacte permet de la poser facilement dans une allée privée ou sur une seule place de parking en zone résidentielle.
+            </p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; font-size: 14px;">
+              <div>
+                <strong>📏 Dimensions approx. :</strong><br />
+                <span style="color: var(--text-muted);">4.2m (L) x 2.0m (l) x 1.2m (H)</span>
+              </div>
+              <div>
+                <strong>⚖️ Charge Utile Max :</strong><br />
+                <span style="color: var(--text-muted);">6 Tonnes (Déchets mélangés)</span>
+              </div>
+              <div>
+                <strong>🟢 Déchets Admis :</strong><br />
+                <span style="color: #27ae60; font-weight: 600;">Plâtre/Placo, métaux, emballages, mobilier dégradé.</span>
+              </div>
+              <div>
+                <strong>🔴 Déchets Interdits :</strong><br />
+                <span style="color: #c0392b; font-weight: 600;">Terre, béton (benne trop haute pour ce poids), amiante.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Benne 15m3 -->
+        <div class="form-card" style="padding: 40px; display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; align-items: center;" id="benne-15">
+          <div style="text-align: center; background: var(--bg-color); border-radius: var(--radius-md); padding: 30px; border: 1.5px dashed var(--border-color);">
+            <img src="/images/benne-verts.png" alt="Location Benne 15m3 Déchets Verts" style="width: 100%; max-width: 180px; height: auto; border-radius: var(--radius-sm); margin: 0 auto 15px; display: block; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);" />
+            <h3 style="font-size: 26px; font-weight: 800; color: var(--secondary-color); margin-top: 15px;">Benne 15 m³</h3>
+            <span style="font-size: 14px; font-weight: 700; color: var(--accent-color); text-transform: uppercase; letter-spacing: 0.5px;">Déchets Verts / DIB</span>
+          </div>
+          <div>
+            <h4 style="font-size: 20px; font-weight: 800; color: var(--secondary-color); margin-bottom: 15px;">Spécifications Techniques</h4>
+            <p style="font-size: 15px; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;">
+              Le caisson polyvalent par excellence. Parfaitement adapté pour l'entretien d'espaces verts d'envergure, le débroussaillage de parcelles, ou pour évacuer les encombrants volumineux lors de déménagements ou successions familiales.
+            </p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; font-size: 14px;">
+              <div>
+                <strong>📏 Dimensions approx. :</strong><br />
+                <span style="color: var(--text-muted);">5.0m (L) x 2.0m (l) x 1.5m (H)</span>
+              </div>
+              <div>
+                <strong>⚖️ Charge Utile Max :</strong><br />
+                <span style="color: var(--text-muted);">8 Tonnes (Matériaux intermédiaires)</span>
+              </div>
+              <div>
+                <strong>🟢 Déchets Admis :</strong><br />
+                <span style="color: #27ae60; font-weight: 600;">Branches, tontes, souches d'arbres, meubles, DIB.</span>
+              </div>
+              <div>
+                <strong>🔴 Déchets Interdits :</strong><br />
+                <span style="color: #c0392b; font-weight: 600;">Béton armé, briques en grande quantité, amiante.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Benne 30m3 -->
+        <div class="form-card" style="padding: 40px; display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; align-items: center;" id="benne-30">
+          <div style="text-align: center; background: var(--bg-color); border-radius: var(--radius-md); padding: 30px; border: 1.5px dashed var(--border-color);">
+            <img src="/images/benne-dib.png" alt="Location Benne 30m3 DIB Bois" style="width: 100%; max-width: 180px; height: auto; border-radius: var(--radius-sm); margin: 0 auto 15px; display: block; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);" />
+            <h3 style="font-size: 26px; font-weight: 800; color: var(--secondary-color); margin-top: 15px;">Benne 30 m³</h3>
+            <span style="font-size: 14px; font-weight: 700; color: var(--accent-color); text-transform: uppercase; letter-spacing: 0.5px;">Gros Volumes (Bois/DIB)</span>
+          </div>
+          <div>
+            <h4 style="font-size: 20px; font-weight: 800; color: var(--secondary-color); margin-bottom: 15px;">Spécifications Techniques</h4>
+            <p style="font-size: 15px; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;">
+              Notre plus grand conteneur de chantier. Destiné aux déchets volumineux mais légers : palettes en bois, cartons de déballage, isolants, métaux de déconstruction ou gros volumes végétaux. Il dispose de portes arrière à deux battants pour un chargement au sol facilité.
+            </p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; font-size: 14px;">
+              <div>
+                <strong>📏 Dimensions approx. :</strong><br />
+                <span style="color: var(--text-muted);">6.2m (L) x 2.2m (l) x 2.2m (H)</span>
+              </div>
+              <div>
+                <strong>⚖️ Charge Utile Max :</strong><br />
+                <span style="color: var(--text-muted);">10 Tonnes (Déchets volumineux légers)</span>
+              </div>
+              <div>
+                <strong>🟢 Déchets Admis :</strong><br />
+                <span style="color: #27ae60; font-weight: 600;">Bois (palettes, charpente), cartons, emballages, isolants.</span>
+              </div>
+              <div>
+                <strong>🔴 Déchets Interdits :</strong><br />
+                <span style="color: #c0392b; font-weight: 600;">Interdiction stricte de mettre des gravats ou de la terre (surcharge immédiate).</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Waste categories classification guide -->
+  <section class="features" style="background: var(--white); padding: 80px 0;">
+    <div class="container" style="max-width: 800px;">
+      <div class="section-title">
+        <h2>Réglementation & Guide du Tri des Déchets</h2>
+        <p>Trier ses déchets à la source permet de réduire considérablement la facture finale de traitement</p>
+      </div>
+
+      <div style="font-size: 16px; line-height: 1.8; color: var(--text-dark); display: flex; flex-direction: column; gap: 24px;">
+        <h3 style="font-size: 20px; font-weight: 800; color: var(--secondary-color);">
+          1. Les Gravats Inertes (les moins chers à traiter)
+        </h3>
+        <p style="color: var(--text-muted); margin: 0;">
+          Les gravats inertes sont des matériaux qui ne subissent aucune modification physique ou chimique importante (béton, tuiles, briques, parpaings, terre). Ils sont recyclés en concassés routiers. Parce qu'ils se recyclent facilement, louer une benne à gravats est la solution la plus économique. Cependant, le moindre sac de plastique ou morceau de bois présent peut disqualifier la benne et la reclasser en DIB (surfacturation immédiate en décharge).
+        </p>
+
+        <h3 style="font-size: 20px; font-weight: 800; color: var(--secondary-color); margin-top: 10px;">
+          2. Les Déchets Industriels Banals - DIB (Tout-venant)
+        </h3>
+        <p style="color: var(--text-muted); margin: 0;">
+          Cette catégorie regroupe les mélanges de déchets non dangereux issus du second œuvre ou des débarras (plâtre, cartons, plastiques, métaux, polystyrène, laine de verre, meubles). Ces bennes sont transportées vers des centres de tri équipés de séparateurs mécaniques pour extraire les matières valorisables. Le reste est valorisé énergétiquement ou enfoui, ce qui explique un coût de traitement plus élevé.
+        </p>
+
+        <h3 style="font-size: 20px; font-weight: 800; color: var(--secondary-color); margin-top: 10px;">
+          3. Les Déchets Interdits et Dangereux (Responsabilité pénale)
+        </h3>
+        <div style="background: rgba(192, 57, 43, 0.05); border-left: 4px solid #c0392b; padding: 20px; border-radius: var(--radius-sm);">
+          <p style="font-size: 15px; color: #7f8c8d; font-weight: 700; margin-bottom: 8px;">
+            ⚠️ Produits interdits dans toutes nos bennes :
+          </p>
+          <ul style="list-style-type: square; padding-left: 20px; font-size: 14px; color: var(--text-muted); display: flex; flex-direction: column; gap: 6px;">
+            <li>L'amiante et le fibrociment (nécessite des filières étanches sous bordereau CAP amiante).</li>
+            <li>Les pots de peinture pleins, solvants, huiles de moteur et aérosols de produits chimiques.</li>
+            <li>Les bouteilles de gaz, extincteurs et réservoirs sous pression.</li>
+            <li>Les pneus de voitures et camions.</li>
+            <li>Les déchets ménagers putrescibles (ordures ménagères).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote capture form -->
+  <section class="features" style="background: var(--bg-color); padding: 80px 0;" id="devis">
+    <div class="container hero-grid">
+      <div style="display: flex; flex-direction: column; gap: 20px; justify-content: center;">
+        <h2 style="font-size: 36px; font-weight: 800; color: var(--secondary-color);">Obtenez votre devis sous 2h</h2>
+        <p style="font-size: 16px; color: var(--text-muted); line-height: 1.7;">
+          Nos conseillers analysent votre projet et vous proposent le meilleur tarif local du département du Nord. Remplissez notre formulaire interactif pour recevoir votre proposition tarifaire personnalisée.
+        </p>
+      </div>
+      <div>
+        <StepsForm />
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<!-- Client Side Calculator Script -->
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const projectSelect = document.getElementById('project-select');
+    const calculatorResult = document.getElementById('calculator-result');
+    const resultIcon = document.getElementById('result-icon');
+    const resultVolumeTitle = document.getElementById('result-volume-title');
+    const resultWasteLabel = document.getElementById('result-waste-label');
+    const resultExplanation = document.getElementById('result-explanation');
+    const resultDims = document.getElementById('result-dims');
+    const resultWeight = document.getElementById('result-weight');
+    const resultAllowed = document.getElementById('result-allowed');
+    const ctaBtnVol = document.getElementById('cta-btn-vol');
+
+    const projectRecommendations = {
+      dalle_beton: {
+        volume: "8",
+        wasteLabel: "Gravats & Inertes",
+        icon: "🧱",
+        explanation: "Les gravats (béton, dalles, briques) sont extrêmement lourds. Le transport de ces matériaux est limité réglementairement à des bennes de 8m³ pour ne pas dépasser la charge maximale autorisée par essieu sur la route.",
+        dims: "4.0m x 2.0m x 1.0m",
+        weight: "10 Tonnes",
+        allowed: "Béton, briques, tuiles, carrelage propre"
+      },
+      terrassement: {
+        volume: "8",
+        wasteLabel: "Gravats & Inertes",
+        icon: "🪨",
+        explanation: "La terre végétale excavée, le sable et le gravier pèsent en moyenne 1,5 à 1,8 tonne par mètre cube. Pour éviter toute surcharge du camion, le caisson de 8m³ renforcé est la seule benne autorisée pour ce type de matériaux.",
+        dims: "4.0m x 2.0m x 1.0m",
+        weight: "10 Tonnes",
+        allowed: "Terre brute, cailloux, sables"
+      },
+      renov_cuisine: {
+        volume: "10",
+        wasteLabel: "Tout-Venant (DIB)",
+        icon: "📦",
+        explanation: "La rénovation d'une pièce d'eau ou cuisine génère des gravats légers, des plaques de plâtre (placo), du bois et des plastiques mélangés. La benne DIB de 10m³ compacte est idéale pour ce mélange de matériaux de second œuvre.",
+        dims: "4.2m x 2.0m x 1.2m",
+        weight: "6 Tonnes",
+        allowed: "Placo, carrelage, meubles de cuisine, tuyaux"
+      },
+      vide_garage: {
+        volume: "15",
+        wasteLabel: "Encombrants / Tout-Venant",
+        icon: "🚗",
+        explanation: "Pour vider un grenier, débarrasser des étagères, cartons et vieux meubles, la benne de 15m³ est la plus polyvalente. Elle offre un volume confortable pour les objets encombrants sans risque de surcharge.",
+        dims: "5.0m x 2.0m x 1.5m",
+        weight: "8 Tonnes",
+        allowed: "Meubles, cartons, vieux objets, électroménager"
+      },
+      vide_maison: {
+        volume: "20",
+        wasteLabel: "Encombrants / Tout-Venant",
+        icon: "🏠",
+        explanation: "Le vidage intégral d'un grand logement accumule d'importants volumes de mobilier, matelas, emballages et textiles. Une benne de 20m³ évite les doubles rotations et permet de tout évacuer en une seule fois.",
+        dims: "6.0m x 2.2m x 1.5m",
+        weight: "10 Tonnes",
+        allowed: "Matelas, meubles, gros volumes de tout-venant"
+      },
+      taille_arbres: {
+        volume: "15",
+        wasteLabel: "Déchets Verts (Végétaux)",
+        icon: "🌿",
+        explanation: "Les résidus de taille de haie, branchages et tontes de pelouses sont volumineux mais légers. La benne paysagère de 15m³ est idéale pour collecter ces végétaux afin de les valoriser en compostage industriel.",
+        dims: "5.0m x 2.0m x 1.5m",
+        weight: "8 Tonnes",
+        allowed: "Branches, souches d'arbres, gazon, feuillage"
+      },
+      charpente_bois: {
+        volume: "30",
+        wasteLabel: "Bois & DIB Léger",
+        icon: "🪵",
+        explanation: "Les poutres en bois, planches de coffrage et palettes de manutention prennent beaucoup de place mais pèsent relativement peu. La benne géante de 30m³ permet de charger des longueurs importantes de bois en toute sécurité.",
+        dims: "6.2m x 2.2m x 2.2m",
+        weight: "10 Tonnes",
+        allowed: "Palettes, chutes de bois brut, cartons"
+      }
+    };
+
+    projectSelect.addEventListener('change', () => {
+      const selectedProject = projectSelect.value;
+      const rec = projectRecommendations[selectedProject];
+
+      if (rec) {
+        resultIcon.textContent = rec.icon;
+        resultVolumeTitle.textContent = `Benne ${rec.volume} m³`;
+        resultWasteLabel.textContent = rec.wasteLabel;
+        resultExplanation.textContent = rec.explanation;
+        resultDims.textContent = rec.dims;
+        resultWeight.textContent = rec.weight;
+        resultAllowed.textContent = rec.allowed;
+        ctaBtnVol.textContent = rec.volume;
+
+        calculatorResult.style.display = 'block';
+      } else {
+        calculatorResult.style.display = 'none';
+      }
+    });
+  });
+</script>

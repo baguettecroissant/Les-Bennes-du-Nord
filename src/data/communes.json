@@ -1,0 +1,4405 @@
+[
+  {
+    "nom": "Lille",
+    "slug": "lille",
+    "codeInsee": "59350",
+    "codePostal": "59000",
+    "population": 238246
+  },
+  {
+    "nom": "Tourcoing",
+    "slug": "tourcoing",
+    "codeInsee": "59599",
+    "codePostal": "59200",
+    "population": 98772
+  },
+  {
+    "nom": "Roubaix",
+    "slug": "roubaix",
+    "codeInsee": "59512",
+    "codePostal": "59100",
+    "population": 98286
+  },
+  {
+    "nom": "Dunkerque",
+    "slug": "dunkerque",
+    "codeInsee": "59183",
+    "codePostal": "59140",
+    "population": 86263
+  },
+  {
+    "nom": "Villeneuve-d'Ascq",
+    "slug": "villeneuve-d-ascq",
+    "codeInsee": "59009",
+    "codePostal": "59491",
+    "population": 62868
+  },
+  {
+    "nom": "Valenciennes",
+    "slug": "valenciennes",
+    "codeInsee": "59606",
+    "codePostal": "59300",
+    "population": 43468
+  },
+  {
+    "nom": "Wattrelos",
+    "slug": "wattrelos",
+    "codeInsee": "59650",
+    "codePostal": "59150",
+    "population": 40847
+  },
+  {
+    "nom": "Douai",
+    "slug": "douai",
+    "codeInsee": "59178",
+    "codePostal": "59500",
+    "population": 40250
+  },
+  {
+    "nom": "Marcq-en-Barœul",
+    "slug": "marcq-en-barul",
+    "codeInsee": "59378",
+    "codePostal": "59700",
+    "population": 40184
+  },
+  {
+    "nom": "Cambrai",
+    "slug": "cambrai",
+    "codeInsee": "59122",
+    "codePostal": "59400",
+    "population": 31134
+  },
+  {
+    "nom": "Maubeuge",
+    "slug": "maubeuge",
+    "codeInsee": "59392",
+    "codePostal": "59600",
+    "population": 28767
+  },
+  {
+    "nom": "Lambersart",
+    "slug": "lambersart",
+    "codeInsee": "59328",
+    "codePostal": "59130",
+    "population": 27090
+  },
+  {
+    "nom": "Armentières",
+    "slug": "armentieres",
+    "codeInsee": "59017",
+    "codePostal": "59280",
+    "population": 26998
+  },
+  {
+    "nom": "Loos",
+    "slug": "loos",
+    "codeInsee": "59360",
+    "codePostal": "59120",
+    "population": 22567
+  },
+  {
+    "nom": "Hazebrouck",
+    "slug": "hazebrouck",
+    "codeInsee": "59295",
+    "codePostal": "59190",
+    "population": 21912
+  },
+  {
+    "nom": "La Madeleine",
+    "slug": "la-madeleine",
+    "codeInsee": "59368",
+    "codePostal": "59110",
+    "population": 21790
+  },
+  {
+    "nom": "Mons-en-Barœul",
+    "slug": "mons-en-barul",
+    "codeInsee": "59410",
+    "codePostal": "59370",
+    "population": 21105
+  },
+  {
+    "nom": "Coudekerque-Branche",
+    "slug": "coudekerque-branche",
+    "codeInsee": "59155",
+    "codePostal": "59210",
+    "population": 20787
+  },
+  {
+    "nom": "Wasquehal",
+    "slug": "wasquehal",
+    "codeInsee": "59646",
+    "codePostal": "59290",
+    "population": 20726
+  },
+  {
+    "nom": "Halluin",
+    "slug": "halluin",
+    "codeInsee": "59279",
+    "codePostal": "59250",
+    "population": 20715
+  },
+  {
+    "nom": "Denain",
+    "slug": "denain",
+    "codeInsee": "59172",
+    "codePostal": "59220",
+    "population": 20665
+  },
+  {
+    "nom": "Croix",
+    "slug": "croix",
+    "codeInsee": "59163",
+    "codePostal": "59170",
+    "population": 20566
+  },
+  {
+    "nom": "Grande-Synthe",
+    "slug": "grande-synthe",
+    "codeInsee": "59271",
+    "codePostal": "59760",
+    "population": 20239
+  },
+  {
+    "nom": "Ronchin",
+    "slug": "ronchin",
+    "codeInsee": "59507",
+    "codePostal": "59790",
+    "population": 19787
+  },
+  {
+    "nom": "Faches-Thumesnil",
+    "slug": "faches-thumesnil",
+    "codeInsee": "59220",
+    "codePostal": "59155",
+    "population": 18619
+  },
+  {
+    "nom": "Hem",
+    "slug": "hem",
+    "codeInsee": "59299",
+    "codePostal": "59510",
+    "population": 18582
+  },
+  {
+    "nom": "Sin-le-Noble",
+    "slug": "sin-le-noble",
+    "codeInsee": "59569",
+    "codePostal": "59450",
+    "population": 16076
+  },
+  {
+    "nom": "Saint-Amand-les-Eaux",
+    "slug": "saint-amand-les-eaux",
+    "codeInsee": "59526",
+    "codePostal": "59230",
+    "population": 15974
+  },
+  {
+    "nom": "Wattignies",
+    "slug": "wattignies",
+    "codeInsee": "59648",
+    "codePostal": "59139",
+    "population": 15525
+  },
+  {
+    "nom": "Haubourdin",
+    "slug": "haubourdin",
+    "codeInsee": "59286",
+    "codePostal": "59320",
+    "population": 15074
+  },
+  {
+    "nom": "Bailleul",
+    "slug": "bailleul",
+    "codeInsee": "59043",
+    "codePostal": "59270",
+    "population": 14732
+  },
+  {
+    "nom": "Hautmont",
+    "slug": "hautmont",
+    "codeInsee": "59291",
+    "codePostal": "59330",
+    "population": 14152
+  },
+  {
+    "nom": "Roncq",
+    "slug": "roncq",
+    "codeInsee": "59508",
+    "codePostal": "59223",
+    "population": 14075
+  },
+  {
+    "nom": "Lys-lez-Lannoy",
+    "slug": "lys-lez-lannoy",
+    "codeInsee": "59367",
+    "codePostal": "59390",
+    "population": 14050
+  },
+  {
+    "nom": "Caudry",
+    "slug": "caudry",
+    "codeInsee": "59139",
+    "codePostal": "59540",
+    "population": 13833
+  },
+  {
+    "nom": "Mouvaux",
+    "slug": "mouvaux",
+    "codeInsee": "59421",
+    "codePostal": "59420",
+    "population": 13369
+  },
+  {
+    "nom": "Seclin",
+    "slug": "seclin",
+    "codeInsee": "59560",
+    "codePostal": "59113",
+    "population": 13261
+  },
+  {
+    "nom": "Saint-André-lez-Lille",
+    "slug": "saint-andre-lez-lille",
+    "codeInsee": "59527",
+    "codePostal": "59350",
+    "population": 13233
+  },
+  {
+    "nom": "Anzin",
+    "slug": "anzin",
+    "codeInsee": "59014",
+    "codePostal": "59410",
+    "population": 13183
+  },
+  {
+    "nom": "Comines",
+    "slug": "comines",
+    "codeInsee": "59152",
+    "codePostal": "59560",
+    "population": 12731
+  },
+  {
+    "nom": "Marquette-lez-Lille",
+    "slug": "marquette-lez-lille",
+    "codeInsee": "59386",
+    "codePostal": "59520",
+    "population": 12622
+  },
+  {
+    "nom": "Raismes",
+    "slug": "raismes",
+    "codeInsee": "59491",
+    "codePostal": "59590",
+    "population": 12199
+  },
+  {
+    "nom": "Marly",
+    "slug": "marly",
+    "codeInsee": "59383",
+    "codePostal": "59770",
+    "population": 11995
+  },
+  {
+    "nom": "Somain",
+    "slug": "somain",
+    "codeInsee": "59574",
+    "codePostal": "59490",
+    "population": 11766
+  },
+  {
+    "nom": "Bruay-sur-l'Escaut",
+    "slug": "bruay-sur-l-escaut",
+    "codeInsee": "59112",
+    "codePostal": "59860",
+    "population": 11644
+  },
+  {
+    "nom": "Fourmies",
+    "slug": "fourmies",
+    "codeInsee": "59249",
+    "codePostal": "59610",
+    "population": 11449
+  },
+  {
+    "nom": "Gravelines",
+    "slug": "gravelines",
+    "codeInsee": "59273",
+    "codePostal": "59820",
+    "population": 11430
+  },
+  {
+    "nom": "Wambrechies",
+    "slug": "wambrechies",
+    "codeInsee": "59636",
+    "codePostal": "59118",
+    "population": 11012
+  },
+  {
+    "nom": "Saint-Saulve",
+    "slug": "saint-saulve",
+    "codeInsee": "59544",
+    "codePostal": "59880",
+    "population": 10947
+  },
+  {
+    "nom": "Annœullin",
+    "slug": "annullin",
+    "codeInsee": "59011",
+    "codePostal": "59112",
+    "population": 10847
+  },
+  {
+    "nom": "Vieux-Condé",
+    "slug": "vieux-conde",
+    "codeInsee": "59616",
+    "codePostal": "59690",
+    "population": 10617
+  },
+  {
+    "nom": "Jeumont",
+    "slug": "jeumont",
+    "codeInsee": "59324",
+    "codePostal": "59460",
+    "population": 10160
+  },
+  {
+    "nom": "Douchy-les-Mines",
+    "slug": "douchy-les-mines",
+    "codeInsee": "59179",
+    "codePostal": "59282",
+    "population": 10109
+  },
+  {
+    "nom": "Neuville-en-Ferrain",
+    "slug": "neuville-en-ferrain",
+    "codeInsee": "59426",
+    "codePostal": "59960",
+    "population": 10002
+  },
+  {
+    "nom": "Aniche",
+    "slug": "aniche",
+    "codeInsee": "59008",
+    "codePostal": "59580",
+    "population": 9963
+  },
+  {
+    "nom": "Merville",
+    "slug": "merville",
+    "codeInsee": "59400",
+    "codePostal": "59660",
+    "population": 9808
+  },
+  {
+    "nom": "Bondues",
+    "slug": "bondues",
+    "codeInsee": "59090",
+    "codePostal": "59910",
+    "population": 9747
+  },
+  {
+    "nom": "Lesquin",
+    "slug": "lesquin",
+    "codeInsee": "59343",
+    "codePostal": "59810",
+    "population": 9600
+  },
+  {
+    "nom": "Leers",
+    "slug": "leers",
+    "codeInsee": "59339",
+    "codePostal": "59115",
+    "population": 9521
+  },
+  {
+    "nom": "Condé-sur-l'Escaut",
+    "slug": "conde-sur-l-escaut",
+    "codeInsee": "59153",
+    "codePostal": "59163",
+    "population": 9253
+  },
+  {
+    "nom": "Escaudain",
+    "slug": "escaudain",
+    "codeInsee": "59205",
+    "codePostal": "59124",
+    "population": 9039
+  },
+  {
+    "nom": "La Chapelle-d'Armentières",
+    "slug": "la-chapelle-d-armentieres",
+    "codeInsee": "59143",
+    "codePostal": "59930",
+    "population": 8754
+  },
+  {
+    "nom": "Aulnoye-Aymeries",
+    "slug": "aulnoye-aymeries",
+    "codeInsee": "59033",
+    "codePostal": "59620",
+    "population": 8612
+  },
+  {
+    "nom": "Onnaing",
+    "slug": "onnaing",
+    "codeInsee": "59447",
+    "codePostal": "59264",
+    "population": 8479
+  },
+  {
+    "nom": "Pérenchies",
+    "slug": "perenchies",
+    "codeInsee": "59457",
+    "codePostal": "59840",
+    "population": 8455
+  },
+  {
+    "nom": "Orchies",
+    "slug": "orchies",
+    "codeInsee": "59449",
+    "codePostal": "59310",
+    "population": 8396
+  },
+  {
+    "nom": "Téteghem-Coudekerque-Village",
+    "slug": "teteghem-coudekerque-village",
+    "codeInsee": "59588",
+    "codePostal": "59229",
+    "population": 8247
+  },
+  {
+    "nom": "Linselles",
+    "slug": "linselles",
+    "codeInsee": "59352",
+    "codePostal": "59126",
+    "population": 8161
+  },
+  {
+    "nom": "Houplines",
+    "slug": "houplines",
+    "codeInsee": "59317",
+    "codePostal": "59116",
+    "population": 7921
+  },
+  {
+    "nom": "Cappelle-la-Grande",
+    "slug": "cappelle-la-grande",
+    "codeInsee": "59131",
+    "codePostal": "59180",
+    "population": 7839
+  },
+  {
+    "nom": "Nieppe",
+    "slug": "nieppe",
+    "codeInsee": "59431",
+    "codePostal": "59850",
+    "population": 7764
+  },
+  {
+    "nom": "Wavrin",
+    "slug": "wavrin",
+    "codeInsee": "59653",
+    "codePostal": "59136",
+    "population": 7758
+  },
+  {
+    "nom": "Fresnes-sur-Escaut",
+    "slug": "fresnes-sur-escaut",
+    "codeInsee": "59253",
+    "codePostal": "59970",
+    "population": 7354
+  },
+  {
+    "nom": "Waziers",
+    "slug": "waziers",
+    "codeInsee": "59654",
+    "codePostal": "59119",
+    "population": 7266
+  },
+  {
+    "nom": "Templeuve-en-Pévèle",
+    "slug": "templeuve-en-pevele",
+    "codeInsee": "59586",
+    "codePostal": "59242",
+    "population": 7202
+  },
+  {
+    "nom": "Auby",
+    "slug": "auby",
+    "codeInsee": "59028",
+    "codePostal": "59950",
+    "population": 7083
+  },
+  {
+    "nom": "Aulnoy-lez-Valenciennes",
+    "slug": "aulnoy-lez-valenciennes",
+    "codeInsee": "59032",
+    "codePostal": "59300",
+    "population": 7080
+  },
+  {
+    "nom": "Bourbourg",
+    "slug": "bourbourg",
+    "codeInsee": "59094",
+    "codePostal": "59630",
+    "population": 6931
+  },
+  {
+    "nom": "Quesnoy-sur-Deûle",
+    "slug": "quesnoy-sur-deule",
+    "codeInsee": "59482",
+    "codePostal": "59890",
+    "population": 6805
+  },
+  {
+    "nom": "Beuvrages",
+    "slug": "beuvrages",
+    "codeInsee": "59079",
+    "codePostal": "59192",
+    "population": 6796
+  },
+  {
+    "nom": "Le Cateau-Cambrésis",
+    "slug": "le-cateau-cambresis",
+    "codeInsee": "59136",
+    "codePostal": "59360",
+    "population": 6764
+  },
+  {
+    "nom": "Feignies",
+    "slug": "feignies",
+    "codeInsee": "59225",
+    "codePostal": "59750",
+    "population": 6703
+  },
+  {
+    "nom": "La Bassée",
+    "slug": "la-bassee",
+    "codeInsee": "59051",
+    "codePostal": "59480",
+    "population": 6650
+  },
+  {
+    "nom": "Estaires",
+    "slug": "estaires",
+    "codeInsee": "59212",
+    "codePostal": "59940",
+    "population": 6525
+  },
+  {
+    "nom": "Cuincy",
+    "slug": "cuincy",
+    "codeInsee": "59165",
+    "codePostal": "59553",
+    "population": 6467
+  },
+  {
+    "nom": "Louvroil",
+    "slug": "louvroil",
+    "codeInsee": "59365",
+    "codePostal": "59720",
+    "population": 6294
+  },
+  {
+    "nom": "Lallaing",
+    "slug": "lallaing",
+    "codeInsee": "59327",
+    "codePostal": "59167",
+    "population": 6287
+  },
+  {
+    "nom": "Ostricourt",
+    "slug": "ostricourt",
+    "codeInsee": "59452",
+    "codePostal": "59162",
+    "population": 6097
+  },
+  {
+    "nom": "Pecquencourt",
+    "slug": "pecquencourt",
+    "codeInsee": "59456",
+    "codePostal": "59146",
+    "population": 6092
+  },
+  {
+    "nom": "Trith-Saint-Léger",
+    "slug": "trith-saint-leger",
+    "codeInsee": "59603",
+    "codePostal": "59125",
+    "population": 6019
+  },
+  {
+    "nom": "Roost-Warendin",
+    "slug": "roost-warendin",
+    "codeInsee": "59509",
+    "codePostal": "59286",
+    "population": 5956
+  },
+  {
+    "nom": "Loon-Plage",
+    "slug": "loon-plage",
+    "codeInsee": "59359",
+    "codePostal": "59279",
+    "population": 5952
+  },
+  {
+    "nom": "Quiévrechain",
+    "slug": "quievrechain",
+    "codeInsee": "59484",
+    "codePostal": "59920",
+    "population": 5949
+  },
+  {
+    "nom": "Flines-lez-Raches",
+    "slug": "flines-lez-raches",
+    "codeInsee": "59239",
+    "codePostal": "59148",
+    "population": 5745
+  },
+  {
+    "nom": "Santes",
+    "slug": "santes",
+    "codeInsee": "59553",
+    "codePostal": "59211",
+    "population": 5652
+  },
+  {
+    "nom": "Sainghin-en-Weppes",
+    "slug": "sainghin-en-weppes",
+    "codeInsee": "59524",
+    "codePostal": "59184",
+    "population": 5638
+  },
+  {
+    "nom": "Wallers",
+    "slug": "wallers",
+    "codeInsee": "59632",
+    "codePostal": "59135",
+    "population": 5633
+  },
+  {
+    "nom": "La Gorgue",
+    "slug": "la-gorgue",
+    "codeInsee": "59268",
+    "codePostal": "59253",
+    "population": 5616
+  },
+  {
+    "nom": "Wormhout",
+    "slug": "wormhout",
+    "codeInsee": "59663",
+    "codePostal": "59470",
+    "population": 5584
+  },
+  {
+    "nom": "Baisieux",
+    "slug": "baisieux",
+    "codeInsee": "59044",
+    "codePostal": "59780",
+    "population": 5545
+  },
+  {
+    "nom": "Fenain",
+    "slug": "fenain",
+    "codeInsee": "59227",
+    "codePostal": "59179",
+    "population": 5441
+  },
+  {
+    "nom": "Wervicq-Sud",
+    "slug": "wervicq-sud",
+    "codeInsee": "59656",
+    "codePostal": "59117",
+    "population": 5426
+  },
+  {
+    "nom": "Flers-en-Escrebieux",
+    "slug": "flers-en-escrebieux",
+    "codeInsee": "59234",
+    "codePostal": "59128",
+    "population": 5424
+  },
+  {
+    "nom": "Erquinghem-Lys",
+    "slug": "erquinghem-lys",
+    "codeInsee": "59202",
+    "codePostal": "59193",
+    "population": 5341
+  },
+  {
+    "nom": "Dechy",
+    "slug": "dechy",
+    "codeInsee": "59170",
+    "codePostal": "59187",
+    "population": 5338
+  },
+  {
+    "nom": "Bauvin",
+    "slug": "bauvin",
+    "codeInsee": "59052",
+    "codePostal": "59221",
+    "population": 5249
+  },
+  {
+    "nom": "Ferrière-la-Grande",
+    "slug": "ferriere-la-grande",
+    "codeInsee": "59230",
+    "codePostal": "59680",
+    "population": 5131
+  },
+  {
+    "nom": "Petite-Forêt",
+    "slug": "petite-foret",
+    "codeInsee": "59459",
+    "codePostal": "59494",
+    "population": 5054
+  },
+  {
+    "nom": "Bousbecque",
+    "slug": "bousbecque",
+    "codeInsee": "59098",
+    "codePostal": "59166",
+    "population": 4978
+  },
+  {
+    "nom": "Grand-Fort-Philippe",
+    "slug": "grand-fort-philippe",
+    "codeInsee": "59272",
+    "codePostal": "59153",
+    "population": 4887
+  },
+  {
+    "nom": "Lambres-lez-Douai",
+    "slug": "lambres-lez-douai",
+    "codeInsee": "59329",
+    "codePostal": "59552",
+    "population": 4883
+  },
+  {
+    "nom": "Le Quesnoy",
+    "slug": "le-quesnoy",
+    "codeInsee": "59481",
+    "codePostal": "59530",
+    "population": 4878
+  },
+  {
+    "nom": "Phalempin",
+    "slug": "phalempin",
+    "codeInsee": "59462",
+    "codePostal": "59133",
+    "population": 4847
+  },
+  {
+    "nom": "Cysoing",
+    "slug": "cysoing",
+    "codeInsee": "59168",
+    "codePostal": "59830",
+    "population": 4839
+  },
+  {
+    "nom": "Hallennes-lez-Haubourdin",
+    "slug": "hallennes-lez-haubourdin",
+    "codeInsee": "59278",
+    "codePostal": "59320",
+    "population": 4683
+  },
+  {
+    "nom": "Sequedin",
+    "slug": "sequedin",
+    "codeInsee": "59566",
+    "codePostal": "59320",
+    "population": 4675
+  },
+  {
+    "nom": "Guesnain",
+    "slug": "guesnain",
+    "codeInsee": "59276",
+    "codePostal": "59287",
+    "population": 4635
+  },
+  {
+    "nom": "Auberchicourt",
+    "slug": "auberchicourt",
+    "codeInsee": "59024",
+    "codePostal": "59165",
+    "population": 4626
+  },
+  {
+    "nom": "Crespin",
+    "slug": "crespin",
+    "codeInsee": "59160",
+    "codePostal": "59154",
+    "population": 4532
+  },
+  {
+    "nom": "Marchiennes",
+    "slug": "marchiennes",
+    "codeInsee": "59375",
+    "codePostal": "59870",
+    "population": 4507
+  },
+  {
+    "nom": "Montigny-en-Ostrevent",
+    "slug": "montigny-en-ostrevent",
+    "codeInsee": "59414",
+    "codePostal": "59182",
+    "population": 4495
+  },
+  {
+    "nom": "Hergnies",
+    "slug": "hergnies",
+    "codeInsee": "59301",
+    "codePostal": "59199",
+    "population": 4479
+  },
+  {
+    "nom": "Provin",
+    "slug": "provin",
+    "codeInsee": "59477",
+    "codePostal": "59185",
+    "population": 4428
+  },
+  {
+    "nom": "Steenvoorde",
+    "slug": "steenvoorde",
+    "codeInsee": "59580",
+    "codePostal": "59114",
+    "population": 4332
+  },
+  {
+    "nom": "Escautpont",
+    "slug": "escautpont",
+    "codeInsee": "59207",
+    "codePostal": "59278",
+    "population": 4202
+  },
+  {
+    "nom": "Bray-Dunes",
+    "slug": "bray-dunes",
+    "codeInsee": "59107",
+    "codePostal": "59123",
+    "population": 4189
+  },
+  {
+    "nom": "Thumeries",
+    "slug": "thumeries",
+    "codeInsee": "59592",
+    "codePostal": "59239",
+    "population": 4170
+  },
+  {
+    "nom": "Hérin",
+    "slug": "herin",
+    "codeInsee": "59302",
+    "codePostal": "59195",
+    "population": 4169
+  },
+  {
+    "nom": "Gondecourt",
+    "slug": "gondecourt",
+    "codeInsee": "59266",
+    "codePostal": "59147",
+    "population": 4148
+  },
+  {
+    "nom": "Solesmes",
+    "slug": "solesmes",
+    "codeInsee": "59571",
+    "codePostal": "59730",
+    "population": 4142
+  },
+  {
+    "nom": "Ghyvelde",
+    "slug": "ghyvelde",
+    "codeInsee": "59260",
+    "codePostal": "59122",
+    "population": 4133
+  },
+  {
+    "nom": "Bouchain",
+    "slug": "bouchain",
+    "codeInsee": "59092",
+    "codePostal": "59111",
+    "population": 4113
+  },
+  {
+    "nom": "Abscon",
+    "slug": "abscon",
+    "codeInsee": "59002",
+    "codePostal": "59215",
+    "population": 4108
+  },
+  {
+    "nom": "Leffrinckoucke",
+    "slug": "leffrinckoucke",
+    "codeInsee": "59340",
+    "codePostal": "59495",
+    "population": 4078
+  },
+  {
+    "nom": "Avesnes-sur-Helpe",
+    "slug": "avesnes-sur-helpe",
+    "codeInsee": "59036",
+    "codePostal": "59440",
+    "population": 4012
+  },
+  {
+    "nom": "Neuville-Saint-Rémy",
+    "slug": "neuville-saint-remy",
+    "codeInsee": "59428",
+    "codePostal": "59554",
+    "population": 4012
+  },
+  {
+    "nom": "Raimbeaucourt",
+    "slug": "raimbeaucourt",
+    "codeInsee": "59489",
+    "codePostal": "59283",
+    "population": 4000
+  },
+  {
+    "nom": "Masny",
+    "slug": "masny",
+    "codeInsee": "59390",
+    "codePostal": "59176",
+    "population": 3999
+  },
+  {
+    "nom": "Rousies",
+    "slug": "rousies",
+    "codeInsee": "59514",
+    "codePostal": "59131",
+    "population": 3980
+  },
+  {
+    "nom": "Hondschoote",
+    "slug": "hondschoote",
+    "codeInsee": "59309",
+    "codePostal": "59122",
+    "population": 3957
+  },
+  {
+    "nom": "Toufflers",
+    "slug": "toufflers",
+    "codeInsee": "59598",
+    "codePostal": "59390",
+    "population": 3957
+  },
+  {
+    "nom": "Maing",
+    "slug": "maing",
+    "codeInsee": "59369",
+    "codePostal": "59233",
+    "population": 3954
+  },
+  {
+    "nom": "Hasnon",
+    "slug": "hasnon",
+    "codeInsee": "59284",
+    "codePostal": "59178",
+    "population": 3849
+  },
+  {
+    "nom": "Rœulx",
+    "slug": "rulx",
+    "codeInsee": "59504",
+    "codePostal": "59172",
+    "population": 3743
+  },
+  {
+    "nom": "Lourches",
+    "slug": "lourches",
+    "codeInsee": "59361",
+    "codePostal": "59156",
+    "population": 3734
+  },
+  {
+    "nom": "Templemars",
+    "slug": "templemars",
+    "codeInsee": "59585",
+    "codePostal": "59175",
+    "population": 3669
+  },
+  {
+    "nom": "Avesnes-les-Aubert",
+    "slug": "avesnes-les-aubert",
+    "codeInsee": "59037",
+    "codePostal": "59129",
+    "population": 3562
+  },
+  {
+    "nom": "Allennes-les-Marais",
+    "slug": "allennes-les-marais",
+    "codeInsee": "59005",
+    "codePostal": "59251",
+    "population": 3545
+  },
+  {
+    "nom": "Mérignies",
+    "slug": "merignies",
+    "codeInsee": "59398",
+    "codePostal": "59710",
+    "population": 3527
+  },
+  {
+    "nom": "Bergues",
+    "slug": "bergues",
+    "codeInsee": "59067",
+    "codePostal": "59380",
+    "population": 3525
+  },
+  {
+    "nom": "Hornaing",
+    "slug": "hornaing",
+    "codeInsee": "59314",
+    "codePostal": "59171",
+    "population": 3496
+  },
+  {
+    "nom": "Steenwerck",
+    "slug": "steenwerck",
+    "codeInsee": "59581",
+    "codePostal": "59181",
+    "population": 3450
+  },
+  {
+    "nom": "Coutiches",
+    "slug": "coutiches",
+    "codeInsee": "59158",
+    "codePostal": "59310",
+    "population": 3436
+  },
+  {
+    "nom": "Landrecies",
+    "slug": "landrecies",
+    "codeInsee": "59331",
+    "codePostal": "59550",
+    "population": 3407
+  },
+  {
+    "nom": "Iwuy",
+    "slug": "iwuy",
+    "codeInsee": "59322",
+    "codePostal": "59141",
+    "population": 3403
+  },
+  {
+    "nom": "Houplin-Ancoisne",
+    "slug": "houplin-ancoisne",
+    "codeInsee": "59316",
+    "codePostal": "59263",
+    "population": 3326
+  },
+  {
+    "nom": "Hoymille",
+    "slug": "hoymille",
+    "codeInsee": "59319",
+    "codePostal": "59492",
+    "population": 3259
+  },
+  {
+    "nom": "Bavay",
+    "slug": "bavay",
+    "codeInsee": "59053",
+    "codePostal": "59570",
+    "population": 3249
+  },
+  {
+    "nom": "Haveluy",
+    "slug": "haveluy",
+    "codeInsee": "59292",
+    "codePostal": "59255",
+    "population": 3222
+  },
+  {
+    "nom": "Fretin",
+    "slug": "fretin",
+    "codeInsee": "59256",
+    "codePostal": "59273",
+    "population": 3214
+  },
+  {
+    "nom": "Proville",
+    "slug": "proville",
+    "codeInsee": "59476",
+    "codePostal": "59267",
+    "population": 3206
+  },
+  {
+    "nom": "Salomé",
+    "slug": "salome",
+    "codeInsee": "59550",
+    "codePostal": "59496",
+    "population": 3182
+  },
+  {
+    "nom": "Escaudœuvres",
+    "slug": "escauduvres",
+    "codeInsee": "59206",
+    "codePostal": "59161",
+    "population": 3171
+  },
+  {
+    "nom": "Berlaimont",
+    "slug": "berlaimont",
+    "codeInsee": "59068",
+    "codePostal": "59145",
+    "population": 3159
+  },
+  {
+    "nom": "Quarouble",
+    "slug": "quarouble",
+    "codeInsee": "59479",
+    "codePostal": "59243",
+    "population": 3145
+  },
+  {
+    "nom": "Arleux",
+    "slug": "arleux",
+    "codeInsee": "59015",
+    "codePostal": "59151",
+    "population": 3125
+  },
+  {
+    "nom": "Boussois",
+    "slug": "boussois",
+    "codeInsee": "59104",
+    "codePostal": "59168",
+    "population": 3123
+  },
+  {
+    "nom": "La Sentinelle",
+    "slug": "la-sentinelle",
+    "codeInsee": "59564",
+    "codePostal": "59174",
+    "population": 3103
+  },
+  {
+    "nom": "Anor",
+    "slug": "anor",
+    "codeInsee": "59012",
+    "codePostal": "59186",
+    "population": 3099
+  },
+  {
+    "nom": "Chéreng",
+    "slug": "chereng",
+    "codeInsee": "59146",
+    "codePostal": "59152",
+    "population": 3078
+  },
+  {
+    "nom": "Lecelles",
+    "slug": "lecelles",
+    "codeInsee": "59335",
+    "codePostal": "59226",
+    "population": 3046
+  },
+  {
+    "nom": "Emmerin",
+    "slug": "emmerin",
+    "codeInsee": "59193",
+    "codePostal": "59320",
+    "population": 3026
+  },
+  {
+    "nom": "Pont-à-Marcq",
+    "slug": "pont-a-marcq",
+    "codeInsee": "59466",
+    "codePostal": "59710",
+    "population": 3016
+  },
+  {
+    "nom": "Lezennes",
+    "slug": "lezennes",
+    "codeInsee": "59346",
+    "codePostal": "59260",
+    "population": 2978
+  },
+  {
+    "nom": "Willems",
+    "slug": "willems",
+    "codeInsee": "59660",
+    "codePostal": "59780",
+    "population": 2941
+  },
+  {
+    "nom": "Thiant",
+    "slug": "thiant",
+    "codeInsee": "59589",
+    "codePostal": "59224",
+    "population": 2914
+  },
+  {
+    "nom": "Neuville-sur-Escaut",
+    "slug": "neuville-sur-escaut",
+    "codeInsee": "59429",
+    "codePostal": "59293",
+    "population": 2901
+  },
+  {
+    "nom": "Beuvry-la-Forêt",
+    "slug": "beuvry-la-foret",
+    "codeInsee": "59080",
+    "codePostal": "59310",
+    "population": 2861
+  },
+  {
+    "nom": "Courchelettes",
+    "slug": "courchelettes",
+    "codeInsee": "59156",
+    "codePostal": "59552",
+    "population": 2855
+  },
+  {
+    "nom": "Sainghin-en-Mélantois",
+    "slug": "sainghin-en-melantois",
+    "codeInsee": "59523",
+    "codePostal": "59262",
+    "population": 2840
+  },
+  {
+    "nom": "Wignehies",
+    "slug": "wignehies",
+    "codeInsee": "59659",
+    "codePostal": "59212",
+    "population": 2804
+  },
+  {
+    "nom": "Genech",
+    "slug": "genech",
+    "codeInsee": "59258",
+    "codePostal": "59242",
+    "population": 2803
+  },
+  {
+    "nom": "Sains-du-Nord",
+    "slug": "sains-du-nord",
+    "codeInsee": "59525",
+    "codePostal": "59177",
+    "population": 2755
+  },
+  {
+    "nom": "Capinghem",
+    "slug": "capinghem",
+    "codeInsee": "59128",
+    "codePostal": "59160",
+    "population": 2728
+  },
+  {
+    "nom": "Masnières",
+    "slug": "masnieres",
+    "codeInsee": "59389",
+    "codePostal": "59241",
+    "population": 2689
+  },
+  {
+    "nom": "Verlinghem",
+    "slug": "verlinghem",
+    "codeInsee": "59611",
+    "codePostal": "59237",
+    "population": 2682
+  },
+  {
+    "nom": "Râches",
+    "slug": "raches",
+    "codeInsee": "59486",
+    "codePostal": "59194",
+    "population": 2672
+  },
+  {
+    "nom": "Marpent",
+    "slug": "marpent",
+    "codeInsee": "59385",
+    "codePostal": "59164",
+    "population": 2653
+  },
+  {
+    "nom": "Nomain",
+    "slug": "nomain",
+    "codeInsee": "59435",
+    "codePostal": "59310",
+    "population": 2651
+  },
+  {
+    "nom": "Vieux-Berquin",
+    "slug": "vieux-berquin",
+    "codeInsee": "59615",
+    "codePostal": "59232",
+    "population": 2628
+  },
+  {
+    "nom": "Haspres",
+    "slug": "haspres",
+    "codeInsee": "59285",
+    "codePostal": "59198",
+    "population": 2626
+  },
+  {
+    "nom": "Wahagnies",
+    "slug": "wahagnies",
+    "codeInsee": "59630",
+    "codePostal": "59261",
+    "population": 2613
+  },
+  {
+    "nom": "Frelinghien",
+    "slug": "frelinghien",
+    "codeInsee": "59252",
+    "codePostal": "59236",
+    "population": 2609
+  },
+  {
+    "nom": "Trélon",
+    "slug": "trelon",
+    "codeInsee": "59601",
+    "codePostal": "59132",
+    "population": 2604
+  },
+  {
+    "nom": "Morbecque",
+    "slug": "morbecque",
+    "codeInsee": "59416",
+    "codePostal": "59190",
+    "population": 2573
+  },
+  {
+    "nom": "Watten",
+    "slug": "watten",
+    "codeInsee": "59647",
+    "codePostal": "59143",
+    "population": 2564
+  },
+  {
+    "nom": "Avelin",
+    "slug": "avelin",
+    "codeInsee": "59034",
+    "codePostal": "59710",
+    "population": 2561
+  },
+  {
+    "nom": "Camphin-en-Pévèle",
+    "slug": "camphin-en-pevele",
+    "codeInsee": "59124",
+    "codePostal": "59780",
+    "population": 2518
+  },
+  {
+    "nom": "Landas",
+    "slug": "landas",
+    "codeInsee": "59330",
+    "codePostal": "59310",
+    "population": 2518
+  },
+  {
+    "nom": "Monchecourt",
+    "slug": "monchecourt",
+    "codeInsee": "59409",
+    "codePostal": "59234",
+    "population": 2516
+  },
+  {
+    "nom": "Saultain",
+    "slug": "saultain",
+    "codeInsee": "59557",
+    "codePostal": "59990",
+    "population": 2499
+  },
+  {
+    "nom": "Famars",
+    "slug": "famars",
+    "codeInsee": "59221",
+    "codePostal": "59300",
+    "population": 2474
+  },
+  {
+    "nom": "Leval",
+    "slug": "leval",
+    "codeInsee": "59344",
+    "codePostal": "59620",
+    "population": 2474
+  },
+  {
+    "nom": "Busigny",
+    "slug": "busigny",
+    "codeInsee": "59118",
+    "codePostal": "59137",
+    "population": 2435
+  },
+  {
+    "nom": "Ennevelin",
+    "slug": "ennevelin",
+    "codeInsee": "59197",
+    "codePostal": "59710",
+    "population": 2416
+  },
+  {
+    "nom": "Pont-sur-Sambre",
+    "slug": "pont-sur-sambre",
+    "codeInsee": "59467",
+    "codePostal": "59138",
+    "population": 2371
+  },
+  {
+    "nom": "Lewarde",
+    "slug": "lewarde",
+    "codeInsee": "59345",
+    "codePostal": "59287",
+    "population": 2353
+  },
+  {
+    "nom": "Recquignies",
+    "slug": "recquignies",
+    "codeInsee": "59495",
+    "codePostal": "59245",
+    "population": 2338
+  },
+  {
+    "nom": "Bersée",
+    "slug": "bersee",
+    "codeInsee": "59071",
+    "codePostal": "59235",
+    "population": 2318
+  },
+  {
+    "nom": "Haulchin",
+    "slug": "haulchin",
+    "codeInsee": "59288",
+    "codePostal": "59121",
+    "population": 2281
+  },
+  {
+    "nom": "Faumont",
+    "slug": "faumont",
+    "codeInsee": "59222",
+    "codePostal": "59310",
+    "population": 2278
+  },
+  {
+    "nom": "Herlies",
+    "slug": "herlies",
+    "codeInsee": "59303",
+    "codePostal": "59134",
+    "population": 2267
+  },
+  {
+    "nom": "Gommegnies",
+    "slug": "gommegnies",
+    "codeInsee": "59265",
+    "codePostal": "59144",
+    "population": 2264
+  },
+  {
+    "nom": "Cappelle-en-Pévèle",
+    "slug": "cappelle-en-pevele",
+    "codeInsee": "59129",
+    "codePostal": "59242",
+    "population": 2257
+  },
+  {
+    "nom": "Attiches",
+    "slug": "attiches",
+    "codeInsee": "59022",
+    "codePostal": "59551",
+    "population": 2245
+  },
+  {
+    "nom": "Boeschepe",
+    "slug": "boeschepe",
+    "codeInsee": "59086",
+    "codePostal": "59299",
+    "population": 2244
+  },
+  {
+    "nom": "Avesnelles",
+    "slug": "avesnelles",
+    "codeInsee": "59035",
+    "codePostal": "59440",
+    "population": 2232
+  },
+  {
+    "nom": "Méteren",
+    "slug": "meteren",
+    "codeInsee": "59401",
+    "codePostal": "59270",
+    "population": 2231
+  },
+  {
+    "nom": "Bachant",
+    "slug": "bachant",
+    "codeInsee": "59041",
+    "codePostal": "59138",
+    "population": 2230
+  },
+  {
+    "nom": "Cassel",
+    "slug": "cassel",
+    "codeInsee": "59135",
+    "codePostal": "59670",
+    "population": 2198
+  },
+  {
+    "nom": "Fournes-en-Weppes",
+    "slug": "fournes-en-weppes",
+    "codeInsee": "59250",
+    "codePostal": "59134",
+    "population": 2179
+  },
+  {
+    "nom": "Prouvy",
+    "slug": "prouvy",
+    "codeInsee": "59475",
+    "codePostal": "59121",
+    "population": 2178
+  },
+  {
+    "nom": "Lompret",
+    "slug": "lompret",
+    "codeInsee": "59356",
+    "codePostal": "59840",
+    "population": 2155
+  },
+  {
+    "nom": "Cousolre",
+    "slug": "cousolre",
+    "codeInsee": "59157",
+    "codePostal": "59149",
+    "population": 2153
+  },
+  {
+    "nom": "Bertry",
+    "slug": "bertry",
+    "codeInsee": "59074",
+    "codePostal": "59980",
+    "population": 2140
+  },
+  {
+    "nom": "Esquelbecq",
+    "slug": "esquelbecq",
+    "codeInsee": "59210",
+    "codePostal": "59470",
+    "population": 2137
+  },
+  {
+    "nom": "Raillencourt-Sainte-Olle",
+    "slug": "raillencourt-sainte-olle",
+    "codeInsee": "59488",
+    "codePostal": "59554",
+    "population": 2127
+  },
+  {
+    "nom": "Poix-du-Nord",
+    "slug": "poix-du-nord",
+    "codeInsee": "59464",
+    "codePostal": "59218",
+    "population": 2126
+  },
+  {
+    "nom": "Villers-Outréaux",
+    "slug": "villers-outreaux",
+    "codeInsee": "59624",
+    "codePostal": "59142",
+    "population": 2117
+  },
+  {
+    "nom": "Renescure",
+    "slug": "renescure",
+    "codeInsee": "59497",
+    "codePostal": "59173",
+    "population": 2113
+  },
+  {
+    "nom": "Préseau",
+    "slug": "preseau",
+    "codeInsee": "59471",
+    "codePostal": "59990",
+    "population": 2100
+  },
+  {
+    "nom": "Walincourt-Selvigny",
+    "slug": "walincourt-selvigny",
+    "codeInsee": "59631",
+    "codePostal": "59127",
+    "population": 2081
+  },
+  {
+    "nom": "Armbouts-Cappel",
+    "slug": "armbouts-cappel",
+    "codeInsee": "59016",
+    "codePostal": "59380",
+    "population": 2077
+  },
+  {
+    "nom": "Mons-en-Pévèle",
+    "slug": "mons-en-pevele",
+    "codeInsee": "59411",
+    "codePostal": "59246",
+    "population": 2075
+  },
+  {
+    "nom": "La Longueville",
+    "slug": "la-longueville",
+    "codeInsee": "59357",
+    "codePostal": "59570",
+    "population": 2057
+  },
+  {
+    "nom": "Prémesques",
+    "slug": "premesques",
+    "codeInsee": "59470",
+    "codePostal": "59840",
+    "population": 2031
+  },
+  {
+    "nom": "Godewaersvelde",
+    "slug": "godewaersvelde",
+    "codeInsee": "59262",
+    "codePostal": "59270",
+    "population": 2024
+  },
+  {
+    "nom": "Rosult",
+    "slug": "rosult",
+    "codeInsee": "59511",
+    "codePostal": "59230",
+    "population": 2022
+  },
+  {
+    "nom": "Warhem",
+    "slug": "warhem",
+    "codeInsee": "59641",
+    "codePostal": "59380",
+    "population": 2020
+  },
+  {
+    "nom": "Blaringhem",
+    "slug": "blaringhem",
+    "codeInsee": "59084",
+    "codePostal": "59173",
+    "population": 2008
+  },
+  {
+    "nom": "Rexpoëde",
+    "slug": "rexpoede",
+    "codeInsee": "59499",
+    "codePostal": "59122",
+    "population": 1976
+  },
+  {
+    "nom": "Sebourg",
+    "slug": "sebourg",
+    "codeInsee": "59559",
+    "codePostal": "59990",
+    "population": 1967
+  },
+  {
+    "nom": "Marquillies",
+    "slug": "marquillies",
+    "codeInsee": "59388",
+    "codePostal": "59274",
+    "population": 1961
+  },
+  {
+    "nom": "Caëstre",
+    "slug": "caestre",
+    "codeInsee": "59120",
+    "codePostal": "59190",
+    "population": 1951
+  },
+  {
+    "nom": "Marquette-en-Ostrevant",
+    "slug": "marquette-en-ostrevant",
+    "codeInsee": "59387",
+    "codePostal": "59252",
+    "population": 1943
+  },
+  {
+    "nom": "Beauvois-en-Cambrésis",
+    "slug": "beauvois-en-cambresis",
+    "codeInsee": "59063",
+    "codePostal": "59157",
+    "population": 1933
+  },
+  {
+    "nom": "Sailly-lez-Lannoy",
+    "slug": "sailly-lez-lannoy",
+    "codeInsee": "59522",
+    "codePostal": "59390",
+    "population": 1923
+  },
+  {
+    "nom": "Hélesmes",
+    "slug": "helesmes",
+    "codeInsee": "59297",
+    "codePostal": "59171",
+    "population": 1907
+  },
+  {
+    "nom": "Bachy",
+    "slug": "bachy",
+    "codeInsee": "59042",
+    "codePostal": "59830",
+    "population": 1898
+  },
+  {
+    "nom": "Écaillon",
+    "slug": "ecaillon",
+    "codeInsee": "59185",
+    "codePostal": "59176",
+    "population": 1869
+  },
+  {
+    "nom": "Ligny-en-Cambrésis",
+    "slug": "ligny-en-cambresis",
+    "codeInsee": "59349",
+    "codePostal": "59191",
+    "population": 1847
+  },
+  {
+    "nom": "Marcoing",
+    "slug": "marcoing",
+    "codeInsee": "59377",
+    "codePostal": "59159",
+    "population": 1841
+  },
+  {
+    "nom": "Lannoy",
+    "slug": "lannoy",
+    "codeInsee": "59332",
+    "codePostal": "59390",
+    "population": 1812
+  },
+  {
+    "nom": "Quiévy",
+    "slug": "quievy",
+    "codeInsee": "59485",
+    "codePostal": "59214",
+    "population": 1803
+  },
+  {
+    "nom": "Solre-le-Château",
+    "slug": "solre-le-chateau",
+    "codeInsee": "59572",
+    "codePostal": "59740",
+    "population": 1796
+  },
+  {
+    "nom": "Deûlémont",
+    "slug": "deulemont",
+    "codeInsee": "59173",
+    "codePostal": "59890",
+    "population": 1778
+  },
+  {
+    "nom": "Bois-Grenier",
+    "slug": "bois-grenier",
+    "codeInsee": "59088",
+    "codePostal": "59280",
+    "population": 1775
+  },
+  {
+    "nom": "Assevent",
+    "slug": "assevent",
+    "codeInsee": "59021",
+    "codePostal": "59600",
+    "population": 1769
+  },
+  {
+    "nom": "Bousies",
+    "slug": "bousies",
+    "codeInsee": "59099",
+    "codePostal": "59222",
+    "population": 1769
+  },
+  {
+    "nom": "Fontaine-Notre-Dame",
+    "slug": "fontaine-notre-dame",
+    "codeInsee": "59244",
+    "codePostal": "59400",
+    "population": 1754
+  },
+  {
+    "nom": "Aubers",
+    "slug": "aubers",
+    "codeInsee": "59025",
+    "codePostal": "59249",
+    "population": 1749
+  },
+  {
+    "nom": "Cantin",
+    "slug": "cantin",
+    "codeInsee": "59126",
+    "codePostal": "59169",
+    "population": 1741
+  },
+  {
+    "nom": "Camphin-en-Carembault",
+    "slug": "camphin-en-carembault",
+    "codeInsee": "59123",
+    "codePostal": "59133",
+    "population": 1737
+  },
+  {
+    "nom": "Rumegies",
+    "slug": "rumegies",
+    "codeInsee": "59519",
+    "codePostal": "59226",
+    "population": 1722
+  },
+  {
+    "nom": "Spycker",
+    "slug": "spycker",
+    "codeInsee": "59576",
+    "codePostal": "59380",
+    "population": 1718
+  },
+  {
+    "nom": "Bierne",
+    "slug": "bierne",
+    "codeInsee": "59082",
+    "codePostal": "59380",
+    "population": 1716
+  },
+  {
+    "nom": "Illies",
+    "slug": "illies",
+    "codeInsee": "59320",
+    "codePostal": "59480",
+    "population": 1712
+  },
+  {
+    "nom": "Aubry-du-Hainaut",
+    "slug": "aubry-du-hainaut",
+    "codeInsee": "59027",
+    "codePostal": "59494",
+    "population": 1705
+  },
+  {
+    "nom": "Saméon",
+    "slug": "sameon",
+    "codeInsee": "59551",
+    "codePostal": "59310",
+    "population": 1704
+  },
+  {
+    "nom": "Glageon",
+    "slug": "glageon",
+    "codeInsee": "59261",
+    "codePostal": "59132",
+    "population": 1699
+  },
+  {
+    "nom": "Bruille-Saint-Amand",
+    "slug": "bruille-saint-amand",
+    "codeInsee": "59114",
+    "codePostal": "59199",
+    "population": 1698
+  },
+  {
+    "nom": "Flines-lès-Mortagne",
+    "slug": "flines-les-mortagne",
+    "codeInsee": "59238",
+    "codePostal": "59158",
+    "population": 1685
+  },
+  {
+    "nom": "Bourghelles",
+    "slug": "bourghelles",
+    "codeInsee": "59096",
+    "codePostal": "59830",
+    "population": 1682
+  },
+  {
+    "nom": "Saulzoir",
+    "slug": "saulzoir",
+    "codeInsee": "59558",
+    "codePostal": "59227",
+    "population": 1672
+  },
+  {
+    "nom": "Moncheaux",
+    "slug": "moncheaux",
+    "codeInsee": "59408",
+    "codePostal": "59283",
+    "population": 1663
+  },
+  {
+    "nom": "Forest-sur-Marque",
+    "slug": "forest-sur-marque",
+    "codeInsee": "59247",
+    "codePostal": "59510",
+    "population": 1662
+  },
+  {
+    "nom": "Vendeville",
+    "slug": "vendeville",
+    "codeInsee": "59609",
+    "codePostal": "59175",
+    "population": 1654
+  },
+  {
+    "nom": "Herzeele",
+    "slug": "herzeele",
+    "codeInsee": "59305",
+    "codePostal": "59470",
+    "population": 1638
+  },
+  {
+    "nom": "Féchain",
+    "slug": "fechain",
+    "codeInsee": "59224",
+    "codePostal": "59247",
+    "population": 1635
+  },
+  {
+    "nom": "Anstaing",
+    "slug": "anstaing",
+    "codeInsee": "59013",
+    "codePostal": "59152",
+    "population": 1631
+  },
+  {
+    "nom": "Zuydcoote",
+    "slug": "zuydcoote",
+    "codeInsee": "59668",
+    "codePostal": "59123",
+    "population": 1630
+  },
+  {
+    "nom": "Lauwin-Planque",
+    "slug": "lauwin-planque",
+    "codeInsee": "59334",
+    "codePostal": "59553",
+    "population": 1608
+  },
+  {
+    "nom": "Steenbecque",
+    "slug": "steenbecque",
+    "codeInsee": "59578",
+    "codePostal": "59189",
+    "population": 1602
+  },
+  {
+    "nom": "Auchy-lez-Orchies",
+    "slug": "auchy-lez-orchies",
+    "codeInsee": "59029",
+    "codePostal": "59310",
+    "population": 1599
+  },
+  {
+    "nom": "Mortagne-du-Nord",
+    "slug": "mortagne-du-nord",
+    "codeInsee": "59418",
+    "codePostal": "59158",
+    "population": 1599
+  },
+  {
+    "nom": "Wavrechain-sous-Denain",
+    "slug": "wavrechain-sous-denain",
+    "codeInsee": "59651",
+    "codePostal": "59220",
+    "population": 1599
+  },
+  {
+    "nom": "Saint-Jans-Cappel",
+    "slug": "saint-jans-cappel",
+    "codeInsee": "59535",
+    "codePostal": "59270",
+    "population": 1598
+  },
+  {
+    "nom": "Arnèke",
+    "slug": "arneke",
+    "codeInsee": "59018",
+    "codePostal": "59285",
+    "population": 1594
+  },
+  {
+    "nom": "Erre",
+    "slug": "erre",
+    "codeInsee": "59203",
+    "codePostal": "59171",
+    "population": 1586
+  },
+  {
+    "nom": "Bouvignies",
+    "slug": "bouvignies",
+    "codeInsee": "59105",
+    "codePostal": "59870",
+    "population": 1580
+  },
+  {
+    "nom": "Saint-Aubert",
+    "slug": "saint-aubert",
+    "codeInsee": "59528",
+    "codePostal": "59188",
+    "population": 1570
+  },
+  {
+    "nom": "Zegerscappel",
+    "slug": "zegerscappel",
+    "codeInsee": "59666",
+    "codePostal": "59470",
+    "population": 1562
+  },
+  {
+    "nom": "Saint-Hilaire-lez-Cambrai",
+    "slug": "saint-hilaire-lez-cambrai",
+    "codeInsee": "59533",
+    "codePostal": "59292",
+    "population": 1558
+  },
+  {
+    "nom": "Colleret",
+    "slug": "colleret",
+    "codeInsee": "59151",
+    "codePostal": "59680",
+    "population": 1541
+  },
+  {
+    "nom": "Uxem",
+    "slug": "uxem",
+    "codeInsee": "59605",
+    "codePostal": "59229",
+    "population": 1518
+  },
+  {
+    "nom": "Mouchin",
+    "slug": "mouchin",
+    "codeInsee": "59419",
+    "codePostal": "59310",
+    "population": 1491
+  },
+  {
+    "nom": "Vicq",
+    "slug": "vicq",
+    "codeInsee": "59613",
+    "codePostal": "59970",
+    "population": 1464
+  },
+  {
+    "nom": "Lieu-Saint-Amand",
+    "slug": "lieu-saint-amand",
+    "codeInsee": "59348",
+    "codePostal": "59111",
+    "population": 1462
+  },
+  {
+    "nom": "Avesnes-le-Sec",
+    "slug": "avesnes-le-sec",
+    "codeInsee": "59038",
+    "codePostal": "59296",
+    "population": 1458
+  },
+  {
+    "nom": "Maroilles",
+    "slug": "maroilles",
+    "codeInsee": "59384",
+    "codePostal": "59550",
+    "population": 1454
+  },
+  {
+    "nom": "Brouckerque",
+    "slug": "brouckerque",
+    "codeInsee": "59110",
+    "codePostal": "59630",
+    "population": 1452
+  },
+  {
+    "nom": "Haussy",
+    "slug": "haussy",
+    "codeInsee": "59289",
+    "codePostal": "59294",
+    "population": 1451
+  },
+  {
+    "nom": "Hordain",
+    "slug": "hordain",
+    "codeInsee": "59313",
+    "codePostal": "59111",
+    "population": 1446
+  },
+  {
+    "nom": "Bollezeele",
+    "slug": "bollezeele",
+    "codeInsee": "59089",
+    "codePostal": "59470",
+    "population": 1445
+  },
+  {
+    "nom": "Le Doulieu",
+    "slug": "le-doulieu",
+    "codeInsee": "59180",
+    "codePostal": "59940",
+    "population": 1436
+  },
+  {
+    "nom": "Felleries",
+    "slug": "felleries",
+    "codeInsee": "59226",
+    "codePostal": "59740",
+    "population": 1433
+  },
+  {
+    "nom": "Férin",
+    "slug": "ferin",
+    "codeInsee": "59228",
+    "codePostal": "59169",
+    "population": 1432
+  },
+  {
+    "nom": "Rumilly-en-Cambrésis",
+    "slug": "rumilly-en-cambresis",
+    "codeInsee": "59520",
+    "codePostal": "59281",
+    "population": 1431
+  },
+  {
+    "nom": "Rieux-en-Cambrésis",
+    "slug": "rieux-en-cambresis",
+    "codeInsee": "59502",
+    "codePostal": "59277",
+    "population": 1425
+  },
+  {
+    "nom": "Neuf-Berquin",
+    "slug": "neuf-berquin",
+    "codeInsee": "59423",
+    "codePostal": "59940",
+    "population": 1417
+  },
+  {
+    "nom": "Gouzeaucourt",
+    "slug": "gouzeaucourt",
+    "codeInsee": "59269",
+    "codePostal": "59231",
+    "population": 1413
+  },
+  {
+    "nom": "Radinghem-en-Weppes",
+    "slug": "radinghem-en-weppes",
+    "codeInsee": "59487",
+    "codePostal": "59320",
+    "population": 1410
+  },
+  {
+    "nom": "Nivelle",
+    "slug": "nivelle",
+    "codeInsee": "59434",
+    "codePostal": "59230",
+    "population": 1406
+  },
+  {
+    "nom": "Steene",
+    "slug": "steene",
+    "codeInsee": "59579",
+    "codePostal": "59380",
+    "population": 1405
+  },
+  {
+    "nom": "Maretz",
+    "slug": "maretz",
+    "codeInsee": "59382",
+    "codePostal": "59238",
+    "population": 1402
+  },
+  {
+    "nom": "Sars-Poteries",
+    "slug": "sars-poteries",
+    "codeInsee": "59555",
+    "codePostal": "59216",
+    "population": 1402
+  },
+  {
+    "nom": "Don",
+    "slug": "don",
+    "codeInsee": "59670",
+    "codePostal": "59272",
+    "population": 1387
+  },
+  {
+    "nom": "Tressin",
+    "slug": "tressin",
+    "codeInsee": "59602",
+    "codePostal": "59152",
+    "population": 1386
+  },
+  {
+    "nom": "Haverskerque",
+    "slug": "haverskerque",
+    "codeInsee": "59293",
+    "codePostal": "59660",
+    "population": 1376
+  },
+  {
+    "nom": "Viesly",
+    "slug": "viesly",
+    "codeInsee": "59614",
+    "codePostal": "59271",
+    "population": 1364
+  },
+  {
+    "nom": "Lécluse",
+    "slug": "lecluse",
+    "codeInsee": "59336",
+    "codePostal": "59259",
+    "population": 1346
+  },
+  {
+    "nom": "Bruille-lez-Marchiennes",
+    "slug": "bruille-lez-marchiennes",
+    "codeInsee": "59113",
+    "codePostal": "59490",
+    "population": 1340
+  },
+  {
+    "nom": "Aix-en-Pévèle",
+    "slug": "aix-en-pevele",
+    "codeInsee": "59004",
+    "codePostal": "59310",
+    "population": 1338
+  },
+  {
+    "nom": "Wannehain",
+    "slug": "wannehain",
+    "codeInsee": "59638",
+    "codePostal": "59830",
+    "population": 1338
+  },
+  {
+    "nom": "Curgies",
+    "slug": "curgies",
+    "codeInsee": "59166",
+    "codePostal": "59990",
+    "population": 1333
+  },
+  {
+    "nom": "Vred",
+    "slug": "vred",
+    "codeInsee": "59629",
+    "codePostal": "59870",
+    "population": 1302
+  },
+  {
+    "nom": "Bellaing",
+    "slug": "bellaing",
+    "codeInsee": "59064",
+    "codePostal": "59135",
+    "population": 1301
+  },
+  {
+    "nom": "Wandignies-Hamage",
+    "slug": "wandignies-hamage",
+    "codeInsee": "59637",
+    "codePostal": "59870",
+    "population": 1301
+  },
+  {
+    "nom": "Englefontaine",
+    "slug": "englefontaine",
+    "codeInsee": "59194",
+    "codePostal": "59530",
+    "population": 1291
+  },
+  {
+    "nom": "Neuf-Mesnil",
+    "slug": "neuf-mesnil",
+    "codeInsee": "59424",
+    "codePostal": "59330",
+    "population": 1286
+  },
+  {
+    "nom": "Ennetières-en-Weppes",
+    "slug": "ennetieres-en-weppes",
+    "codeInsee": "59196",
+    "codePostal": "59320",
+    "population": 1280
+  },
+  {
+    "nom": "Rieulay",
+    "slug": "rieulay",
+    "codeInsee": "59501",
+    "codePostal": "59870",
+    "population": 1261
+  },
+  {
+    "nom": "Winnezeele",
+    "slug": "winnezeele",
+    "codeInsee": "59662",
+    "codePostal": "59670",
+    "population": 1261
+  },
+  {
+    "nom": "Hantay",
+    "slug": "hantay",
+    "codeInsee": "59281",
+    "codePostal": "59496",
+    "population": 1244
+  },
+  {
+    "nom": "Étrœungt",
+    "slug": "etrungt",
+    "codeInsee": "59218",
+    "codePostal": "59219",
+    "population": 1233
+  },
+  {
+    "nom": "Looberghe",
+    "slug": "looberghe",
+    "codeInsee": "59358",
+    "codePostal": "59630",
+    "population": 1228
+  },
+  {
+    "nom": "Fontaine-au-Pire",
+    "slug": "fontaine-au-pire",
+    "codeInsee": "59243",
+    "codePostal": "59157",
+    "population": 1214
+  },
+  {
+    "nom": "Eecke",
+    "slug": "eecke",
+    "codeInsee": "59189",
+    "codePostal": "59114",
+    "population": 1213
+  },
+  {
+    "nom": "Cartignies",
+    "slug": "cartignies",
+    "codeInsee": "59134",
+    "codePostal": "59244",
+    "population": 1209
+  },
+  {
+    "nom": "Gruson",
+    "slug": "gruson",
+    "codeInsee": "59275",
+    "codePostal": "59152",
+    "population": 1207
+  },
+  {
+    "nom": "Villers-Pol",
+    "slug": "villers-pol",
+    "codeInsee": "59626",
+    "codePostal": "59530",
+    "population": 1197
+  },
+  {
+    "nom": "Saint-Souplet",
+    "slug": "saint-souplet",
+    "codeInsee": "59545",
+    "codePostal": "59360",
+    "population": 1191
+  },
+  {
+    "nom": "Ohain",
+    "slug": "ohain",
+    "codeInsee": "59445",
+    "codePostal": "59132",
+    "population": 1171
+  },
+  {
+    "nom": "Cappelle-Brouck",
+    "slug": "cappelle-brouck",
+    "codeInsee": "59130",
+    "codePostal": "59630",
+    "population": 1169
+  },
+  {
+    "nom": "Killem",
+    "slug": "killem",
+    "codeInsee": "59326",
+    "codePostal": "59122",
+    "population": 1164
+  },
+  {
+    "nom": "Fromelles",
+    "slug": "fromelles",
+    "codeInsee": "59257",
+    "codePostal": "59249",
+    "population": 1161
+  },
+  {
+    "nom": "Villers-en-Cauchies",
+    "slug": "villers-en-cauchies",
+    "codeInsee": "59622",
+    "codePostal": "59188",
+    "population": 1151
+  },
+  {
+    "nom": "Saint-Sylvestre-Cappel",
+    "slug": "saint-sylvestre-cappel",
+    "codeInsee": "59546",
+    "codePostal": "59114",
+    "population": 1144
+  },
+  {
+    "nom": "Aubigny-au-Bac",
+    "slug": "aubigny-au-bac",
+    "codeInsee": "59026",
+    "codePostal": "59265",
+    "population": 1143
+  },
+  {
+    "nom": "Estrées",
+    "slug": "estrees",
+    "codeInsee": "59214",
+    "codePostal": "59151",
+    "population": 1134
+  },
+  {
+    "nom": "Wargnies-le-Grand",
+    "slug": "wargnies-le-grand",
+    "codeInsee": "59639",
+    "codePostal": "59144",
+    "population": 1125
+  },
+  {
+    "nom": "Vendegies-sur-Écaillon",
+    "slug": "vendegies-sur-ecaillon",
+    "codeInsee": "59608",
+    "codePostal": "59213",
+    "population": 1123
+  },
+  {
+    "nom": "Jenlain",
+    "slug": "jenlain",
+    "codeInsee": "59323",
+    "codePostal": "59144",
+    "population": 1115
+  },
+  {
+    "nom": "Quaëdypre",
+    "slug": "quaedypre",
+    "codeInsee": "59478",
+    "codePostal": "59380",
+    "population": 1108
+  },
+  {
+    "nom": "Merris",
+    "slug": "merris",
+    "codeInsee": "59399",
+    "codePostal": "59270",
+    "population": 1106
+  },
+  {
+    "nom": "Thun-Saint-Amand",
+    "slug": "thun-saint-amand",
+    "codeInsee": "59594",
+    "codePostal": "59158",
+    "population": 1106
+  },
+  {
+    "nom": "Carnin",
+    "slug": "carnin",
+    "codeInsee": "59133",
+    "codePostal": "59112",
+    "population": 1105
+  },
+  {
+    "nom": "Neuvilly",
+    "slug": "neuvilly",
+    "codeInsee": "59430",
+    "codePostal": "59360",
+    "population": 1103
+  },
+  {
+    "nom": "Verchain-Maugré",
+    "slug": "verchain-maugre",
+    "codeInsee": "59610",
+    "codePostal": "59227",
+    "population": 1103
+  },
+  {
+    "nom": "Bugnicourt",
+    "slug": "bugnicourt",
+    "codeInsee": "59117",
+    "codePostal": "59151",
+    "population": 1095
+  },
+  {
+    "nom": "Clary",
+    "slug": "clary",
+    "codeInsee": "59149",
+    "codePostal": "59225",
+    "population": 1088
+  },
+  {
+    "nom": "Villereau",
+    "slug": "villereau",
+    "codeInsee": "59619",
+    "codePostal": "59530",
+    "population": 1084
+  },
+  {
+    "nom": "Artres",
+    "slug": "artres",
+    "codeInsee": "59019",
+    "codePostal": "59269",
+    "population": 1082
+  },
+  {
+    "nom": "Gœulzin",
+    "slug": "gulzin",
+    "codeInsee": "59263",
+    "codePostal": "59169",
+    "population": 1070
+  },
+  {
+    "nom": "Saint-Remy-du-Nord",
+    "slug": "saint-remy-du-nord",
+    "codeInsee": "59543",
+    "codePostal": "59330",
+    "population": 1054
+  },
+  {
+    "nom": "Bavinchove",
+    "slug": "bavinchove",
+    "codeInsee": "59054",
+    "codePostal": "59670",
+    "population": 1045
+  },
+  {
+    "nom": "Paillencourt",
+    "slug": "paillencourt",
+    "codeInsee": "59455",
+    "codePostal": "59295",
+    "population": 1030
+  },
+  {
+    "nom": "Péronne-en-Mélantois",
+    "slug": "peronne-en-melantois",
+    "codeInsee": "59458",
+    "codePostal": "59273",
+    "population": 1025
+  },
+  {
+    "nom": "Ferrière-la-Petite",
+    "slug": "ferriere-la-petite",
+    "codeInsee": "59231",
+    "codePostal": "59680",
+    "population": 1024
+  },
+  {
+    "nom": "Élesmes",
+    "slug": "elesmes",
+    "codeInsee": "59190",
+    "codePostal": "59600",
+    "population": 1013
+  },
+  {
+    "nom": "Villers-Sire-Nicole",
+    "slug": "villers-sire-nicole",
+    "codeInsee": "59627",
+    "codePostal": "59600",
+    "population": 1009
+  },
+  {
+    "nom": "Pitgam",
+    "slug": "pitgam",
+    "codeInsee": "59463",
+    "codePostal": "59284",
+    "population": 1007
+  },
+  {
+    "nom": "Prisches",
+    "slug": "prisches",
+    "codeInsee": "59474",
+    "codePostal": "59550",
+    "population": 1000
+  },
+  {
+    "nom": "Beaufort",
+    "slug": "beaufort",
+    "codeInsee": "59058",
+    "codePostal": "59330",
+    "population": 995
+  },
+  {
+    "nom": "Saint-Pierre-Brouck",
+    "slug": "saint-pierre-brouck",
+    "codeInsee": "59539",
+    "codePostal": "59630",
+    "population": 989
+  },
+  {
+    "nom": "Carnières",
+    "slug": "carnieres",
+    "codeInsee": "59132",
+    "codePostal": "59217",
+    "population": 983
+  },
+  {
+    "nom": "Houtkerque",
+    "slug": "houtkerque",
+    "codeInsee": "59318",
+    "codePostal": "59470",
+    "population": 978
+  },
+  {
+    "nom": "Saint-Python",
+    "slug": "saint-python",
+    "codeInsee": "59541",
+    "codePostal": "59730",
+    "population": 978
+  },
+  {
+    "nom": "Taisnières-sur-Hon",
+    "slug": "taisnieres-sur-hon",
+    "codeInsee": "59584",
+    "codePostal": "59570",
+    "population": 963
+  },
+  {
+    "nom": "Maulde",
+    "slug": "maulde",
+    "codeInsee": "59393",
+    "codePostal": "59158",
+    "population": 949
+  },
+  {
+    "nom": "Odomez",
+    "slug": "odomez",
+    "codeInsee": "59444",
+    "codePostal": "59970",
+    "population": 945
+  },
+  {
+    "nom": "Strazeele",
+    "slug": "strazeele",
+    "codeInsee": "59582",
+    "codePostal": "59270",
+    "population": 942
+  },
+  {
+    "nom": "Vieux-Reng",
+    "slug": "vieux-reng",
+    "codeInsee": "59618",
+    "codePostal": "59600",
+    "population": 938
+  },
+  {
+    "nom": "Estreux",
+    "slug": "estreux",
+    "codeInsee": "59215",
+    "codePostal": "59990",
+    "population": 937
+  },
+  {
+    "nom": "Tourmignies",
+    "slug": "tourmignies",
+    "codeInsee": "59600",
+    "codePostal": "59551",
+    "population": 936
+  },
+  {
+    "nom": "Flêtre",
+    "slug": "fletre",
+    "codeInsee": "59237",
+    "codePostal": "59270",
+    "population": 923
+  },
+  {
+    "nom": "Louvil",
+    "slug": "louvil",
+    "codeInsee": "59364",
+    "codePostal": "59830",
+    "population": 922
+  },
+  {
+    "nom": "Thiennes",
+    "slug": "thiennes",
+    "codeInsee": "59590",
+    "codePostal": "59189",
+    "population": 920
+  },
+  {
+    "nom": "Fressain",
+    "slug": "fressain",
+    "codeInsee": "59254",
+    "codePostal": "59234",
+    "population": 919
+  },
+  {
+    "nom": "Château-l'Abbaye",
+    "slug": "chateau-l-abbaye",
+    "codeInsee": "59144",
+    "codePostal": "59230",
+    "population": 917
+  },
+  {
+    "nom": "Hondeghem",
+    "slug": "hondeghem",
+    "codeInsee": "59308",
+    "codePostal": "59190",
+    "population": 916
+  },
+  {
+    "nom": "Mastaing",
+    "slug": "mastaing",
+    "codeInsee": "59391",
+    "codePostal": "59172",
+    "population": 911
+  },
+  {
+    "nom": "Nieurlet",
+    "slug": "nieurlet",
+    "codeInsee": "59433",
+    "codePostal": "59143",
+    "population": 908
+  },
+  {
+    "nom": "Houdain-lez-Bavay",
+    "slug": "houdain-lez-bavay",
+    "codeInsee": "59315",
+    "codePostal": "59570",
+    "population": 902
+  },
+  {
+    "nom": "Louvignies-Quesnoy",
+    "slug": "louvignies-quesnoy",
+    "codeInsee": "59363",
+    "codePostal": "59530",
+    "population": 899
+  },
+  {
+    "nom": "Rubrouck",
+    "slug": "rubrouck",
+    "codeInsee": "59516",
+    "codePostal": "59285",
+    "population": 899
+  },
+  {
+    "nom": "Esquerchin",
+    "slug": "esquerchin",
+    "codeInsee": "59211",
+    "codePostal": "59553",
+    "population": 893
+  },
+  {
+    "nom": "Anhiers",
+    "slug": "anhiers",
+    "codeInsee": "59007",
+    "codePostal": "59194",
+    "population": 888
+  },
+  {
+    "nom": "Saint-Vaast-en-Cambrésis",
+    "slug": "saint-vaast-en-cambresis",
+    "codeInsee": "59547",
+    "codePostal": "59188",
+    "population": 871
+  },
+  {
+    "nom": "Socx",
+    "slug": "socx",
+    "codeInsee": "59570",
+    "codePostal": "59380",
+    "population": 869
+  },
+  {
+    "nom": "Hon-Hergies",
+    "slug": "hon-hergies",
+    "codeInsee": "59310",
+    "codePostal": "59570",
+    "population": 867
+  },
+  {
+    "nom": "Quérénaing",
+    "slug": "querenaing",
+    "codeInsee": "59480",
+    "codePostal": "59269",
+    "population": 865
+  },
+  {
+    "nom": "Jolimetz",
+    "slug": "jolimetz",
+    "codeInsee": "59325",
+    "codePostal": "59530",
+    "population": 856
+  },
+  {
+    "nom": "Bambecque",
+    "slug": "bambecque",
+    "codeInsee": "59046",
+    "codePostal": "59470",
+    "population": 845
+  },
+  {
+    "nom": "Beaucamps-Ligny",
+    "slug": "beaucamps-ligny",
+    "codeInsee": "59056",
+    "codePostal": "59134",
+    "population": 845
+  },
+  {
+    "nom": "Millam",
+    "slug": "millam",
+    "codeInsee": "59402",
+    "codePostal": "59143",
+    "population": 838
+  },
+  {
+    "nom": "Noyelles-lès-Seclin",
+    "slug": "noyelles-les-seclin",
+    "codeInsee": "59437",
+    "codePostal": "59139",
+    "population": 838
+  },
+  {
+    "nom": "Holque",
+    "slug": "holque",
+    "codeInsee": "59307",
+    "codePostal": "59143",
+    "population": 837
+  },
+  {
+    "nom": "Preux-au-Bois",
+    "slug": "preux-au-bois",
+    "codeInsee": "59472",
+    "codePostal": "59288",
+    "population": 832
+  },
+  {
+    "nom": "Noordpeene",
+    "slug": "noordpeene",
+    "codeInsee": "59436",
+    "codePostal": "59670",
+    "population": 825
+  },
+  {
+    "nom": "Sainte-Marie-Cappel",
+    "slug": "sainte-marie-cappel",
+    "codeInsee": "59536",
+    "codePostal": "59670",
+    "population": 825
+  },
+  {
+    "nom": "Thivencelle",
+    "slug": "thivencelle",
+    "codeInsee": "59591",
+    "codePostal": "59163",
+    "population": 817
+  },
+  {
+    "nom": "Noyelles-sur-Escaut",
+    "slug": "noyelles-sur-escaut",
+    "codeInsee": "59438",
+    "codePostal": "59159",
+    "population": 816
+  },
+  {
+    "nom": "Dompierre-sur-Helpe",
+    "slug": "dompierre-sur-helpe",
+    "codeInsee": "59177",
+    "codePostal": "59440",
+    "population": 815
+  },
+  {
+    "nom": "Bellignies",
+    "slug": "bellignies",
+    "codeInsee": "59065",
+    "codePostal": "59570",
+    "population": 810
+  },
+  {
+    "nom": "Maresches",
+    "slug": "maresches",
+    "codeInsee": "59381",
+    "codePostal": "59990",
+    "population": 808
+  },
+  {
+    "nom": "Wallon-Cappel",
+    "slug": "wallon-cappel",
+    "codeInsee": "59634",
+    "codePostal": "59190",
+    "population": 808
+  },
+  {
+    "nom": "Troisvilles",
+    "slug": "troisvilles",
+    "codeInsee": "59604",
+    "codePostal": "59980",
+    "population": 805
+  },
+  {
+    "nom": "Émerchicourt",
+    "slug": "emerchicourt",
+    "codeInsee": "59192",
+    "codePostal": "59580",
+    "population": 804
+  },
+  {
+    "nom": "Hamel",
+    "slug": "hamel",
+    "codeInsee": "59280",
+    "codePostal": "59151",
+    "population": 797
+  },
+  {
+    "nom": "Craywick",
+    "slug": "craywick",
+    "codeInsee": "59159",
+    "codePostal": "59279",
+    "population": 791
+  },
+  {
+    "nom": "Thun-l'Évêque",
+    "slug": "thun-l-eveque",
+    "codeInsee": "59593",
+    "codePostal": "59141",
+    "population": 788
+  },
+  {
+    "nom": "Lynde",
+    "slug": "lynde",
+    "codeInsee": "59366",
+    "codePostal": "59173",
+    "population": 783
+  },
+  {
+    "nom": "Catillon-sur-Sambre",
+    "slug": "catillon-sur-sambre",
+    "codeInsee": "59137",
+    "codePostal": "59360",
+    "population": 781
+  },
+  {
+    "nom": "Bermerain",
+    "slug": "bermerain",
+    "codeInsee": "59069",
+    "codePostal": "59213",
+    "population": 778
+  },
+  {
+    "nom": "Brillon",
+    "slug": "brillon",
+    "codeInsee": "59109",
+    "codePostal": "59178",
+    "population": 771
+  },
+  {
+    "nom": "Wargnies-le-Petit",
+    "slug": "wargnies-le-petit",
+    "codeInsee": "59640",
+    "codePostal": "59144",
+    "population": 771
+  },
+  {
+    "nom": "Boëseghem",
+    "slug": "boeseghem",
+    "codeInsee": "59087",
+    "codePostal": "59189",
+    "population": 766
+  },
+  {
+    "nom": "Bouvines",
+    "slug": "bouvines",
+    "codeInsee": "59106",
+    "codePostal": "59830",
+    "population": 766
+  },
+  {
+    "nom": "Chemy",
+    "slug": "chemy",
+    "codeInsee": "59145",
+    "codePostal": "59147",
+    "population": 766
+  },
+  {
+    "nom": "Pommereuil",
+    "slug": "pommereuil",
+    "codeInsee": "59465",
+    "codePostal": "59360",
+    "population": 765
+  },
+  {
+    "nom": "Awoingt",
+    "slug": "awoingt",
+    "codeInsee": "59039",
+    "codePostal": "59400",
+    "population": 757
+  },
+  {
+    "nom": "Staple",
+    "slug": "staple",
+    "codeInsee": "59577",
+    "codePostal": "59190",
+    "population": 756
+  },
+  {
+    "nom": "Marcq-en-Ostrevent",
+    "slug": "marcq-en-ostrevent",
+    "codeInsee": "59379",
+    "codePostal": "59252",
+    "population": 741
+  },
+  {
+    "nom": "Rombies-et-Marchipont",
+    "slug": "rombies-et-marchipont",
+    "codeInsee": "59505",
+    "codePostal": "59990",
+    "population": 741
+  },
+  {
+    "nom": "Les Rues-des-Vignes",
+    "slug": "les-rues-des-vignes",
+    "codeInsee": "59517",
+    "codePostal": "59258",
+    "population": 737
+  },
+  {
+    "nom": "Saint-Hilaire-sur-Helpe",
+    "slug": "saint-hilaire-sur-helpe",
+    "codeInsee": "59534",
+    "codePostal": "59440",
+    "population": 733
+  },
+  {
+    "nom": "Estrun",
+    "slug": "estrun",
+    "codeInsee": "59219",
+    "codePostal": "59295",
+    "population": 725
+  },
+  {
+    "nom": "Gognies-Chaussée",
+    "slug": "gognies-chaussee",
+    "codeInsee": "59264",
+    "codePostal": "59600",
+    "population": 723
+  },
+  {
+    "nom": "Crèvecœur-sur-l'Escaut",
+    "slug": "crevecur-sur-l-escaut",
+    "codeInsee": "59161",
+    "codePostal": "59258",
+    "population": 716
+  },
+  {
+    "nom": "Loffre",
+    "slug": "loffre",
+    "codeInsee": "59354",
+    "codePostal": "59182",
+    "population": 712
+  },
+  {
+    "nom": "Honnecourt-sur-Escaut",
+    "slug": "honnecourt-sur-escaut",
+    "codeInsee": "59312",
+    "codePostal": "59266",
+    "population": 710
+  },
+  {
+    "nom": "Millonfosse",
+    "slug": "millonfosse",
+    "codeInsee": "59403",
+    "codePostal": "59178",
+    "population": 705
+  },
+  {
+    "nom": "Brunémont",
+    "slug": "brunemont",
+    "codeInsee": "59115",
+    "codePostal": "59151",
+    "population": 704
+  },
+  {
+    "nom": "Lederzeele",
+    "slug": "lederzeele",
+    "codeInsee": "59337",
+    "codePostal": "59143",
+    "population": 703
+  },
+  {
+    "nom": "Mairieux",
+    "slug": "mairieux",
+    "codeInsee": "59370",
+    "codePostal": "59600",
+    "population": 699
+  },
+  {
+    "nom": "Oisy",
+    "slug": "oisy",
+    "codeInsee": "59446",
+    "codePostal": "59195",
+    "population": 699
+  },
+  {
+    "nom": "Mecquignies",
+    "slug": "mecquignies",
+    "codeInsee": "59396",
+    "codePostal": "59570",
+    "population": 695
+  },
+  {
+    "nom": "Tilloy-lez-Cambrai",
+    "slug": "tilloy-lez-cambrai",
+    "codeInsee": "59597",
+    "codePostal": "59554",
+    "population": 695
+  },
+  {
+    "nom": "Oudezeele",
+    "slug": "oudezeele",
+    "codeInsee": "59453",
+    "codePostal": "59670",
+    "population": 690
+  },
+  {
+    "nom": "Béthencourt",
+    "slug": "bethencourt",
+    "codeInsee": "59075",
+    "codePostal": "59540",
+    "population": 689
+  },
+  {
+    "nom": "Briastre",
+    "slug": "briastre",
+    "codeInsee": "59108",
+    "codePostal": "59730",
+    "population": 689
+  },
+  {
+    "nom": "Cattenières",
+    "slug": "cattenieres",
+    "codeInsee": "59138",
+    "codePostal": "59217",
+    "population": 689
+  },
+  {
+    "nom": "Fontaine-au-Bois",
+    "slug": "fontaine-au-bois",
+    "codeInsee": "59242",
+    "codePostal": "59550",
+    "population": 687
+  },
+  {
+    "nom": "Saint-Waast",
+    "slug": "saint-waast",
+    "codeInsee": "59548",
+    "codePostal": "59570",
+    "population": 686
+  },
+  {
+    "nom": "Villers-Guislain",
+    "slug": "villers-guislain",
+    "codeInsee": "59623",
+    "codePostal": "59297",
+    "population": 684
+  },
+  {
+    "nom": "Erchin",
+    "slug": "erchin",
+    "codeInsee": "59199",
+    "codePostal": "59169",
+    "population": 670
+  },
+  {
+    "nom": "Villers-au-Tertre",
+    "slug": "villers-au-tertre",
+    "codeInsee": "59620",
+    "codePostal": "59234",
+    "population": 670
+  },
+  {
+    "nom": "Cagnoncles",
+    "slug": "cagnoncles",
+    "codeInsee": "59121",
+    "codePostal": "59161",
+    "population": 663
+  },
+  {
+    "nom": "Ebblinghem",
+    "slug": "ebblinghem",
+    "codeInsee": "59184",
+    "codePostal": "59173",
+    "population": 660
+  },
+  {
+    "nom": "Obies",
+    "slug": "obies",
+    "codeInsee": "59441",
+    "codePostal": "59570",
+    "population": 660
+  },
+  {
+    "nom": "Crochte",
+    "slug": "crochte",
+    "codeInsee": "59162",
+    "codePostal": "59380",
+    "population": 659
+  },
+  {
+    "nom": "Noyelles-sur-Selle",
+    "slug": "noyelles-sur-selle",
+    "codeInsee": "59440",
+    "codePostal": "59282",
+    "population": 657
+  },
+  {
+    "nom": "Esnes",
+    "slug": "esnes",
+    "codeInsee": "59209",
+    "codePostal": "59127",
+    "population": 656
+  },
+  {
+    "nom": "Rouvignies",
+    "slug": "rouvignies",
+    "codeInsee": "59515",
+    "codePostal": "59220",
+    "population": 655
+  },
+  {
+    "nom": "Cerfontaine",
+    "slug": "cerfontaine",
+    "codeInsee": "59142",
+    "codePostal": "59680",
+    "population": 646
+  },
+  {
+    "nom": "Ors",
+    "slug": "ors",
+    "codeInsee": "59450",
+    "codePostal": "59360",
+    "population": 644
+  },
+  {
+    "nom": "West-Cappel",
+    "slug": "west-cappel",
+    "codeInsee": "59657",
+    "codePostal": "59380",
+    "population": 644
+  },
+  {
+    "nom": "Vieux-Mesnil",
+    "slug": "vieux-mesnil",
+    "codeInsee": "59617",
+    "codePostal": "59138",
+    "population": 641
+  },
+  {
+    "nom": "Sepmeries",
+    "slug": "sepmeries",
+    "codeInsee": "59565",
+    "codePostal": "59269",
+    "population": 640
+  },
+  {
+    "nom": "Le Maisnil",
+    "slug": "le-maisnil",
+    "codeInsee": "59371",
+    "codePostal": "59134",
+    "population": 628
+  },
+  {
+    "nom": "Berthen",
+    "slug": "berthen",
+    "codeInsee": "59073",
+    "codePostal": "59270",
+    "population": 627
+  },
+  {
+    "nom": "Erquinghem-le-Sec",
+    "slug": "erquinghem-le-sec",
+    "codeInsee": "59201",
+    "codePostal": "59320",
+    "population": 620
+  },
+  {
+    "nom": "Naves",
+    "slug": "naves",
+    "codeInsee": "59422",
+    "codePostal": "59161",
+    "population": 620
+  },
+  {
+    "nom": "Sars-et-Rosières",
+    "slug": "sars-et-rosieres",
+    "codeInsee": "59554",
+    "codePostal": "59230",
+    "population": 620
+  },
+  {
+    "nom": "L'Orée de Mormal",
+    "slug": "l-oree-de-mormal",
+    "codeInsee": "59006",
+    "codePostal": "59144",
+    "population": 619
+  },
+  {
+    "nom": "Inchy",
+    "slug": "inchy",
+    "codeInsee": "59321",
+    "codePostal": "59540",
+    "population": 619
+  },
+  {
+    "nom": "Englos",
+    "slug": "englos",
+    "codeInsee": "59195",
+    "codePostal": "59320",
+    "population": 618
+  },
+  {
+    "nom": "Monchaux-sur-Écaillon",
+    "slug": "monchaux-sur-ecaillon",
+    "codeInsee": "59407",
+    "codePostal": "59224",
+    "population": 616
+  },
+  {
+    "nom": "Merckeghem",
+    "slug": "merckeghem",
+    "codeInsee": "59397",
+    "codePostal": "59470",
+    "population": 615
+  },
+  {
+    "nom": "Ledringhem",
+    "slug": "ledringhem",
+    "codeInsee": "59338",
+    "codePostal": "59470",
+    "population": 611
+  },
+  {
+    "nom": "Élincourt",
+    "slug": "elincourt",
+    "codeInsee": "59191",
+    "codePostal": "59127",
+    "population": 606
+  },
+  {
+    "nom": "Wasnes-au-Bac",
+    "slug": "wasnes-au-bac",
+    "codeInsee": "59645",
+    "codePostal": "59252",
+    "population": 604
+  },
+  {
+    "nom": "Warlaing",
+    "slug": "warlaing",
+    "codeInsee": "59642",
+    "codePostal": "59870",
+    "population": 603
+  },
+  {
+    "nom": "Beugnies",
+    "slug": "beugnies",
+    "codeInsee": "59078",
+    "codePostal": "59216",
+    "population": 599
+  },
+  {
+    "nom": "Hargnies",
+    "slug": "hargnies",
+    "codeInsee": "59283",
+    "codePostal": "59138",
+    "population": 599
+  },
+  {
+    "nom": "La Neuville",
+    "slug": "la-neuville",
+    "codeInsee": "59427",
+    "codePostal": "59239",
+    "population": 593
+  },
+  {
+    "nom": "Buysscheure",
+    "slug": "buysscheure",
+    "codeInsee": "59119",
+    "codePostal": "59285",
+    "population": 582
+  },
+  {
+    "nom": "Wicres",
+    "slug": "wicres",
+    "codeInsee": "59658",
+    "codePostal": "59134",
+    "population": 581
+  },
+  {
+    "nom": "Cauroir",
+    "slug": "cauroir",
+    "codeInsee": "59141",
+    "codePostal": "59400",
+    "population": 579
+  },
+  {
+    "nom": "Ramillies",
+    "slug": "ramillies",
+    "codeInsee": "59492",
+    "codePostal": "59161",
+    "population": 579
+  },
+  {
+    "nom": "Beaudignies",
+    "slug": "beaudignies",
+    "codeInsee": "59057",
+    "codePostal": "59530",
+    "population": 574
+  },
+  {
+    "nom": "Volckerinckhove",
+    "slug": "volckerinckhove",
+    "codeInsee": "59628",
+    "codePostal": "59470",
+    "population": 573
+  },
+  {
+    "nom": "Fressies",
+    "slug": "fressies",
+    "codeInsee": "59255",
+    "codePostal": "59268",
+    "population": 571
+  },
+  {
+    "nom": "Hem-Lenglet",
+    "slug": "hem-lenglet",
+    "codeInsee": "59300",
+    "codePostal": "59247",
+    "population": 565
+  },
+  {
+    "nom": "Orsinval",
+    "slug": "orsinval",
+    "codeInsee": "59451",
+    "codePostal": "59530",
+    "population": 564
+  },
+  {
+    "nom": "Cobrieux",
+    "slug": "cobrieux",
+    "codeInsee": "59150",
+    "codePostal": "59830",
+    "population": 563
+  },
+  {
+    "nom": "Zuytpeene",
+    "slug": "zuytpeene",
+    "codeInsee": "59669",
+    "codePostal": "59670",
+    "population": 557
+  },
+  {
+    "nom": "Borre",
+    "slug": "borre",
+    "codeInsee": "59091",
+    "codePostal": "59190",
+    "population": 553
+  },
+  {
+    "nom": "Montigny-en-Cambrésis",
+    "slug": "montigny-en-cambresis",
+    "codeInsee": "59413",
+    "codePostal": "59225",
+    "population": 552
+  },
+  {
+    "nom": "Bazuel",
+    "slug": "bazuel",
+    "codeInsee": "59055",
+    "codePostal": "59360",
+    "population": 551
+  },
+  {
+    "nom": "Aubencheul-au-Bac",
+    "slug": "aubencheul-au-bac",
+    "codeInsee": "59023",
+    "codePostal": "59265",
+    "population": 549
+  },
+  {
+    "nom": "Forest-en-Cambrésis",
+    "slug": "forest-en-cambresis",
+    "codeInsee": "59246",
+    "codePostal": "59222",
+    "population": 549
+  },
+  {
+    "nom": "Thun-Saint-Martin",
+    "slug": "thun-saint-martin",
+    "codeInsee": "59595",
+    "codePostal": "59141",
+    "population": 543
+  },
+  {
+    "nom": "Honnechy",
+    "slug": "honnechy",
+    "codeInsee": "59311",
+    "codePostal": "59980",
+    "population": 541
+  },
+  {
+    "nom": "Oxelaëre",
+    "slug": "oxelaere",
+    "codeInsee": "59454",
+    "codePostal": "59670",
+    "population": 540
+  },
+  {
+    "nom": "Dourlers",
+    "slug": "dourlers",
+    "codeInsee": "59181",
+    "codePostal": "59440",
+    "population": 536
+  },
+  {
+    "nom": "Tilloy-lez-Marchiennes",
+    "slug": "tilloy-lez-marchiennes",
+    "codeInsee": "59596",
+    "codePostal": "59870",
+    "population": 536
+  },
+  {
+    "nom": "Vertain",
+    "slug": "vertain",
+    "codeInsee": "59612",
+    "codePostal": "59730",
+    "population": 535
+  },
+  {
+    "nom": "Bévillers",
+    "slug": "bevillers",
+    "codeInsee": "59081",
+    "codePostal": "59217",
+    "population": 529
+  },
+  {
+    "nom": "Liessies",
+    "slug": "liessies",
+    "codeInsee": "59347",
+    "codePostal": "59740",
+    "population": 527
+  },
+  {
+    "nom": "Limont-Fontaine",
+    "slug": "limont-fontaine",
+    "codeInsee": "59351",
+    "codePostal": "59330",
+    "population": 525
+  },
+  {
+    "nom": "Boussières-sur-Sambre",
+    "slug": "boussieres-sur-sambre",
+    "codeInsee": "59103",
+    "codePostal": "59330",
+    "population": 522
+  },
+  {
+    "nom": "Sémeries",
+    "slug": "semeries",
+    "codeInsee": "59562",
+    "codePostal": "59440",
+    "population": 520
+  },
+  {
+    "nom": "Terdeghem",
+    "slug": "terdeghem",
+    "codeInsee": "59587",
+    "codePostal": "59114",
+    "population": 519
+  },
+  {
+    "nom": "Féron",
+    "slug": "feron",
+    "codeInsee": "59229",
+    "codePostal": "59610",
+    "population": 514
+  },
+  {
+    "nom": "Niergnies",
+    "slug": "niergnies",
+    "codeInsee": "59432",
+    "codePostal": "59400",
+    "population": 509
+  },
+  {
+    "nom": "Le Favril",
+    "slug": "le-favril",
+    "codeInsee": "59223",
+    "codePostal": "59550",
+    "population": 506
+  },
+  {
+    "nom": "Floyon",
+    "slug": "floyon",
+    "codeInsee": "59241",
+    "codePostal": "59219",
+    "population": 505
+  },
+  {
+    "nom": "Ghissignies",
+    "slug": "ghissignies",
+    "codeInsee": "59259",
+    "codePostal": "59530",
+    "population": 505
+  },
+  {
+    "nom": "Malincourt",
+    "slug": "malincourt",
+    "codeInsee": "59372",
+    "codePostal": "59127",
+    "population": 498
+  },
+  {
+    "nom": "Bantigny",
+    "slug": "bantigny",
+    "codeInsee": "59048",
+    "codePostal": "59554",
+    "population": 494
+  },
+  {
+    "nom": "Mœuvres",
+    "slug": "muvres",
+    "codeInsee": "59405",
+    "codePostal": "59400",
+    "population": 490
+  },
+  {
+    "nom": "Sercus",
+    "slug": "sercus",
+    "codeInsee": "59568",
+    "codePostal": "59173",
+    "population": 486
+  },
+  {
+    "nom": "Saint-Martin-sur-Écaillon",
+    "slug": "saint-martin-sur-ecaillon",
+    "codeInsee": "59537",
+    "codePostal": "59213",
+    "population": 483
+  },
+  {
+    "nom": "Vendegies-au-Bois",
+    "slug": "vendegies-au-bois",
+    "codeInsee": "59607",
+    "codePostal": "59218",
+    "population": 482
+  },
+  {
+    "nom": "Escarmain",
+    "slug": "escarmain",
+    "codeInsee": "59204",
+    "codePostal": "59213",
+    "population": 479
+  },
+  {
+    "nom": "Estourmel",
+    "slug": "estourmel",
+    "codeInsee": "59213",
+    "codePostal": "59400",
+    "population": 475
+  },
+  {
+    "nom": "Taisnières-en-Thiérache",
+    "slug": "taisnieres-en-thierache",
+    "codeInsee": "59583",
+    "codePostal": "59550",
+    "population": 475
+  },
+  {
+    "nom": "Grand-Fayt",
+    "slug": "grand-fayt",
+    "codeInsee": "59270",
+    "codePostal": "59244",
+    "population": 473
+  },
+  {
+    "nom": "Romeries",
+    "slug": "romeries",
+    "codeInsee": "59506",
+    "codePostal": "59730",
+    "population": 471
+  },
+  {
+    "nom": "Saint-Remy-Chaussée",
+    "slug": "saint-remy-chaussee",
+    "codeInsee": "59542",
+    "codePostal": "59620",
+    "population": 469
+  },
+  {
+    "nom": "Caullery",
+    "slug": "caullery",
+    "codeInsee": "59140",
+    "codePostal": "59191",
+    "population": 467
+  },
+  {
+    "nom": "La Groise",
+    "slug": "la-groise",
+    "codeInsee": "59274",
+    "codePostal": "59360",
+    "population": 464
+  },
+  {
+    "nom": "Oost-Cappel",
+    "slug": "oost-cappel",
+    "codeInsee": "59448",
+    "codePostal": "59122",
+    "population": 463
+  },
+  {
+    "nom": "Eringhem",
+    "slug": "eringhem",
+    "codeInsee": "59200",
+    "codePostal": "59470",
+    "population": 462
+  },
+  {
+    "nom": "Marbaix",
+    "slug": "marbaix",
+    "codeInsee": "59374",
+    "codePostal": "59440",
+    "population": 461
+  },
+  {
+    "nom": "Beaumont-en-Cambrésis",
+    "slug": "beaumont-en-cambresis",
+    "codeInsee": "59059",
+    "codePostal": "59540",
+    "population": 458
+  },
+  {
+    "nom": "Roucourt",
+    "slug": "roucourt",
+    "codeInsee": "59513",
+    "codePostal": "59169",
+    "population": 456
+  },
+  {
+    "nom": "Ruesnes",
+    "slug": "ruesnes",
+    "codeInsee": "59518",
+    "codePostal": "59530",
+    "population": 448
+  },
+  {
+    "nom": "Abancourt",
+    "slug": "abancourt",
+    "codeInsee": "59001",
+    "codePostal": "59268",
+    "population": 441
+  },
+  {
+    "nom": "Bantouzelle",
+    "slug": "bantouzelle",
+    "codeInsee": "59049",
+    "codePostal": "59266",
+    "population": 441
+  },
+  {
+    "nom": "Wavrechain-sous-Faulx",
+    "slug": "wavrechain-sous-faulx",
+    "codeInsee": "59652",
+    "codePostal": "59111",
+    "population": 440
+  },
+  {
+    "nom": "Potelle",
+    "slug": "potelle",
+    "codeInsee": "59468",
+    "codePostal": "59530",
+    "population": 439
+  },
+  {
+    "nom": "Boussières-en-Cambrésis",
+    "slug": "boussieres-en-cambresis",
+    "codeInsee": "59102",
+    "codePostal": "59217",
+    "population": 436
+  },
+  {
+    "nom": "Lesdain",
+    "slug": "lesdain",
+    "codeInsee": "59341",
+    "codePostal": "59258",
+    "population": 432
+  },
+  {
+    "nom": "La Flamengrie",
+    "slug": "la-flamengrie",
+    "codeInsee": "59232",
+    "codePostal": "59570",
+    "population": 431
+  },
+  {
+    "nom": "Broxeele",
+    "slug": "broxeele",
+    "codeInsee": "59111",
+    "codePostal": "59470",
+    "population": 425
+  },
+  {
+    "nom": "Herrin",
+    "slug": "herrin",
+    "codeInsee": "59304",
+    "codePostal": "59147",
+    "population": 425
+  },
+  {
+    "nom": "Monceau-Saint-Waast",
+    "slug": "monceau-saint-waast",
+    "codeInsee": "59406",
+    "codePostal": "59620",
+    "population": 419
+  },
+  {
+    "nom": "Séranvillers-Forenville",
+    "slug": "seranvillers-forenville",
+    "codeInsee": "59567",
+    "codePostal": "59400",
+    "population": 416
+  },
+  {
+    "nom": "Cantaing-sur-Escaut",
+    "slug": "cantaing-sur-escaut",
+    "codeInsee": "59125",
+    "codePostal": "59267",
+    "population": 410
+  },
+  {
+    "nom": "Saint-Momelin",
+    "slug": "saint-momelin",
+    "codeInsee": "59538",
+    "codePostal": "59143",
+    "population": 410
+  },
+  {
+    "nom": "Sailly-lez-Cambrai",
+    "slug": "sailly-lez-cambrai",
+    "codeInsee": "59521",
+    "codePostal": "59554",
+    "population": 409
+  },
+  {
+    "nom": "Maurois",
+    "slug": "maurois",
+    "codeInsee": "59394",
+    "codePostal": "59980",
+    "population": 405
+  },
+  {
+    "nom": "Pradelles",
+    "slug": "pradelles",
+    "codeInsee": "59469",
+    "codePostal": "59190",
+    "population": 399
+  },
+  {
+    "nom": "Sommaing",
+    "slug": "sommaing",
+    "codeInsee": "59575",
+    "codePostal": "59213",
+    "population": 397
+  },
+  {
+    "nom": "Bry",
+    "slug": "bry",
+    "codeInsee": "59116",
+    "codePostal": "59144",
+    "population": 390
+  },
+  {
+    "nom": "Villers-Plouich",
+    "slug": "villers-plouich",
+    "codeInsee": "59625",
+    "codePostal": "59231",
+    "population": 390
+  },
+  {
+    "nom": "Frasnoy",
+    "slug": "frasnoy",
+    "codeInsee": "59251",
+    "codePostal": "59530",
+    "population": 389
+  },
+  {
+    "nom": "Hardifort",
+    "slug": "hardifort",
+    "codeInsee": "59282",
+    "codePostal": "59670",
+    "population": 385
+  },
+  {
+    "nom": "Wambaix",
+    "slug": "wambaix",
+    "codeInsee": "59635",
+    "codePostal": "59400",
+    "population": 381
+  },
+  {
+    "nom": "Ribécourt-la-Tour",
+    "slug": "ribecourt-la-tour",
+    "codeInsee": "59500",
+    "codePostal": "59159",
+    "population": 380
+  },
+  {
+    "nom": "Bousignies-sur-Roc",
+    "slug": "bousignies-sur-roc",
+    "codeInsee": "59101",
+    "codePostal": "59149",
+    "population": 369
+  },
+  {
+    "nom": "Eswars",
+    "slug": "eswars",
+    "codeInsee": "59216",
+    "codePostal": "59161",
+    "population": 363
+  },
+  {
+    "nom": "Haut-Lieu",
+    "slug": "haut-lieu",
+    "codeInsee": "59290",
+    "codePostal": "59440",
+    "population": 361
+  },
+  {
+    "nom": "Boursies",
+    "slug": "boursies",
+    "codeInsee": "59097",
+    "codePostal": "59400",
+    "population": 360
+  },
+  {
+    "nom": "Audignies",
+    "slug": "audignies",
+    "codeInsee": "59031",
+    "codePostal": "59570",
+    "population": 359
+  },
+  {
+    "nom": "Clairfayts",
+    "slug": "clairfayts",
+    "codeInsee": "59148",
+    "codePostal": "59740",
+    "population": 357
+  },
+  {
+    "nom": "Gussignies",
+    "slug": "gussignies",
+    "codeInsee": "59277",
+    "codePostal": "59570",
+    "population": 353
+  },
+  {
+    "nom": "Hecq",
+    "slug": "hecq",
+    "codeInsee": "59296",
+    "codePostal": "59530",
+    "population": 353
+  },
+  {
+    "nom": "Ochtezeele",
+    "slug": "ochtezeele",
+    "codeInsee": "59443",
+    "codePostal": "59670",
+    "population": 351
+  },
+  {
+    "nom": "Aibes",
+    "slug": "aibes",
+    "codeInsee": "59003",
+    "codePostal": "59149",
+    "population": 350
+  },
+  {
+    "nom": "Bas-Lieu",
+    "slug": "bas-lieu",
+    "codeInsee": "59050",
+    "codePostal": "59440",
+    "population": 348
+  },
+  {
+    "nom": "Bettignies",
+    "slug": "bettignies",
+    "codeInsee": "59076",
+    "codePostal": "59600",
+    "population": 343
+  },
+  {
+    "nom": "Saint-Benin",
+    "slug": "saint-benin",
+    "codeInsee": "59531",
+    "codePostal": "59360",
+    "population": 343
+  },
+  {
+    "nom": "Flaumont-Waudrechies",
+    "slug": "flaumont-waudrechies",
+    "codeInsee": "59233",
+    "codePostal": "59440",
+    "population": 342
+  },
+  {
+    "nom": "Banteux",
+    "slug": "banteux",
+    "codeInsee": "59047",
+    "codePostal": "59266",
+    "population": 339
+  },
+  {
+    "nom": "Bousignies",
+    "slug": "bousignies",
+    "codeInsee": "59100",
+    "codePostal": "59178",
+    "population": 339
+  },
+  {
+    "nom": "Reumont",
+    "slug": "reumont",
+    "codeInsee": "59498",
+    "codePostal": "59980",
+    "population": 337
+  },
+  {
+    "nom": "Wulverdinghe",
+    "slug": "wulverdinghe",
+    "codeInsee": "59664",
+    "codePostal": "59143",
+    "population": 334
+  },
+  {
+    "nom": "Eth",
+    "slug": "eth",
+    "codeInsee": "59217",
+    "codePostal": "59144",
+    "population": 328
+  },
+  {
+    "nom": "Saint-Aubin",
+    "slug": "saint-aubin",
+    "codeInsee": "59529",
+    "codePostal": "59440",
+    "population": 328
+  },
+  {
+    "nom": "Saint-Aybert",
+    "slug": "saint-aybert",
+    "codeInsee": "59530",
+    "codePostal": "59163",
+    "population": 328
+  },
+  {
+    "nom": "Dimechaux",
+    "slug": "dimechaux",
+    "codeInsee": "59174",
+    "codePostal": "59740",
+    "population": 327
+  },
+  {
+    "nom": "Salesches",
+    "slug": "salesches",
+    "codeInsee": "59549",
+    "codePostal": "59218",
+    "population": 327
+  },
+  {
+    "nom": "Doignies",
+    "slug": "doignies",
+    "codeInsee": "59176",
+    "codePostal": "59400",
+    "population": 325
+  },
+  {
+    "nom": "Blécourt",
+    "slug": "blecourt",
+    "codeInsee": "59085",
+    "codePostal": "59268",
+    "population": 313
+  },
+  {
+    "nom": "Haynecourt",
+    "slug": "haynecourt",
+    "codeInsee": "59294",
+    "codePostal": "59268",
+    "population": 307
+  },
+  {
+    "nom": "Escobecques",
+    "slug": "escobecques",
+    "codeInsee": "59208",
+    "codePostal": "59320",
+    "population": 302
+  },
+  {
+    "nom": "Locquignol",
+    "slug": "locquignol",
+    "codeInsee": "59353",
+    "codePostal": "59530",
+    "population": 301
+  },
+  {
+    "nom": "Preux-au-Sart",
+    "slug": "preux-au-sart",
+    "codeInsee": "59473",
+    "codePostal": "59144",
+    "population": 300
+  },
+  {
+    "nom": "Neuville-en-Avesnois",
+    "slug": "neuville-en-avesnois",
+    "codeInsee": "59425",
+    "codePostal": "59218",
+    "population": 298
+  },
+  {
+    "nom": "Wylder",
+    "slug": "wylder",
+    "codeInsee": "59665",
+    "codePostal": "59380",
+    "population": 298
+  },
+  {
+    "nom": "Boulogne-sur-Helpe",
+    "slug": "boulogne-sur-helpe",
+    "codeInsee": "59093",
+    "codePostal": "59440",
+    "population": 291
+  },
+  {
+    "nom": "Dimont",
+    "slug": "dimont",
+    "codeInsee": "59175",
+    "codePostal": "59216",
+    "population": 289
+  },
+  {
+    "nom": "Hestrud",
+    "slug": "hestrud",
+    "codeInsee": "59306",
+    "codePostal": "59740",
+    "population": 288
+  },
+  {
+    "nom": "Saint-Georges-sur-l'Aa",
+    "slug": "saint-georges-sur-l-aa",
+    "codeInsee": "59532",
+    "codePostal": "59820",
+    "population": 287
+  },
+  {
+    "nom": "Petit-Fayt",
+    "slug": "petit-fayt",
+    "codeInsee": "59461",
+    "codePostal": "59244",
+    "population": 286
+  },
+  {
+    "nom": "Wallers-en-Fagne",
+    "slug": "wallers-en-fagne",
+    "codeInsee": "59633",
+    "codePostal": "59132",
+    "population": 284
+  },
+  {
+    "nom": "Noyelles-sur-Sambre",
+    "slug": "noyelles-sur-sambre",
+    "codeInsee": "59439",
+    "codePostal": "59550",
+    "population": 283
+  },
+  {
+    "nom": "Obrechies",
+    "slug": "obrechies",
+    "codeInsee": "59442",
+    "codePostal": "59680",
+    "population": 283
+  },
+  {
+    "nom": "Drincham",
+    "slug": "drincham",
+    "codeInsee": "59182",
+    "codePostal": "59630",
+    "population": 281
+  },
+  {
+    "nom": "Gonnelieu",
+    "slug": "gonnelieu",
+    "codeInsee": "59267",
+    "codePostal": "59231",
+    "population": 279
+  },
+  {
+    "nom": "Mazinghien",
+    "slug": "mazinghien",
+    "codeInsee": "59395",
+    "codePostal": "59360",
+    "population": 279
+  },
+  {
+    "nom": "Flesquières",
+    "slug": "flesquieres",
+    "codeInsee": "59236",
+    "codePostal": "59267",
+    "population": 276
+  },
+  {
+    "nom": "Montay",
+    "slug": "montay",
+    "codeInsee": "59412",
+    "codePostal": "59360",
+    "population": 276
+  },
+  {
+    "nom": "Beaurepaire-sur-Sambre",
+    "slug": "beaurepaire-sur-sambre",
+    "codeInsee": "59061",
+    "codePostal": "59550",
+    "population": 272
+  },
+  {
+    "nom": "Éclaibes",
+    "slug": "eclaibes",
+    "codeInsee": "59187",
+    "codePostal": "59330",
+    "population": 269
+  },
+  {
+    "nom": "Sassegnies",
+    "slug": "sassegnies",
+    "codeInsee": "59556",
+    "codePostal": "59145",
+    "population": 260
+  },
+  {
+    "nom": "Anneux",
+    "slug": "anneux",
+    "codeInsee": "59010",
+    "codePostal": "59400",
+    "population": 258
+  },
+  {
+    "nom": "Bettrechies",
+    "slug": "bettrechies",
+    "codeInsee": "59077",
+    "codePostal": "59570",
+    "population": 253
+  },
+  {
+    "nom": "Zermezeele",
+    "slug": "zermezeele",
+    "codeInsee": "59667",
+    "codePostal": "59670",
+    "population": 252
+  },
+  {
+    "nom": "Rejet-de-Beaulieu",
+    "slug": "rejet-de-beaulieu",
+    "codeInsee": "59496",
+    "codePostal": "59360",
+    "population": 241
+  },
+  {
+    "nom": "Wattignies-la-Victoire",
+    "slug": "wattignies-la-victoire",
+    "codeInsee": "59649",
+    "codePostal": "59680",
+    "population": 240
+  },
+  {
+    "nom": "Bissezeele",
+    "slug": "bissezeele",
+    "codeInsee": "59083",
+    "codePostal": "59380",
+    "population": 239
+  },
+  {
+    "nom": "Croix-Caluyau",
+    "slug": "croix-caluyau",
+    "codeInsee": "59164",
+    "codePostal": "59222",
+    "population": 238
+  },
+  {
+    "nom": "Bersillies",
+    "slug": "bersillies",
+    "codeInsee": "59072",
+    "codePostal": "59600",
+    "population": 237
+  },
+  {
+    "nom": "Eppe-Sauvage",
+    "slug": "eppe-sauvage",
+    "codeInsee": "59198",
+    "codePostal": "59132",
+    "population": 237
+  },
+  {
+    "nom": "Lez-Fontaine",
+    "slug": "lez-fontaine",
+    "codeInsee": "59342",
+    "codePostal": "59740",
+    "population": 236
+  },
+  {
+    "nom": "Beaurain",
+    "slug": "beaurain",
+    "codeInsee": "59060",
+    "codePostal": "59730",
+    "population": 234
+  },
+  {
+    "nom": "Larouillies",
+    "slug": "larouillies",
+    "codeInsee": "59333",
+    "codePostal": "59219",
+    "population": 231
+  },
+  {
+    "nom": "Warneton",
+    "slug": "warneton",
+    "codeInsee": "59643",
+    "codePostal": "59560",
+    "population": 231
+  },
+  {
+    "nom": "Montrécourt",
+    "slug": "montrecourt",
+    "codeInsee": "59415",
+    "codePostal": "59227",
+    "population": 228
+  },
+  {
+    "nom": "Semousies",
+    "slug": "semousies",
+    "codeInsee": "59563",
+    "codePostal": "59440",
+    "population": 227
+  },
+  {
+    "nom": "Wemaers-Cappel",
+    "slug": "wemaers-cappel",
+    "codeInsee": "59655",
+    "codePostal": "59670",
+    "population": 225
+  },
+  {
+    "nom": "Ramousies",
+    "slug": "ramousies",
+    "codeInsee": "59493",
+    "codePostal": "59177",
+    "population": 220
+  },
+  {
+    "nom": "Damousies",
+    "slug": "damousies",
+    "codeInsee": "59169",
+    "codePostal": "59680",
+    "population": 205
+  },
+  {
+    "nom": "Robersart",
+    "slug": "robersart",
+    "codeInsee": "59503",
+    "codePostal": "59550",
+    "population": 201
+  }
+]

@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/Layout.astro';
+import config from '../data/config.json';
+
+const title = `Politique de Confidentialité | ${config.brandName}`;
+const description = `Politique de confidentialité et protection des données pour le site ${config.brandName}`;
+---
+
+<Layout title={title} description={description}>
+  <section class="features">
+    <div class="container" style="max-width: 800px; padding: 40px 20px;">
+      <h1 style="font-size: 36px; font-weight: 800; color: var(--secondary-color); margin-bottom: 24px;">Politique de Confidentialité</h1>
+      
+      <div style="display: flex; flex-direction: column; gap: 24px; color: var(--text-dark); line-height: 1.8;">
+        <p>Chez <strong>{config.brandName}</strong>, nous accordons une importance primordiale à la protection et à la confidentialité de vos données personnelles.</p>
+
+        <div>
+          <h2 style="font-size: 20px; font-weight: 700; color: var(--secondary-color); margin-bottom: 8px;">1. Données collectées</h2>
+          <p>Lorsque vous utilisez notre simulateur / formulaire de devis, nous collectons les données suivantes :</p>
+          <ul style="list-style-type: disc; padding-left: 20px; margin-top: 8px;">
+            <li>Nom complet</li>
+            <li>Numéro de téléphone</li>
+            <li>Adresse e-mail</li>
+            <li>Code postal / Ville du chantier</li>
+            <li>Informations sur le projet (Type de déchets, volume de benne, type d'emplacement)</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 style="font-size: 20px; font-weight: 700; color: var(--secondary-color); margin-bottom: 8px;">2. Utilisation des données</h2>
+          <p>Ces données sont utilisées uniquement pour qualifier votre besoin et transmettre votre demande de devis à notre partenaire loueur exclusif intervenant à {config.mainCity} et dans le {config.department}. Ce partenaire vous contactera directement par téléphone ou par e-mail pour finaliser la location.</p>
+        </div>
+
+        <div>
+          <h2 style="font-size: 20px; font-weight: 700; color: var(--secondary-color); margin-bottom: 8px;">3. Vos droits</h2>
+          <p>Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès, de rectification, de portabilité et de suppression de vos données personnelles. Pour exercer ces droits, vous pouvez nous contacter à l'adresse e-mail suivante : <strong>{config.email}</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

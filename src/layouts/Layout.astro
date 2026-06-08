@@ -1,0 +1,102 @@
+---
+import config from '../data/config.json';
+import '../styles/global.css';
+
+interface Props {
+	title?: string;
+	description?: string;
+	canonicalUrl?: string;
+}
+
+const { 
+  title = `${config.brandName} | Location de Benne ${config.mainCity} & ${config.department}`, 
+  description = config.description,
+  canonicalUrl
+} = Astro.props;
+
+const accentColor = config.accentColor;
+const secondaryColor = config.secondaryColor;
+const currentYear = new Date().getFullYear();
+---
+
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		{canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:site_name" content={config.brandName} />
+
+		<!-- Inject brand-specific styles dynamically -->
+		<style define:vars={{ accentColor, secondaryColor }}>
+			:root {
+				--accent-color: var(--accentColor);
+				--secondary-color: var(--secondaryColor);
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Header -->
+		<header>
+			<div class="container header-inner">
+				<a href="/" class="logo">
+					<span>🚚</span> {config.brandName}
+				</a>
+				<nav class="header-nav">
+					<a href="/">Accueil</a>
+					<a href="/tarifs">Tarifs</a>
+					<a href="/types-bennes">Nos Bennes</a>
+					<a href="/communes">Villes (59)</a>
+				</nav>
+				<a href="#devis" class="contact-btn">
+					📋 Devis Gratuit
+				</a>
+			</div>
+		</header>
+
+		<!-- Main Content Slot -->
+		<slot />
+
+		<!-- Footer -->
+		<footer>
+			<div class="container footer-grid">
+				<div class="footer-brand">
+					<h3>🚚 {config.brandName}</h3>
+					<p>Votre partenaire de confiance pour la location de bennes à gravats, DIB, déchets verts et encombrants dans tout le département du {config.department} ({config.departmentCode}).</p>
+				</div>
+				<div class="footer-links">
+					<h4>Nos Services</h4>
+					<ul>
+						<li><a href="/#devis">Demande de Devis</a></li>
+						<li><a href="/tarifs">Nos Tarifs</a></li>
+						<li><a href="/types-bennes">Types de Bennes</a></li>
+						<li><a href="/communes">Villes desservies (59)</a></li>
+					</ul>
+				</div>
+				<div class="footer-links">
+					<h4>Contact & Infos</h4>
+					<ul>
+						<li>Email : {config.email}</li>
+						<li>Zone : {config.mainCity} & alentours</li>
+					</ul>
+				</div>
+			</div>
+			<div class="container footer-bottom">
+				<p>&copy; {currentYear} {config.brandName}. Tous droits réservés.</p>
+				<p>
+					<a href="/mentions-legales">Mentions Légales</a> | 
+					<a href="/politique-confidentialite">RGPD</a>
+				</p>
+			</div>
+		</footer>
+	</body>
+</html>

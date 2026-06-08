@@ -1,0 +1,365 @@
+---
+import Layout from '../layouts/Layout.astro';
+import StepsForm from '../components/StepsForm.astro';
+import config from '../data/config.json';
+import communes from '../data/communes.json';
+
+const title = `Tarif Location de Benne Nord (59) | Prix Moyen 2026 - ${config.brandName}`;
+const description = `Consultez les tarifs indicatifs de location de bennes (8m³ à 30m³) dans le département du Nord. Simulez votre tarif local pour gravats, encombrants, végétaux et bois.`;
+
+// base prices for display in static tables
+const priceFactorLille = 1.15; // Lille price factor (>100k pop)
+const priceFactorMoy = 1;     // standard price factor
+---
+
+<Layout title={title} description={description}>
+  <!-- Simple Hero Header -->
+  <section class="hero" style="padding: 60px 0 80px;">
+    <div class="container" style="text-align: center; max-width: 800px;">
+      <h1 style="font-size: 42px; font-weight: 800; color: var(--secondary-color); margin-bottom: 20px;">
+        Tarifs Location de Bennes dans le <span>{config.department}</span>
+      </h1>
+      <p style="font-size: 18px; color: var(--text-muted); line-height: 1.6; margin-bottom: 0;">
+        Découvrez nos tarifs transparents tout inclus : livraison, pose sur chantier, location de 1 à 5 jours, retrait et traitement éco-responsable des déchets en centre de tri agréé du {config.departmentCode}.
+      </p>
+    </div>
+  </section>
+
+  <!-- Simulator Section -->
+  <section class="features" style="background: var(--white); padding: 60px 0;">
+    <div class="container">
+      <div class="section-title">
+        <h2>Simulateur de Tarif Localisé</h2>
+        <p>Estimez le tarif indicatif de votre benne selon votre commune et le type de déchet</p>
+      </div>
+
+      <div class="form-card" style="max-width: 700px; margin: 0 auto; padding: 40px; box-shadow: var(--shadow-lg);">
+        <div style="display: flex; flex-direction: column; gap: 24px;">
+          <!-- City Input with datalist -->
+          <div class="form-group">
+            <label for="city-input">📍 1. Saisissez votre commune (Nord) :</label>
+            <input 
+              list="communes-list" 
+              id="city-input" 
+              placeholder="Ex: Lille, Roubaix, Valenciennes, Mures..." 
+              class="form-control" 
+              style="width: 100%; border: 1.5px solid var(--border-color); background: var(--bg-color);"
+            />
+            <datalist id="communes-list">
+              {communes.map((c) => (
+                <option value={c.nom}></option>
+              ))}
+            </datalist>
+            <span style="font-size: 13px; color: var(--text-muted);">
+              Choisissez l'une des 629 communes du département du Nord (59).
+            </span>
+          </div>
+
+          <!-- Waste Type Select -->
+          <div class="form-group">
+            <label for="waste-select">🧱 2. Type de déchets à évacuer :</label>
+            <select id="waste-select" class="form-control" style="width: 100%; border: 1.5px solid var(--border-color); background: var(--bg-color);">
+              <option value="gravats">🪨 Gravats & Inertes (Terre, béton, tuiles, briques - Benne 8m³)</option>
+              <option value="encombrants" selected>📦 Encombrants / Tout-Venant (Vieux meubles, DIB, plâtre - Benne 10m³)</option>
+              <option value="verts">🌿 Déchets Verts (Taille de haie, branchages, gazon - Benne 15m³)</option>
+              <option value="dib">🏭 Déchets de Bois & DIB (Palettes, planches de coffrage - Benne 30m³)</option>
+            </select>
+          </div>
+
+          <!-- Result Area (hidden by default) -->
+          <div id="price-result-card" style="display: none; background: rgba(243, 112, 33, 0.04); border: 2px dashed var(--accent-color); border-radius: var(--radius-md); padding: 30px; text-align: center; margin-top: 10px;">
+            <h3 style="font-size: 18px; font-weight: 700; color: var(--secondary-color); margin-bottom: 5px;">
+              Tarif indicatif estimé pour <span id="result-city-name" style="color: var(--accent-color);">[Ville]</span>
+            </h3>
+            <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 15px;" id="result-waste-type">
+              [Type de déchet]
+            </p>
+            <div style="font-size: 38px; font-weight: 900; color: var(--secondary-color); margin-bottom: 15px;">
+              <span id="result-base-price">0 € HT</span>
+            </div>
+            <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 20px;">
+              Ce prix comprend : Transport aller-retour, mise à disposition 1-5 jours et tri éco-responsable.
+            </p>
+            <a 
+              id="result-local-link" 
+              href="#" 
+              style="display: block; font-weight: 700; color: var(--accent-color); text-decoration: underline; font-size: 15px;"
+            >
+              👉 Découvrir les règles et formalités de voirie locales
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Pricing Tables by Category -->
+  <section class="features" style="background: var(--bg-color); padding: 80px 0;">
+    <div class="container">
+      <div class="section-title">
+        <h2>Détail des Tarifs par Catégorie de Déchets</h2>
+        <p>Comparez les prix et capacités pour choisir le bon format de benne</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 50px;">
+        <!-- Card 1: Gravats -->
+        <div class="form-card" style="padding: 30px;">
+          <h3 style="font-size: 20px; font-weight: 800; color: var(--secondary-color); margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+            🪨 Gravats & Inertes (Béton, terre, tuiles)
+          </h3>
+          <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 20px;">
+            Ces matériaux très denses et lourds sont valorisés en filières de granulats routiers. La taille est limitée pour des questions de poids total en charge.
+          </p>
+          <table style="width: 100%; border-collapse: collapse; font-size: 14px; text-align: left;">
+            <thead>
+              <tr style="border-bottom: 2px solid var(--border-color); color: var(--secondary-color); font-weight: 700;">
+                <th style="padding: 10px 4px;">Volume</th>
+                <th style="padding: 10px 4px;">Prix Moyen HT</th>
+                <th style="padding: 10px 4px; text-align: right;">Tarif Métropole</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 12px 4px; font-weight: 600;">Benne 8 m³</td>
+                <td style="padding: 12px 4px; color: var(--accent-color); font-weight: 700;">280 €</td>
+                <td style="padding: 12px 4px; text-align: right; font-weight: 700; color: var(--secondary-color);">{Math.round(280 * priceFactorLille)} €</td>
+              </tr>
+            </tbody>
+          </table>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 15px;">
+            💡 <em>Le plâtre et les cloisons BA13 sont strictement interdits dans cette benne.</em>
+          </p>
+        </div>
+
+        <!-- Card 2: Tout-Venant (DIB) -->
+        <div class="form-card" style="padding: 30px;">
+          <h3 style="font-size: 20px; font-weight: 800; color: var(--secondary-color); margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+            📦 Tout-Venant / DIB (Déchets mixtes)
+          </h3>
+          <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 20px;">
+            Idéal pour vider une maison, évacuer le plâtre, le plastique, le mobilier dégradé, le verre et autres déchets non dangereux.
+          </p>
+          <table style="width: 100%; border-collapse: collapse; font-size: 14px; text-align: left;">
+            <thead>
+              <tr style="border-bottom: 2px solid var(--border-color); color: var(--secondary-color); font-weight: 700;">
+                <th style="padding: 10px 4px;">Volume</th>
+                <th style="padding: 10px 4px;">Prix Moyen HT</th>
+                <th style="padding: 10px 4px; text-align: right;">Tarif Métropole</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 12px 4px; font-weight: 600;">Benne 8 m³</td>
+                <td style="padding: 12px 4px; color: var(--accent-color); font-weight: 700;">340 €</td>
+                <td style="padding: 12px 4px; text-align: right; font-weight: 700; color: var(--secondary-color);">{Math.round(340 * priceFactorLille)} €</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 12px 4px; font-weight: 600;">Benne 10 m³</td>
+                <td style="padding: 12px 4px; color: var(--accent-color); font-weight: 700;">390 €</td>
+                <td style="padding: 12px 4px; text-align: right; font-weight: 700; color: var(--secondary-color);">{Math.round(390 * priceFactorLille)} €</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 12px 4px; font-weight: 600;">Benne 15 m³</td>
+                <td style="padding: 12px 4px; color: var(--accent-color); font-weight: 700;">490 €</td>
+                <td style="padding: 12px 4px; text-align: right; font-weight: 700; color: var(--secondary-color);">{Math.round(490 * priceFactorLille)} €</td>
+              </tr>
+              <tr>
+                <td style="padding: 12px 4px; font-weight: 600;">Benne 20 m³</td>
+                <td style="padding: 12px 4px; color: var(--accent-color); font-weight: 700;">590 €</td>
+                <td style="padding: 12px 4px; text-align: right; font-weight: 700; color: var(--secondary-color);">{Math.round(590 * priceFactorLille)} €</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Card 3: Déchets Verts -->
+        <div class="form-card" style="padding: 30px;">
+          <h3 style="font-size: 20px; font-weight: 800; color: var(--secondary-color); margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+            🌿 Déchets Verts (Jardinage, élagage)
+          </h3>
+          <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 20px;">
+            Pour l'élagage, branchages, tontes et troncs. Rappel : le brûlage de végétaux est passible d'une amende de 450 € dans le Nord.
+          </p>
+          <table style="width: 100%; border-collapse: collapse; font-size: 14px; text-align: left;">
+            <thead>
+              <tr style="border-bottom: 2px solid var(--border-color); color: var(--secondary-color); font-weight: 700;">
+                <th style="padding: 10px 4px;">Volume</th>
+                <th style="padding: 10px 4px;">Prix Moyen HT</th>
+                <th style="padding: 10px 4px; text-align: right;">Tarif Métropole</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 12px 4px; font-weight: 600;">Benne 10 m³</td>
+                <td style="padding: 12px 4px; color: var(--accent-color); font-weight: 700;">290 €</td>
+                <td style="padding: 12px 4px; text-align: right; font-weight: 700; color: var(--secondary-color);">{Math.round(290 * priceFactorLille)} €</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 12px 4px; font-weight: 600;">Benne 15 m³</td>
+                <td style="padding: 12px 4px; color: var(--accent-color); font-weight: 700;">320 €</td>
+                <td style="padding: 12px 4px; text-align: right; font-weight: 700; color: var(--secondary-color);">{Math.round(320 * priceFactorLille)} €</td>
+              </tr>
+              <tr>
+                <td style="padding: 12px 4px; font-weight: 600;">Benne 30 m³</td>
+                <td style="padding: 12px 4px; color: var(--accent-color); font-weight: 700;">490 €</td>
+                <td style="padding: 12px 4px; text-align: right; font-weight: 700; color: var(--secondary-color);">{Math.round(490 * priceFactorLille)} €</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Card 4: Bois & DIB Trié -->
+        <div class="form-card" style="padding: 30px;">
+          <h3 style="font-size: 20px; font-weight: 800; color: var(--secondary-color); margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+            🏭 Bois de coffrage, Palettes & Cartons
+          </h3>
+          <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 20px;">
+            Idéal pour les charpentiers, couvreurs et industriels. Les déchets mono-flux triés permettent une valorisation directe très économique.
+          </p>
+          <table style="width: 100%; border-collapse: collapse; font-size: 14px; text-align: left;">
+            <thead>
+              <tr style="border-bottom: 2px solid var(--border-color); color: var(--secondary-color); font-weight: 700;">
+                <th style="padding: 10px 4px;">Volume</th>
+                <th style="padding: 10px 4px;">Prix Moyen HT</th>
+                <th style="padding: 10px 4px; text-align: right;">Tarif Métropole</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 12px 4px; font-weight: 600;">Benne 15 m³</td>
+                <td style="padding: 12px 4px; color: var(--accent-color); font-weight: 700;">340 €</td>
+                <td style="padding: 12px 4px; text-align: right; font-weight: 700; color: var(--secondary-color);">{Math.round(340 * priceFactorLille)} €</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 12px 4px; font-weight: 600;">Benne 20 m³</td>
+                <td style="padding: 12px 4px; color: var(--accent-color); font-weight: 700;">440 €</td>
+                <td style="padding: 12px 4px; text-align: right; font-weight: 700; color: var(--secondary-color);">{Math.round(440 * priceFactorLille)} €</td>
+              </tr>
+              <tr>
+                <td style="padding: 12px 4px; font-weight: 600;">Benne 30 m³</td>
+                <td style="padding: 12px 4px; color: var(--accent-color); font-weight: 700;">550 €</td>
+                <td style="padding: 12px 4px; text-align: right; font-weight: 700; color: var(--secondary-color);">{Math.round(550 * priceFactorLille)} €</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Split Screen: FAQ & Lead Form -->
+  <section class="features" style="background: var(--white); padding: 80px 0;" id="devis">
+    <div class="container hero-grid">
+      <!-- FAQ Block -->
+      <div style="display: flex; flex-direction: column; gap: 24px;">
+        <h2 style="font-size: 32px; font-weight: 800; color: var(--secondary-color); margin-bottom: 10px;">
+          FAQ Tarification location de benne
+        </h2>
+        
+        <div style="background: var(--bg-color); padding: 24px; border-radius: var(--radius-sm); border: 1px solid var(--border-color);">
+          <h4 style="font-weight: 700; color: var(--secondary-color); font-size: 16px; margin-bottom: 8px;">
+            ❓ Quels facteurs font varier le prix ?
+          </h4>
+          <p style="font-size: 15px; color: var(--text-muted); line-height: 1.6;">
+            Le coût dépend principalement du volume du caisson (de 8m³ à 30m³), de la nature du déchet évacué (les gravats inertes sont recyclés à bas coût alors que le DIB mélangé nécessite un tri coûteux), et de l'emplacement géographique du dépôt par rapport au centre de traitement.
+          </p>
+        </div>
+
+        <div style="background: var(--bg-color); padding: 24px; border-radius: var(--radius-sm); border: 1px solid var(--border-color);">
+          <h4 style="font-weight: 700; color: var(--secondary-color); font-size: 16px; margin-bottom: 8px;">
+            ❓ Qu'est-ce qui est inclus dans le forfait de location ?
+          </h4>
+          <p style="font-size: 15px; color: var(--text-muted); line-height: 1.6;">
+            Tous nos tarifs incluent d'office : la livraison du caisson à votre adresse, la pose sur cales, la mise à disposition de 1 à 5 jours, l'enlèvement par notre chauffeur poids lourd, et le vidage en déchetterie professionnelle agréée avec paiement de l'éco-taxe TGAP.
+          </p>
+        </div>
+
+        <div style="background: var(--bg-color); padding: 24px; border-radius: var(--radius-sm); border: 1px solid var(--border-color);">
+          <h4 style="font-weight: 700; color: var(--secondary-color); font-size: 16px; margin-bottom: 8px;">
+            ❓ Y a-t-il des frais supplémentaires à prévoir ?
+          </h4>
+          <p style="font-size: 15px; color: var(--text-muted); line-height: 1.6;">
+            Des surcoûts peuvent s'appliquer dans les cas suivants : location prolongée au-delà de 5 jours, présence de déchets interdits (ex: amiante, pneus, pots de peinture), dépôt nécessitant des cales ou plaques de protection routières spécifiques, ou taxes d'occupation de voirie si vous posez sur la voie publique à {config.mainCity}.
+          </p>
+        </div>
+      </div>
+
+      <!-- Lead form column -->
+      <div>
+        <StepsForm />
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<!-- Client Side Pricing Simulator -->
+<script is:inline define:vars={{ communes }}>
+  document.addEventListener('DOMContentLoaded', () => {
+    const cityInput = document.getElementById('city-input');
+    const wasteSelect = document.getElementById('waste-select');
+    const resultCard = document.getElementById('price-result-card');
+    const basePriceEl = document.getElementById('result-base-price');
+    const localLinkEl = document.getElementById('result-local-link');
+    const cityNameEl = document.getElementById('result-city-name');
+    const wasteTypeEl = document.getElementById('result-waste-type');
+
+    const basePrices = {
+      gravats: 280,
+      encombrants: 390,
+      verts: 320,
+      dib: 340
+    };
+
+    const wasteLabels = {
+      gravats: "Béton, terre, tuiles (Benne Gravats 8m³)",
+      encombrants: "Vieux meubles, DIB mélangés, plâtre (Benne 10m³)",
+      verts: "Tontes, élagages, souches (Benne Végétaux 15m³)",
+      dib: "Palettes, chutes de bois brut (Benne 30m³)"
+    };
+
+    function updatePrice() {
+      const cityName = cityInput.value.trim();
+      const wasteType = wasteSelect.value;
+      
+      if (!cityName) {
+        resultCard.style.display = 'none';
+        return;
+      }
+
+      // Case-insensitive match in communes list
+      const commune = communes.find(
+        (c) => c.nom.toLowerCase() === cityName.toLowerCase()
+      );
+
+      if (!commune) {
+        resultCard.style.display = 'none';
+        return;
+      }
+
+      const pop = commune.population;
+      // Price factor based on population matching contentEngine.ts
+      const priceFactor = pop > 100000 ? 1.15 : pop > 50000 ? 1.08 : 1;
+      const basePrice = basePrices[wasteType];
+      const finalPrice = Math.round(basePrice * priceFactor);
+
+      cityNameEl.textContent = commune.nom;
+      wasteTypeEl.textContent = wasteLabels[wasteType];
+      basePriceEl.textContent = `${finalPrice} € HT`;
+
+      // Determine dynamic links
+      let linkSuffix = "";
+      if (wasteType === "gravats") linkSuffix = "-gravats";
+      else if (wasteType === "encombrants") linkSuffix = "-encombrants";
+      else if (wasteType === "verts") linkSuffix = "-dechets-verts";
+      else if (wasteType === "dib") linkSuffix = "-dib";
+
+      localLinkEl.href = `/location-benne${linkSuffix}-${commune.slug}`;
+      localLinkEl.textContent = `👉 Découvrir les tarifs & règles de voirie pour la location de benne à ${commune.nom}`;
+      
+      resultCard.style.display = 'block';
+    }
+
+    cityInput.addEventListener('input', updatePrice);
+    wasteSelect.addEventListener('change', updatePrice);
+  });
+</script>

@@ -1,0 +1,309 @@
+---
+import config from '../data/config.json';
+---
+
+<div class="form-card" id="devis">
+  <h2>Demande de devis gratuit</h2>
+  <p class="subtitle">Réponse rapide en moins de 2 heures - Sans engagement</p>
+
+  <form id="benne-lead-form" data-supabase-url={config.supabaseUrl} data-supabase-key={config.supabaseAnonKey} data-domain={config.domain} data-department={config.department}>
+    <!-- Step 1: Type de Déchet -->
+    <div class="step-container" id="step-1">
+      <div class="form-group">
+        <label>1. Quel type de déchets souhaitez-vous évacuer ?</label>
+        <div class="options-grid">
+          <div class="option-box active" data-value="dib" data-step="1">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="2 2 20 20" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+            </svg>
+            <span>Tout-venant / DIB</span>
+          </div>
+          <div class="option-box" data-value="gravats" data-step="1">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="2 2 20 20" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+            </svg>
+            <span>Gravats / Inertes</span>
+          </div>
+          <div class="option-box" data-value="verts" data-step="1">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="2 2 20 20" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+            </svg>
+            <span>Déchets Verts</span>
+          </div>
+          <div class="option-box" data-value="bois" data-step="1">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="2 2 20 20" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            <span>Bois / Palettes</span>
+          </div>
+        </div>
+        <input type="hidden" name="type_dechet" id="type_dechet" value="dib" />
+      </div>
+      <div class="form-nav">
+        <button type="button" class="btn-primary next-btn" data-next="2">Continuer &rarr;</button>
+      </div>
+    </div>
+
+    <!-- Step 2: Taille de la Benne -->
+    <div class="step-container" id="step-2" style="display: none;">
+      <div class="form-group">
+        <label>2. De quel volume de benne avez-vous besoin ?</label>
+        <div class="options-grid">
+          <div class="option-box active" data-value="8m3" data-step="2">
+            <span>📦 8 m³</span>
+            <span style="font-size: 12px; font-weight: normal; color: var(--text-muted);">Idéal petits travaux, gravats lourds</span>
+          </div>
+          <div class="option-box" data-value="10m3" data-step="2">
+            <span>📦 10 m³</span>
+            <span style="font-size: 12px; font-weight: normal; color: var(--text-muted);">Rénovation standard, terre</span>
+          </div>
+          <div class="option-box" data-value="15m3" data-step="2">
+            <span>📦 15 m³</span>
+            <span style="font-size: 12px; font-weight: normal; color: var(--text-muted);">Encombrants, DIB volumineux</span>
+          </div>
+          <div class="option-box" data-value="30m3" data-step="2">
+            <span>📦 30 m³</span>
+            <span style="font-size: 12px; font-weight: normal; color: var(--text-muted);">Gros chantiers, vidage complet</span>
+          </div>
+        </div>
+        <input type="hidden" name="volume_benne" id="volume_benne" value="8m3" />
+      </div>
+      <div class="form-nav">
+        <button type="button" class="btn-secondary prev-btn" data-prev="1">&larr; Retour</button>
+        <button type="button" class="btn-primary next-btn" data-next="3">Continuer &rarr;</button>
+      </div>
+    </div>
+
+    <!-- Step 3: Emplacement & Accès -->
+    <div class="step-container" id="step-3" style="display: none;">
+      <div class="form-group">
+        <label>3. Où sera positionnée la benne ?</label>
+        <div class="options-grid">
+          <div class="option-box active" data-value="prive" data-step="3">
+            <span>🏡 Terrain Privé</span>
+            <span style="font-size: 12px; font-weight: normal; color: var(--text-muted);">Allée, jardin (aucune autorisation requise)</span>
+          </div>
+          <div class="option-box" data-value="public" data-step="3">
+            <span>🛣️ Voie Publique</span>
+            <span style="font-size: 12px; font-weight: normal; color: var(--text-muted);">Rue, trottoir (autorisation mairie requise)</span>
+          </div>
+        </div>
+        <input type="hidden" name="placement" id="placement" value="prive" />
+      </div>
+      <div class="form-nav">
+        <button type="button" class="btn-secondary prev-btn" data-prev="2">&larr; Retour</button>
+        <button type="button" class="btn-primary next-btn" data-next="4">Continuer &rarr;</button>
+      </div>
+    </div>
+
+    <!-- Step 4: Localisation -->
+    <div class="step-container" id="step-4" style="display: none;">
+      <div class="form-group">
+        <label for="postal_code">4. Code Postal / Ville du chantier</label>
+        <input type="text" id="postal_code" name="postal_code" placeholder="Ex: 59000" class="form-control" required pattern="[0-9]{5}" />
+      </div>
+      <div class="form-group">
+        <label for="preferred_date">Date de livraison souhaitée</label>
+        <input type="date" id="preferred_date" name="preferred_date" class="form-control" required />
+      </div>
+      <div class="form-nav">
+        <button type="button" class="btn-secondary prev-btn" data-prev="3">&larr; Retour</button>
+        <button type="button" class="btn-primary next-btn" data-next="5">Continuer &rarr;</button>
+      </div>
+    </div>
+
+    <!-- Step 5: Informations de contact -->
+    <div class="step-container" id="step-5" style="display: none;">
+      <div class="form-group">
+        <label for="full_name">Votre Nom complet</label>
+        <input type="text" id="full_name" name="full_name" placeholder="Jean Dupont" class="form-control" required />
+      </div>
+      <div class="form-group">
+        <label for="phone">Numéro de téléphone</label>
+        <input type="tel" id="phone" name="phone" placeholder="06 12 34 56 78" class="form-control" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Adresse email</label>
+        <input type="email" id="email" name="email" placeholder="jean.dupont@gmail.com" class="form-control" required />
+      </div>
+      <div class="form-nav">
+        <button type="button" class="btn-secondary prev-btn" data-prev="4">&larr; Retour</button>
+        <button type="submit" class="btn-primary submit-btn">🔥 Obtenir mon devis</button>
+      </div>
+    </div>
+  </form>
+
+  <div id="form-success" style="display: none; text-align: center; padding: 20px 0;">
+    <div style="font-size: 60px; margin-bottom: 20px;">✅</div>
+    <h3 style="font-size: 24px; font-weight: 800; color: var(--secondary-color); margin-bottom: 10px;">Demande enregistrée !</h3>
+    <p style="color: var(--text-muted);">Votre demande a été transmise à notre partenaire local. Un conseiller va vous recontacter par téléphone d'ici 2 heures pour valider le tarif et la date de livraison.</p>
+  </div>
+</div>
+
+<script>
+  import communes from '../data/communes.json';
+
+  // Simple multi-step navigation script
+  const steps = document.querySelectorAll('.step-container');
+  const nextBtns = document.querySelectorAll('.next-btn');
+  const prevBtns = document.querySelectorAll('.prev-btn');
+  const form = document.getElementById('benne-lead-form');
+  const formSuccess = document.getElementById('form-success');
+  
+  // Set default minimum date to tomorrow
+  const dateInput = document.getElementById('preferred_date');
+  if (dateInput) {
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    dateInput.min = tomorrow.toISOString().split('T')[0];
+  }
+
+  // Handle Box Option Clicks
+  document.querySelectorAll('.option-box').forEach(box => {
+    box.addEventListener('click', () => {
+      const step = box.dataset.step;
+      const value = box.dataset.value;
+      
+      // Deactivate all boxes in the current step
+      document.querySelectorAll(`.option-box[data-step="${step}"]`).forEach(b => {
+        b.classList.remove('active');
+      });
+      
+      // Activate clicked box
+      box.classList.add('active');
+      
+      // Update hidden input
+      if (step === '1') {
+        document.getElementById('type_dechet').value = value;
+      } else if (step === '2') {
+        document.getElementById('volume_benne').value = value;
+      } else if (step === '3') {
+        document.getElementById('placement').value = value;
+      }
+    });
+  });
+
+  // Next Step Navigation
+  nextBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const nextStepId = btn.dataset.next;
+      const currentStep = btn.closest('.step-container');
+      
+      // Form Validation before moving next (specifically for step 4)
+      if (nextStepId === '5') {
+        const postalCode = document.getElementById('postal_code');
+        const preferredDate = document.getElementById('preferred_date');
+        if (!postalCode.checkValidity() || !preferredDate.checkValidity()) {
+          alert('Veuillez remplir correctement le code postal et la date.');
+          return;
+        }
+      }
+
+      currentStep.style.display = 'none';
+      document.getElementById(`step-${nextStepId}`).style.display = 'flex';
+    });
+  });
+
+  // Previous Step Navigation
+  prevBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const prevStepId = btn.dataset.prev;
+      const currentStep = btn.closest('.step-container');
+      
+      currentStep.style.display = 'none';
+      document.getElementById(`step-${prevStepId}`).style.display = 'flex';
+    });
+  });
+
+  // Form Submission
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    // Disable submit button & show loading state
+    const submitBtn = form.querySelector('.submit-btn');
+    const originalBtnText = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Envoi en cours...';
+
+    // Get config from form attributes
+    const supabaseUrl = form.dataset.supabaseUrl;
+    const supabaseKey = form.dataset.supabaseKey;
+    const domain = form.dataset.domain;
+    const departmentName = form.dataset.department;
+
+    // Collect form data
+    const formData = new FormData(form);
+    const rawData = Object.fromEntries(formData.entries());
+
+    // Resolve city name (ville) from communes database
+    const postalCode = rawData.postal_code?.trim() || '';
+    const foundCommune = communes.find(c => c.codePostal === postalCode);
+    const villeName = foundCommune ? foundCommune.nom : 'Lille';
+
+    // Map volume (e.g. "8m3" -> "8m³")
+    const volumeRaw = rawData.volume_benne || '8m3';
+    const volumeMapped = volumeRaw.replace('m3', 'm³');
+
+    // Map type dechet (e.g. "verts" -> "dechets-verts")
+    let wasteMapped = rawData.type_dechet || 'dib';
+    if (wasteMapped === 'verts') {
+      wasteMapped = 'dechets-verts';
+    }
+
+    // Split nom / prénom
+    const fullName = rawData.full_name?.trim() || '';
+    const nameParts = fullName.split(/\s+/);
+    const prenom = nameParts[0] || '';
+    const nom = nameParts.slice(1).join(' ') || nameParts[0] || '';
+
+    // Prepare payload for Supabase RPC submit_benne_lead
+    const payload = {
+      p_nom: nom,
+      p_prenom: prenom,
+      p_email: rawData.email || '',
+      p_telephone: rawData.phone || '',
+      p_adresse: rawData.placement === 'public' ? 'Voie publique' : 'Terrain privé',
+      p_ville: villeName,
+      p_code_postal: postalCode,
+      p_departement: departmentName || 'Nord',
+      p_profil: 'particulier',
+      p_entreprise: '',
+      p_volume: volumeMapped,
+      p_type_dechet: wasteMapped,
+      p_date_livraison: rawData.preferred_date || '',
+      p_date_retrait: '',
+      p_message: `Positionnement souhaité : ${rawData.placement === 'public' ? 'Voie Publique' : 'Terrain Privé'}`,
+      p_source_site: domain || window.location.hostname
+    };
+
+    console.log('Submitting lead payload to Supabase RPC:', payload);
+
+    try {
+      const response = await fetch(`${supabaseUrl}/rest/v1/rpc/submit_benne_lead`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': supabaseKey,
+          'Authorization': `Bearer ${supabaseKey}`
+        },
+        body: JSON.stringify(payload)
+      });
+
+      if (!response.ok) {
+        throw new Error(`Server returned status ${response.status}`);
+      }
+
+      const responseData = await response.json();
+      console.log('Submission success:', responseData);
+
+      form.style.display = 'none';
+      formSuccess.style.display = 'block';
+
+    } catch (error) {
+      console.error('Submission error:', error);
+      alert('Une erreur est survenue lors de l\'envoi de votre demande. Veuillez réessayer ou nous contacter par e-mail.');
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalBtnText;
+    }
+  });
+</script>

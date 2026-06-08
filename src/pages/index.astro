@@ -1,0 +1,110 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import config from '../data/config.json';
+import communes from '../data/communes.json';
+
+// Slice the top 24 largest cities to display as quick links on the homepage
+const topCommunes = communes.slice(0, 24);
+---
+
+<Layout>
+  <!-- Hero Section with Form -->
+  <Hero />
+
+  <!-- Features / How it works Section -->
+  <section class="features" id="types-bennes">
+    <div class="container">
+      <div class="section-title">
+        <h2>Une benne adaptée à chaque projet</h2>
+        <p>Professionnels du BTP ou particuliers, découvrez nos solutions d'évacuation</p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card" style="padding: 24px;">
+          <img src="/images/benne-gravats.png" alt="Bennes à Gravats" style="width: 100%; height: 160px; object-fit: cover; border-radius: var(--radius-sm); margin-bottom: 20px; border: 1px solid var(--border-color);" />
+          <h3>Bennes à Gravats & Inertes</h3>
+          <p>Pour l'évacuation de terre, béton, briques, tuiles, carrelage et pierres. Idéal après une démolition ou un terrassement.</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-card" style="padding: 24px;">
+          <img src="/images/benne-encombrants.png" alt="Bennes Tout-Venant" style="width: 100%; height: 160px; object-fit: cover; border-radius: var(--radius-sm); margin-bottom: 20px; border: 1px solid var(--border-color);" />
+          <h3>Bennes Tout-Venant (DIB)</h3>
+          <p>Pour vider un logement, évacuer du plâtre, plastique, métaux, cartons, meubles et déchets mélangés non dangereux.</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card" style="padding: 24px;">
+          <img src="/images/benne-verts.png" alt="Bennes Déchets Verts" style="width: 100%; height: 160px; object-fit: cover; border-radius: var(--radius-sm); margin-bottom: 20px; border: 1px solid var(--border-color);" />
+          <h3>Bennes Déchets Verts</h3>
+          <p>Pour les paysagistes ou élagueurs. Évacuation de branches, terre végétale, feuilles, troncs et tailles de haies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Table Section -->
+  <section class="features" id="tarifs" style="background: var(--bg-color);">
+    <div class="container">
+      <div class="section-title">
+        <h2>Tarifs indicatifs de location</h2>
+        <p>Prix moyens constatés dans le {config.department} ({config.departmentCode}) - Transport & Traitement inclus</p>
+      </div>
+
+      <div class="form-card" style="max-width: 800px; margin: 0 auto; padding: 30px;">
+        <table style="width: 100%; border-collapse: collapse; text-align: left;">
+          <thead>
+            <tr style="border-bottom: 2px solid var(--border-color); color: var(--secondary-color); font-weight: 700;">
+              <th style="padding: 12px 8px;">Volume de Benne</th>
+              <th style="padding: 12px 8px;">Type de Déchets</th>
+              <th style="padding: 12px 8px; text-align: right;">Prix Moyen HT</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--border-color);">
+              <td style="padding: 14px 8px; font-weight: 600;">Benne 8 m³</td>
+              <td style="padding: 14px 8px; color: var(--text-muted);">Gravats propres (terre, béton)</td>
+              <td style="padding: 14px 8px; text-align: right; font-weight: 700; color: var(--accent-color);">280 €</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-color);">
+              <td style="padding: 14px 8px; font-weight: 600;">Benne 10 m³</td>
+              <td style="padding: 14px 8px; color: var(--text-muted);">Mélange / DIB (tout-venant)</td>
+              <td style="padding: 14px 8px; text-align: right; font-weight: 700; color: var(--accent-color);">390 €</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-color);">
+              <td style="padding: 14px 8px; font-weight: 600;">Benne 15 m³</td>
+              <td style="padding: 14px 8px; color: var(--text-muted);">Mélange / DIB (tout-venant)</td>
+              <td style="padding: 14px 8px; text-align: right; font-weight: 700; color: var(--accent-color);">490 €</td>
+            </tr>
+            <tr>
+              <td style="padding: 14px 8px; font-weight: 600;">Benne 30 m³</td>
+              <td style="padding: 14px 8px; color: var(--text-muted);">Encombrants / Déchets verts</td>
+              <td style="padding: 14px 8px; text-align: right; font-weight: 700; color: var(--accent-color);">750 €</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Localized SEO Communes Links Section -->
+  <section class="cities-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Zones d'intervention prioritaires</h2>
+        <p>Nous livrons nos bennes dans toutes les villes du {config.department} ({config.departmentCode})</p>
+      </div>
+
+      <div class="cities-grid">
+        {topCommunes.map((commune) => (
+          <a href={`/location-benne-${commune.slug}`} class="city-link">
+            <span>📍 {commune.nom}</span>
+            <span class="arrow">&rarr;</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>
