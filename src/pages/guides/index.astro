@@ -1,0 +1,382 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import { getCollection } from 'astro:content';
+import config from '../../data/config.json';
+
+const posts = await getCollection('guides');
+const sortedPosts = posts.sort(
+  (a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime()
+);
+
+const breadcrumbItems = [
+  { label: 'Accueil', href: '/' },
+  { label: 'Guides & Conseils' }
+];
+
+// Fallback images matching existing assets
+const getFallbackImage = (slug: string) => {
+  if (slug.includes('voirie')) return '/images/hero.png';
+  if (slug.includes('taille')) return '/images/benne-dib.png';
+  if (slug.includes('tri')) return '/images/benne-verts.png';
+  return '/images/hero.png';
+};
+---
+
+<Layout 
+  title={`Guides & Conseils Location de Benne | ${config.brandName}`}
+  description={`Retrouvez tous nos dossiers pratiques et conseils pour louer une benne dans le ${config.department} (${config.departmentCode}) : réglementation, tri, choix du volume.`}
+>
+  <!-- Breadcrumb -->
+  <Breadcrumb items={breadcrumbItems} />
+
+  <!-- Page Header -->
+  <section class="guides-header">
+    <div class="container header-content">
+      <span class="category-tag">Dossiers & Conseils</span>
+      <h1>Le Guide de la Location de Benne</h1>
+      <p>Retrouvez toutes les réponses à vos questions techniques, réglementaires et pratiques pour réussir vos chantiers et évacuer vos déchets en toute sérénité.</p>
+    </div>
+  </section>
+
+  <!-- Guides Grid Section -->
+  <section class="guides-grid-section">
+    <div class="container">
+      <div class="guides-grid">
+        {sortedPosts.map((post) => {
+          const imageUrl = post.data.image || getFallbackImage(post.slug);
+          return (
+            <article class="guide-card">
+              <a href={`/guides/${post.slug}`} class="card-image-wrapper" aria-hidden="true" tabindex="-1">
+                <img 
+                  src={imageUrl} 
+                  alt={post.data.title} 
+                  loading="lazy"
+                  class="card-image"
+                />
+              </a>
+              <div class="card-body">
+                <div class="card-meta">
+                  <span class="card-category">{post.data.category || 'Conseils'}</span>
+                  <time datetime={post.data.publishDate} class="card-date">
+                    {new Date(post.data.publishDate).toLocaleDateString('fr-FR', {
+                      year: 'numeric',
+                      month: 'long',
+                      day: 'numeric'
+                    })}
+                  </time>
+                </div>
+                
+                <h2 class="card-title">
+                  <a href={`/guides/${post.slug}`}>{post.data.title}</a>
+                </h2>
+                
+                <p class="card-excerpt">{post.data.description}</p>
+                
+                <div class="card-footer">
+                  <a href={`/guides/${post.slug}`} class="read-more">
+                    Lire l'article <span>&rarr;</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="guides-cta">
+    <div class="container">
+      <div class="cta-box">
+        <div class="cta-content">
+          <h2>Prêt à louer votre benne au meilleur tarif local ?</h2>
+          <p>Quel que soit votre projet (démolition, rénovation, jardin, débarras), nous livrons votre benne sous 24h partout dans le département du {config.department}.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="/#devis" class="btn-primary-cta">
+            📋 Devis en 2 Minutes
+          </a>
+          <a href="/tarifs" class="btn-secondary-cta">
+            Voir les tarifs par volume
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* --- Header Section --- */
+  .guides-header {
+    background: radial-gradient(circle at 80% 20%, rgba(243, 112, 33, 0.04) 0%, transparent 50%),
+                radial-gradient(circle at 10% 80%, rgba(30, 41, 59, 0.02) 0%, transparent 50%);
+    padding: 80px 0 60px;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .header-content {
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .category-tag {
+    display: inline-block;
+    background: rgba(243, 112, 33, 0.1);
+    color: var(--accent-color);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .header-content h1 {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+  }
+  
+  .header-content p {
+    font-size: 18px;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* --- Grid Section --- */
+  .guides-grid-section {
+    padding: 80px 0;
+    background-color: var(--bg-color);
+  }
+  
+  .guides-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  @media (max-width: 992px) {
+    .guides-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .guides-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* --- Card Design --- */
+  .guide-card {
+    background: var(--white);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+  }
+  
+  .guide-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(243, 112, 33, 0.15);
+  }
+
+  .card-image-wrapper {
+    display: block;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: #e2e8f0;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+  }
+
+  .guide-card:hover .card-image {
+    transform: scale(1.05);
+  }
+
+  .card-body {
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    font-size: 13px;
+  }
+
+  .card-category {
+    font-weight: 700;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .card-date {
+    color: var(--text-muted);
+  }
+
+  .card-title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--secondary-color);
+    margin-bottom: 12px;
+  }
+
+  .card-title a {
+    color: inherit;
+  }
+
+  .card-title a:hover {
+    color: var(--accent-color);
+  }
+
+  .card-excerpt {
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex-grow: 1;
+  }
+
+  .card-footer {
+    border-top: 1px solid var(--border-color);
+    padding-top: 18px;
+  }
+
+  .read-more {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--secondary-color);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: var(--transition);
+  }
+
+  .read-more span {
+    transition: var(--transition);
+  }
+
+  .guide-card:hover .read-more {
+    color: var(--accent-color);
+  }
+
+  .guide-card:hover .read-more span {
+    transform: translateX(4px);
+  }
+
+  /* --- CTA Section --- */
+  .guides-cta {
+    padding: 60px 0 100px;
+    background-color: var(--bg-color);
+  }
+
+  .cta-box {
+    background: linear-gradient(135deg, var(--secondary-color), #2d3748);
+    border-radius: var(--radius-lg);
+    padding: 50px;
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .cta-content {
+    max-width: 600px;
+  }
+
+  .cta-content h2 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+
+  .cta-content p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+  }
+
+  .cta-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 250px;
+  }
+
+  .btn-primary-cta {
+    background: var(--accent-color);
+    color: var(--white);
+    padding: 14px 28px;
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    box-shadow: 0 4px 12px rgba(243, 112, 33, 0.2);
+  }
+
+  .btn-primary-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(243, 112, 33, 0.3);
+    opacity: 0.95;
+  }
+
+  .btn-secondary-cta {
+    background: transparent;
+    color: var(--white);
+    padding: 14px 28px;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .btn-secondary-cta:hover {
+    border-color: var(--white);
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  @media (max-width: 992px) {
+    .cta-box {
+      flex-direction: column;
+      text-align: center;
+      padding: 40px;
+      gap: 30px;
+    }
+    .cta-actions {
+      width: 100%;
+    }
+  }
+</style>

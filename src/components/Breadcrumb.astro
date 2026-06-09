@@ -1,0 +1,79 @@
+---
+interface BreadcrumbItem {
+  label: string;
+  href?: string;
+}
+
+interface Props {
+  items: BreadcrumbItem[];
+}
+
+const { items } = Astro.props;
+---
+
+<nav aria-label="Fil d'Ariane" class="breadcrumb-nav">
+  <div class="container">
+    <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+      {items.map((item, index) => (
+        <li 
+          class="breadcrumb-item" 
+          itemprop="itemListElement" 
+          itemscope 
+          itemtype="https://schema.org/ListItem"
+        >
+          {item.href ? (
+            <a href={item.href} itemprop="item">
+              <span itemprop="name">{item.label}</span>
+            </a>
+          ) : (
+            <span itemprop="name" class="current">{item.label}</span>
+          )}
+          <meta itemprop="position" content={String(index + 1)} />
+          {index < items.length - 1 && <span class="separator" aria-hidden="true">›</span>}
+        </li>
+      ))}
+    </ol>
+  </div>
+</nav>
+
+<style>
+  .breadcrumb-nav {
+    background: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 12px 0;
+  }
+  .breadcrumb-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+  }
+  .breadcrumb-item {
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+  .breadcrumb-item a {
+    color: var(--accent-color);
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+  }
+  .breadcrumb-item a:hover {
+    text-decoration: underline;
+  }
+  .breadcrumb-item .current {
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+  .separator {
+    margin: 0 8px;
+    color: var(--text-muted);
+    font-size: 16px;
+    font-weight: 300;
+  }
+</style>

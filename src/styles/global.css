@@ -492,6 +492,13 @@ footer {
   margin-bottom: 60px;
 }
 
+.footer-grid-enriched {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 50px;
+  margin-bottom: 60px;
+}
+
 .footer-brand h3 {
   color: var(--white);
   font-size: 22px;
@@ -560,6 +567,10 @@ footer {
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+  .footer-grid-enriched {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
   }
 }
 

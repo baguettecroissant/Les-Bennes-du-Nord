@@ -1,0 +1,491 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import StepsForm from '../../components/StepsForm.astro';
+import { getCollection } from 'astro:content';
+import config from '../../data/config.json';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('guides');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post }
+  }));
+}
+
+const { post } = Astro.props;
+const { Content, headings } = await post.render();
+
+// Fetch other posts for the related articles section
+const allPosts = await getCollection('guides');
+const relatedPosts = allPosts
+  .filter((p) => p.slug !== post.slug)
+  .slice(0, 2);
+
+const breadcrumbItems = [
+  { label: 'Accueil', href: '/' },
+  { label: 'Guides & Conseils', href: '/guides' },
+  { label: post.data.title }
+];
+
+// Fallback images matching existing assets
+const getFallbackImage = (slug: string) => {
+  if (slug.includes('voirie')) return '/images/hero.png';
+  if (slug.includes('taille')) return '/images/benne-dib.png';
+  if (slug.includes('tri')) return '/images/benne-verts.png';
+  return '/images/hero.png';
+};
+
+const imageUrl = post.data.image || getFallbackImage(post.slug);
+---
+
+<Layout 
+  title={`${post.data.title} | ${config.brandName}`}
+  description={post.data.description}
+>
+  <!-- Breadcrumb -->
+  <Breadcrumb items={breadcrumbItems} />
+
+  <div class="guide-page-container">
+    <div class="container">
+      <div class="guide-layout">
+        <!-- Main Article Column -->
+        <main class="guide-main">
+          <article class="guide-article">
+            <div class="article-header">
+              <div class="article-meta">
+                <span class="category-pill">{post.data.category || 'Guide'}</span>
+                <time datetime={post.data.publishDate} class="publish-date">
+                  {new Date(post.data.publishDate).toLocaleDateString('fr-FR', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                  })}
+                </time>
+              </div>
+              <h1 class="article-title">{post.data.title}</h1>
+            </div>
+
+            <div class="featured-image-container">
+              <img src={imageUrl} alt={post.data.title} class="featured-image" />
+            </div>
+
+            <!-- Table of Contents (Dynamic from Headings) -->
+            {headings.length > 0 && (
+              <nav class="toc-box" aria-label="Table des matières">
+                <p class="toc-title">Sommaire de ce guide :</p>
+                <ul>
+                  {headings.filter(h => h.depth <= 3).map((h) => (
+                    <li class={`toc-item depth-${h.depth}`}>
+                      <a href={`#${h.slug}`}>
+                        <span class="toc-dot">&bull;</span> {h.text}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            )}
+
+            <!-- Rendered Markdown Content -->
+            <div class="markdown-body">
+              <Content />
+            </div>
+          </article>
+
+          <!-- Related Posts Section -->
+          {relatedPosts.length > 0 && (
+            <section class="related-section">
+              <h3 class="related-title">Autres guides & conseils utiles</h3>
+              <div class="related-grid">
+                {relatedPosts.map((related) => (
+                  <a href={`/guides/${related.slug}`} class="related-card">
+                    <img 
+                      src={related.data.image || getFallbackImage(related.slug)} 
+                      alt={related.data.title} 
+                      class="related-card-img" 
+                    />
+                    <div class="related-card-content">
+                      <span class="related-card-cat">{related.data.category}</span>
+                      <h4>{related.data.title}</h4>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </section>
+          )}
+        </main>
+
+        <!-- Sidebar Lead Form Column -->
+        <aside class="guide-sidebar">
+          <div class="sticky-sidebar">
+            <div class="sidebar-info-card">
+              <h3>🚚 {config.brandName}</h3>
+              <p>Nous livrons nos bennes de 8m³ à 30m³ dans tout le département du <strong>{config.department} (59)</strong> pour tous vos besoins de tri et d'évacuation de déchets.</p>
+              <ul>
+                <li>✓ Devis gratuit et sans engagement</li>
+                <li>✓ Tarifs clairs, transport & traitement inclus</li>
+                <li>✓ Livraison rapide en 24h</li>
+              </ul>
+            </div>
+            
+            <!-- Interactive Multi-step Form -->
+            <StepsForm />
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style is:global>
+  /* --- Markdown Content Typography & Styles (scoped inside .markdown-body) --- */
+  .markdown-body {
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--text-dark);
+  }
+
+  .markdown-body h2 {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--secondary-color);
+    margin-top: 40px;
+    margin-bottom: 16px;
+    border-bottom: 1.5px solid var(--border-color);
+    padding-bottom: 8px;
+  }
+
+  .markdown-body h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-top: 30px;
+    margin-bottom: 12px;
+  }
+
+  .markdown-body p {
+    margin-bottom: 24px;
+  }
+
+  .markdown-body strong {
+    color: var(--secondary-color);
+    font-weight: 600;
+  }
+
+  .markdown-body ul, .markdown-body ol {
+    margin-bottom: 24px;
+    padding-left: 24px;
+  }
+
+  .markdown-body li {
+    margin-bottom: 8px;
+  }
+
+  .markdown-body a {
+    color: var(--accent-color);
+    font-weight: 600;
+    text-decoration: underline;
+  }
+
+  .markdown-body a:hover {
+    text-decoration: none;
+  }
+
+  /* Alerts inside markdown */
+  .markdown-body blockquote {
+    background: rgba(243, 112, 33, 0.05);
+    border-left: 4px solid var(--accent-color);
+    padding: 20px 24px;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    margin: 32px 0;
+  }
+
+  .markdown-body blockquote p {
+    margin: 0;
+    font-style: italic;
+    color: var(--secondary-color);
+    font-weight: 500;
+  }
+
+  /* Comparisons Table inside markdown */
+  .markdown-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 32px 0;
+    font-size: 15px;
+  }
+
+  .markdown-body th {
+    background: #f1f5f9;
+    color: var(--secondary-color);
+    font-weight: 700;
+    text-align: left;
+    padding: 12px 16px;
+    border: 1px solid var(--border-color);
+  }
+
+  .markdown-body td {
+    padding: 12px 16px;
+    border: 1px solid var(--border-color);
+  }
+
+  .markdown-body tr:nth-child(even) td {
+    background: #f8fafc;
+  }
+</style>
+
+<style>
+  /* --- Layout & Structure --- */
+  .guide-page-container {
+    padding: 60px 0 100px;
+    background-color: var(--bg-color);
+  }
+
+  .guide-layout {
+    display: grid;
+    grid-template-columns: 2fr 1.1fr;
+    gap: 48px;
+    align-items: start;
+  }
+
+  @media (max-width: 992px) {
+    .guide-layout {
+      grid-template-columns: 1fr;
+      gap: 50px;
+    }
+  }
+
+  /* --- Main Content Column --- */
+  .guide-main {
+    background: var(--white);
+    padding: 40px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+  }
+
+  @media (max-width: 640px) {
+    .guide-main {
+      padding: 24px;
+    }
+  }
+
+  .article-header {
+    margin-bottom: 24px;
+  }
+
+  .article-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+    font-size: 14px;
+  }
+
+  .category-pill {
+    background: rgba(243, 112, 33, 0.1);
+    color: var(--accent-color);
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+
+  .publish-date {
+    color: var(--text-muted);
+  }
+
+  .article-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--secondary-color);
+    line-height: 1.25;
+  }
+
+  @media (max-width: 640px) {
+    .article-title {
+      font-size: 26px;
+    }
+  }
+
+  .featured-image-container {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    margin-bottom: 32px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .featured-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* --- Table of Contents --- */
+  .toc-box {
+    background: #f8fafc;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 24px;
+    margin-bottom: 40px;
+  }
+
+  .toc-title {
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 12px;
+    font-size: 16px;
+  }
+
+  .toc-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .toc-item a {
+    color: var(--text-muted);
+    font-size: 15px;
+    transition: var(--transition);
+  }
+
+  .toc-item a:hover {
+    color: var(--accent-color);
+  }
+
+  .toc-dot {
+    color: var(--accent-color);
+    margin-right: 4px;
+  }
+
+  .toc-item.depth-3 {
+    padding-left: 20px;
+    font-size: 14px;
+  }
+
+  /* --- Related Section --- */
+  .related-section {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid var(--border-color);
+  }
+
+  .related-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--secondary-color);
+    margin-bottom: 24px;
+  }
+
+  .related-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  @media (max-width: 640px) {
+    .related-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .related-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-color);
+    background: var(--bg-color);
+    overflow: hidden;
+    transition: var(--transition);
+  }
+
+  .related-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-sm);
+    border-color: rgba(243, 112, 33, 0.15);
+  }
+
+  .related-card-img {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .related-card-content {
+    padding: 16px;
+  }
+
+  .related-card-cat {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .related-card h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--secondary-color);
+    line-height: 1.4;
+  }
+
+  /* --- Sidebar & Sticky Container --- */
+  .guide-sidebar {
+    position: sticky;
+    top: 100px;
+  }
+
+  .sticky-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .sidebar-info-card {
+    background: var(--white);
+    border-radius: var(--radius-md);
+    padding: 30px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .sidebar-info-card h3 {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--secondary-color);
+    margin-bottom: 12px;
+  }
+
+  .sidebar-info-card p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .sidebar-info-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--secondary-color);
+  }
+
+  /* Override Form card specific padding inside sidebar */
+  :global(.guide-sidebar .form-card) {
+    padding: 30px !important;
+  }
+</style>

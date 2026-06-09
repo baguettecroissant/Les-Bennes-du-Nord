@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /mentions-legales
+Disallow: /politique-confidentialite
+
+Sitemap: https://les-bennes-du-nord.fr/sitemap-index.xml
