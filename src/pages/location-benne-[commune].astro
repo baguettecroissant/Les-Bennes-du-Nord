@@ -29,10 +29,10 @@ const description = `Location de bennes à ${data.nom} (${data.codePostal}). Ben
 // Calculate local pricing factor based on population
 const priceFactor = data.population && data.population > 100000 ? 1.15 : data.population && data.population > 50000 ? 1.08 : 1;
 const prices = {
-  gravats: Math.round(280 * priceFactor),
-  dib: Math.round(390 * priceFactor),
-  verts: Math.round(320 * priceFactor),
-  bois: Math.round(340 * priceFactor)
+  gravats: Math.round(390 * priceFactor),
+  dib: Math.round(410 * priceFactor),
+  verts: Math.round(440 * priceFactor),
+  bois: Math.round(470 * priceFactor)
 };
 ---
 

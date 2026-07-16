@@ -26,7 +26,7 @@ const title = `Location de Benne Encombrants ${data.nom} (${data.codePostal}) | 
 const description = `Louer une benne tout-venant / encombrants à ${data.nom} (${data.codePostal}). Meubles, électroménager. Devis gratuit sous 2h, livraison rapide dans le ${config.department}.`;
 
 const priceFactor = data.population && data.population > 100000 ? 1.15 : data.population && data.population > 50000 ? 1.08 : 1;
-const price = Math.round(390 * priceFactor);
+const price = Math.round(410 * priceFactor);
 ---
 
 <Layout title={title} description={description}>

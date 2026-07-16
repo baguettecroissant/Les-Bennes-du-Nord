@@ -54,10 +54,10 @@ Voici une estimation des prix moyens constatés (hors taxes) pour une location f
 
 | Volume de la Benne | Benne Gravats Propres | Benne Déchets Verts | Benne Tout-Venant / DIB | Guide Dimensions |
 |--------------------|-----------------------|---------------------|-------------------------|------------------|
-| **Benne 8 m³** | **280 € HT** | **290 € HT** | **350 € HT** | [Fiche 8m³](/types-bennes#8m3) |
-| **Benne 10 m³** | **310 € HT** | **330 € HT** | **390 € HT** | [Fiche 10m³](/types-bennes#10m3) |
-| **Benne 15 m³** | *Non autorisé* | **380 € HT** | **490 € HT** | [Fiche 15m³](/types-bennes#15m3) |
-| **Benne 30 m³** | *Non autorisé* | **520 € HT** | **750 € HT** | [Fiche 30m³](/types-bennes#30m3) |
+| **Benne 8 m³** | **390 € HT** | **300 € HT** | **350 € HT** | [Fiche 8m³](/types-bennes#8m3) |
+| **Benne 10 m³** | **450 € HT** | **360 € HT** | **410 € HT** | [Fiche 10m³](/types-bennes#10m3) |
+| **Benne 15 m³** | *Non autorisé* | **440 € HT** | **490 € HT** | [Fiche 15m³](/types-bennes#15m3) |
+| **Benne 30 m³** | *Non autorisé* | **660 € HT** | **750 € HT** | [Fiche 30m³](/types-bennes#30m3) |
 
 *Note : Les gravats purs ne sont pas autorisés dans les bennes de 15m³ et 30m³ car le poids total dépasserait la limite légale de charge du camion (surcharge).*
 

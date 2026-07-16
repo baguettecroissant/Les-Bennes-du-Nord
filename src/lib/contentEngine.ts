@@ -53,10 +53,10 @@ export function generateCommuneContent(commune: Commune, category: 'main' | 'gra
   // Local pricing calculations
   const priceFactor = commune.population && commune.population > 100000 ? 1.15 : commune.population && commune.population > 50000 ? 1.08 : 1;
   const prices = {
-    gravats: Math.round(280 * priceFactor),
-    dib: Math.round(390 * priceFactor),
-    verts: Math.round(320 * priceFactor),
-    bois: Math.round(340 * priceFactor)
+    gravats: Math.round(390 * priceFactor),
+    dib: Math.round(410 * priceFactor),
+    verts: Math.round(440 * priceFactor),
+    bois: Math.round(470 * priceFactor)
   };
 
   // UNIQUE LOCAL CONTEXT paragraph (always unique per commune)

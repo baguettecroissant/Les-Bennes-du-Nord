@@ -26,7 +26,7 @@ const title = `Location de Benne DIB / Bois ${data.nom} (${data.codePostal}) | T
 const description = `Louer une benne à bois / DIB à ${data.nom} (${data.codePostal}). Évacuation de palettes, charpentes, menuiseries. Devis gratuit sous 2h, livraison rapide dans le ${config.department}.`;
 
 const priceFactor = data.population && data.population > 100000 ? 1.15 : data.population && data.population > 50000 ? 1.08 : 1;
-const price = Math.round(340 * priceFactor);
+const price = Math.round(470 * priceFactor);
 ---
 
 <Layout title={title} description={description}>

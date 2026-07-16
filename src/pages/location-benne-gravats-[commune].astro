@@ -26,7 +26,7 @@ const title = `Location de Benne Gravats ${data.nom} (${data.codePostal}) | Tari
 const description = `Louer une benne à gravats à ${data.nom} (${data.codePostal}). Évacuation de béton, briques, tuiles. Devis gratuit sous 2h, livraison rapide dans le ${config.department}.`;
 
 const priceFactor = data.population && data.population > 100000 ? 1.15 : data.population && data.population > 50000 ? 1.08 : 1;
-const price = Math.round(280 * priceFactor);
+const price = Math.round(390 * priceFactor);
 ---
 
 <Layout title={title} description={description}>
