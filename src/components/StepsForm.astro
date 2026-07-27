@@ -1,12 +1,8 @@
----
-import config from '../data/config.json';
----
-
 <div class="form-card" id="devis">
   <h2>Demande de devis gratuit</h2>
   <p class="subtitle">Réponse rapide en moins de 2 heures - Sans engagement</p>
 
-  <form id="benne-lead-form" data-supabase-url={config.supabaseUrl} data-supabase-key={config.supabaseAnonKey} data-domain={config.domain} data-department={config.department}>
+  <form id="benne-lead-form">
     <!-- Step 1: Type de Déchet -->
     <div class="step-container" id="step-1">
       <div class="form-group">
@@ -126,6 +122,12 @@ import config from '../data/config.json';
         <label for="email">Adresse email</label>
         <input type="email" id="email" name="email" placeholder="jean.dupont@gmail.com" class="form-control" required />
       </div>
+      <div class="form-group">
+        <label style="display:flex;align-items:flex-start;gap:10px;font-size:13px;font-weight:500;line-height:1.4;">
+          <input type="checkbox" name="consent" required style="margin-top:3px;" />
+          <span>J’accepte que ma demande soit transmise aux professionnels partenaires conformément à la <a href="/politique-confidentialite">politique de confidentialité</a>.</span>
+        </label>
+      </div>
       <div class="form-nav">
         <button type="button" class="btn-secondary prev-btn" data-prev="4">&larr; Retour</button>
         <button type="submit" class="btn-primary submit-btn">🔥 Obtenir mon devis</button>
@@ -149,6 +151,7 @@ import config from '../data/config.json';
   const prevBtns = document.querySelectorAll('.prev-btn');
   const form = document.getElementById('benne-lead-form');
   const formSuccess = document.getElementById('form-success');
+  let sourceSubmissionId = `nord-${crypto.randomUUID()}`;
   
   // Set default minimum date to tomorrow
   const dateInput = document.getElementById('preferred_date');
@@ -225,12 +228,6 @@ import config from '../data/config.json';
     submitBtn.disabled = true;
     submitBtn.textContent = 'Envoi en cours...';
 
-    // Get config from form attributes
-    const supabaseUrl = form.dataset.supabaseUrl;
-    const supabaseKey = form.dataset.supabaseKey;
-    const domain = form.dataset.domain;
-    const departmentName = form.dataset.department;
-
     // Collect form data
     const formData = new FormData(form);
     const rawData = Object.fromEntries(formData.entries());
@@ -256,35 +253,28 @@ import config from '../data/config.json';
     const prenom = nameParts[0] || '';
     const nom = nameParts.slice(1).join(' ') || nameParts[0] || '';
 
-    // Prepare payload for Supabase RPC submit_benne_lead
+    // Prepare the source payload for the server-side ingestion adapter.
     const payload = {
-      p_nom: nom,
-      p_prenom: prenom,
-      p_email: rawData.email || '',
-      p_telephone: rawData.phone || '',
-      p_adresse: rawData.placement === 'public' ? 'Voie publique' : 'Terrain privé',
-      p_ville: villeName,
-      p_code_postal: postalCode,
-      p_departement: departmentName || 'Nord',
-      p_profil: 'particulier',
-      p_entreprise: '',
-      p_volume: volumeMapped,
-      p_type_dechet: wasteMapped,
-      p_date_livraison: rawData.preferred_date || '',
-      p_date_retrait: '',
-      p_message: `Positionnement souhaité : ${rawData.placement === 'public' ? 'Voie Publique' : 'Terrain Privé'}`,
-      p_source_site: domain || window.location.hostname
+      nom,
+      prenom,
+      email: rawData.email || '',
+      telephone: rawData.phone || '',
+      adresse: rawData.placement === 'public' ? 'Voie publique' : 'Terrain privé',
+      ville: villeName,
+      code_postal: postalCode,
+      volume: volumeMapped,
+      type_dechet: wasteMapped,
+      date_livraison: rawData.preferred_date || '',
+      message: `Positionnement souhaité : ${rawData.placement === 'public' ? 'Voie Publique' : 'Terrain Privé'}`,
+      consent: rawData.consent === 'on',
+      source_submission_id: sourceSubmissionId
     };
 
-    console.log('Submitting lead payload to Supabase RPC:', payload);
-
     try {
-      const response = await fetch(`${supabaseUrl}/rest/v1/rpc/submit_benne_lead`, {
+      const response = await fetch('/api/submit-lead', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-          'apikey': supabaseKey,
-          'Authorization': `Bearer ${supabaseKey}`
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify(payload)
       });
