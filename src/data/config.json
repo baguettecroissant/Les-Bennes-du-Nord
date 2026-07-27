@@ -11,5 +11,5 @@
   "fontFamily": "'Outfit', sans-serif",
   "description": "Location de bennes à Lille et dans tout le Nord (59) pour professionnels et particuliers. Devis rapide en ligne pour gravats, DIB, déchets verts et encombrants.",
   "supabaseUrl": "https://nhmvgsrwhjsjnpncpiaj.supabase.co",
-  "supabaseAnonKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5obXZnc3J3aGpzam5wbmNwaWFqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njc5OTY0NjQsImV4cCI6MjA4MzU3MjQ2NH0.qpG5CJDNa53BB7ZpDy414GL3hmb51omxqPrnrrd7O6I"
+  "supabaseAnonKey": "sb_publishable_m8vJSDZPPTdOP_x0Oey8AQ_exDbpUev"
 }
